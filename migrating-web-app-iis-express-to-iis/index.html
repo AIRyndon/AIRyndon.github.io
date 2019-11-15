@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+Migrating your Web App from IIS Express to IIS - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="Migrating your Web App from IIS Express to IIS - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/migrating-web-app-iis-express-to-iis/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">Migrating your Web App from IIS Express to IIS</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I&#8217;ve listed a high-level overview of how I did the migration.</p>
+
+<h4 id="from-iis-express-to-iis">From IIS Express to IIS</h4>
+
+<p>I did these on a machine that runs VS2017, SQL Server 2016 and IIS10. The <a href="https://msdn.microsoft.com/en-us/library/dd547590(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web App</a> project was first on LocalDb.</p>
+
+<p>First make changes to the project on Visual Studio. Go to your project&#8217;s properties, then select Local IIS. Then click Create Virtual Directory.</p>
+
+<p>&nbsp;</p>
+
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg"><img class="aligncenter wp-image-478 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg" alt="" width="300" height="72" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>Second, assuming you have a database on SQL Server, update your connection strings on Web.config accordingly.</p>
+
+<p>Third, create a <a href="https://msdn.microsoft.com/en-us/library/dd465323(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web Package.</a> Select IIS as the publish target, then pick Web Deploy Package as the publish method ( I like creating a Web Package compared to publishing directly, pretty sure publishing directly will work too).</p>
+
+<h4 id="publishing-to-iis">Publishing to IIS</h4>
+
+<p>This one is pretty easy once you have the required services running. __<em>I&#8217;m not sure if all these services I turned on are required.</em> Main thing for me is it worked 🙂</p>
+
+<p>First, check if IIS is running or not. It&#8217;s at Control Panel &gt; Program and Features &gt; Turn Windows Features On/Off &#8211; the boxes I ticked are on the screenshot below.</p>
+
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg"><img class="aligncenter wp-image-477 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg" alt="" width="300" height="135" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>Then check if you have Web Deploy installed, I did this by searching for it in <a href="https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads" target="_blank" rel="noopener noreferrer">Web Platform Installer</a>. <em>Again I&#8217;m uncertain if you need to install everything with Web Deploy in there to get this next key option to show.</em></p>
+
+<p>Finally, open IIS Manager (inetmgr from Windows Run). Then go to Sites &#8211; you can use the Default Web Site &#8211; and on the Actions Pane click on Import Application and use your Web Package&#8217;s zip file. The Import Application link was missing on my installation of IIS, installing Web Deploy fixed the issue on my machine.</p>
+
+<p>Hopefully, the import should go smoothly and you&#8217;ll have your Web App on IIS 🙂</p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+Learning about ASP.NET MVC 5 Identity - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="Learning about ASP.NET MVC 5 Identity - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/mvc-5-identity/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">Learning about ASP.NET MVC 5 Identity</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>I just watched a <a href="https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&author=scott-allen&name=aspdotnet-mvc5-fundamentals-m3-identity&clip=0" target="_blank" rel="noopener noreferrer">video</a> from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I&#8217;m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂</p>
+
+<h4 id="mvc-5-identity-8211-microsoft-aspnet-identity-core">MVC 5 Identity &#8211; Microsoft.AspNet.Identity.Core</h4>
+
+<p>This is new in MVC 5, the core assembly of MVC 5 provides interfaces that you can implement if you want full control of user creation, authentication, etc. in your application. But I think Microsoft&#8217;s implementation is good for most projects.</p>
+
+<p>Microsoft&#8217;s implementation relies on Entity Framework to talk with a SQL Server Db. If you want to use a different database, implement the interface provided. The diagram below is a quick overview of what I think are the most important core interfaces:</p>
+
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg"><img class="aligncenter size-medium wp-image-476" src="https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg" alt="" width="300" height="135" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>Microsoft is using a repository pattern on this one, the implementation will be hiding behind interfaces which I believe is a good thing. The concrete class UserManager is there to manage users. IUserStore  and its buddies &#8211;  IUserLoginStore and IUserPasswordStore, who also implements IUserStore &#8211; has methods for database access. The Role interface by the way uses the same pattern as the User interface. It has store interfaces for database access.</p>
+
+<p>Reiterating this, a User or Role just holds your data. UserStore etc. puts this on a Database of your choice. You then use the UserManager concrete class to orchestrate, it has your domain logic. Unless you have to do something low level.</p>
+
+<h4 id="entity-framework-with-sql-server-8211-microsoft-aspnet-identity-entityframework">Entity Framework with SQL Server &#8211; Microsoft.AspNet.Identity.EntityFramework</h4>
+
+<p>This is one implementation of the core interfaces above. Entity Framework has IdentityUser, IdentityRole, a UserStore class, which I think are the crucial ones. The UserStore class implements IUserStore, IUserLogin and IUserPassword. To talk with SQL Server, it has IdentityDbContext. In conclusion, use this unless you really need some custom implementation. Also, I suggest watching this <a href="https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m1-introduction&amp;clip=0">video </a> since it is awesome 🙂<figure class="wp-block-image is-resized"></p>
+
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg"><img src="https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg" alt="" class="wp-image-476" width="182" height="182" /></a></figure></p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

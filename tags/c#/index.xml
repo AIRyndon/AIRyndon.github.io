@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on Introduction</title>
+    <link>https://angeloryndon.com/tags/c#/</link>
+    <description>Recent content in C# on Introduction</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:57:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://angeloryndon.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning ASP.NET Core</title>
+      <link>https://angeloryndon.com/learning-asp-net-core/</link>
+      <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/learning-asp-net-core/</guid>
+      <description>&lt;p&gt;For the last few days, I&amp;#8217;ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don&amp;#8217;t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I&amp;#8217;m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I&amp;#8217;ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Researching on a UWP application for a client</title>
+      <link>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</link>
+      <pubDate>Mon, 08 Apr 2019 22:20:48 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</guid>
+      <description>&lt;p&gt;Yesterday I started researching on a UWP application for a client of mine. This desktop app is supposed to save timesheets of current employees, and it lets them sign in and sign out of the workplace. The main purpose of this application is to save some paper.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Null Object Pattern in C#</title>
+      <link>https://angeloryndon.com/null-object-pattern-in-csharp/</link>
+      <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/null-object-pattern-in-csharp/</guid>
+      <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning about ASP.NET MVC 5 Identity</title>
+      <link>https://angeloryndon.com/mvc-5-identity/</link>
+      <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/mvc-5-identity/</guid>
+      <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I&amp;#8217;m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows Azure configuration for ASP.NET MVC</title>
+      <link>https://angeloryndon.com/windows-azure-configurations/</link>
+      <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/windows-azure-configurations/</guid>
+      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I&amp;#8217;m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won&amp;#8217;t forget that 🙂&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

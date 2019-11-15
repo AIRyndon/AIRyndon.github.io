@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+ASP.NET Url rewrite module - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="ASP.NET Url rewrite module - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/asp-net-url-rewrite-module/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">ASP.NET Url rewrite module</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>I just received some feature requests from my client on <a href="https://angeloryndon.com/portfolio/auckland-airport-motel/" target="_blank" rel="noopener noreferrer">this project.</a> The requests are about improving the site&#8217;s SEO rating. After adding the features, the site is now in the top 5 of google search results for &#8220;Auckland airport motel&#8221;. I used the rewrite module it to move the site to SSL.</p>
+
+<h2 id="a-few-sample-rules">A few sample rules</h2>
+
+<p>Below are sample rules that I believe are helpful to any site &#8211; the 2 rules below redirects to HTTPS, and picks a canonical host name (the one here is for Non-WWW).``</p>
+
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;system.webServer&gt;
+  &lt;rewrite&gt;
+    &lt;rules&gt;
+      &lt;rule name="Redirect to HTTPS"&gt;
+        &lt;match url="(.*)" /&gt;
+        &lt;conditions&gt;
+          &lt;add input="{HTTPS}" pattern="OFF" /&gt;
+        &lt;/conditions&gt;
+        &lt;action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" appendQueryString="false" redirectType="Permanent" /&gt;
+      &lt;/rule&gt;
+      &lt;rule name="Canonical Host Name" stopProcessing="true"&gt;
+        &lt;match url="(.*)" /&gt;
+        &lt;conditions&gt;
+          &lt;add input="{HTTP_HOST}" pattern="^www\." /&gt;
+        &lt;/conditions&gt;
+        &lt;action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" appendQueryString="false" redirectType="Permanent" /&gt;
+      &lt;/rule&gt;
+    &lt;/rules&gt;
+  &lt;/rewrite&gt;
+&lt;system.webServer&gt;</pre>
+
+<p>The rewrite module does its job in three steps:</p>
+
+<ol>
+<li>Check if the incoming URL can be matched with the pattern inside the <match/> element</li>
+<li>If the optional <conditions> element is available, further compare the URL pattern to other rules you specified</li>
+<li>If the incoming URL matches the pattern or passed the conditions, execute what is inside the <action> element</li>
+</ol>
+
+<p>I found that the rewrite module can perform 3 types of actions &#8211; Redirect, Rewrite, and Custom Action. I&#8217;ll just quickly write the main difference between a <strong>Redirect</strong> and a <strong>Rewrite.</strong></p>
+
+<p>A Redirect action type will change the address bar&#8217;s URL to what you specify in the <action> element. A Rewrite will not change that URL and will just silently send the site visitor to the URL inside the <action> element.</p>
+
+<p>I&#8217;ll use this sample URL &#8211; http://<host>:<port>/<path>?<querystring> &#8211; to quickly explain the server variables used in the rules above:</p>
+
+<p>the {HTTPS} variable checks if the request is secure</p>
+
+<p>the {HTTP_HOST} variable grabs the <host> part</p>
+
+<p>the {REQUEST_URI} grabs the <path> and the <querystring></p>
+
+<p>The rewrite module is extremely flexible once you get comfortable with it. Microsoft&#8217;s detailed docs can be found <a href="https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" target="_blank" rel="noopener noreferrer">here.</a></p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

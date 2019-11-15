@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+Learning ASP.NET Core - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="Learning ASP.NET Core - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/learning-asp-net-core/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">Learning ASP.NET Core</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>For the last few days, I&#8217;ve started learning ASP.NET Core. After the initial <a rel="noreferrer noopener" aria-label="research (opens in a new tab)" href="https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/" target="_blank">research</a> on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don&#8217;t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I&#8217;m currently watching a Pluralsight <a rel="noreferrer noopener" aria-label="course (opens in a new tab)" href="https://www.pluralsight.com/courses/aspnet-core-fundamentals" target="_blank">course</a> about it by Scott Allen, I&#8217;ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.</p>
+
+<h2 id="quick-overview-of-model-binding-in-asp-net-core">Quick overview of Model Binding in ASP.NET Core</h2>
+
+<p>The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.</p>
+
+<p>When you make an http request (invoke a method from the PageModel/Controller), the framework&#8217;s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.</p>
+
+<p>When the parameter to the method called by the framework (OnGet for example) does not contain anything, ASP.NET Core will default to null if the parameter is a reference type, and throw an exception if the parameter is a value type.</p>
+
+<h2 id="tag-helpers">Tag Helpers</h2>
+
+<p>These tag helpers are new to me &#8211; I don&#8217;t remember it existed before ASP.NET Core &#8211; and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-<anything>.</p>
+
+<p>The <strong>asp-page</strong> tag helper sets an anchor tag to point to a Razor page. On the other hand, the <strong>asp-for</strong> tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don&#8217;t need to type Model.<Property> to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.</p>
+
+<p>First, it sets the html input&#8217;s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request &#8211; <strong>input model</strong>. Second, it fills the html input&#8217;s value when the server populates the page (responds to the request) with values from the Page Model property &#8211; <strong>output model</strong>. The Input model and Output model are two new helpful terms I got from Scott here.</p>
+
+<p>Last, we have <strong>asp-route-<anything>,</strong> this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The <anything> should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.</p>
+
+<p>That&#8217;s it for this post. Now I&#8217;ll continue the course and will likely create a new post about what I learned.</p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

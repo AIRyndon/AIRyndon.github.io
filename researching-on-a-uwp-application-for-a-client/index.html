@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+Researching on a UWP application for a client - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="Researching on a UWP application for a client - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">Researching on a UWP application for a client</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>Yesterday I started researching on a UWP application for a client of mine. This desktop app is supposed to save timesheets of current employees, and it lets them sign in and sign out of the workplace. The main purpose of this application is to save some paper.</p>
+
+<h2 id="the-first-potential-roadblock-i-wanted-to-address-is-user-authentication">The first potential roadblock I wanted to address is user authentication.</h2>
+
+<p>I searched for UWP authentication online and got <a href="https://docs.microsoft.com/en-us/windows/uwp/security/authentication-and-user-identity">this.</a> I told the client about the options, and explained that for most of those options, the employees can login to the windows 10 computer when they sign in for work, and log out when they are about to finish. The main issue with that approach though, is there is only one computer to sign into. They would rather use paper instead of being hassled by the windows login screen.</p>
+
+<h2 id="potential-solutions">Potential solutions</h2>
+
+<p>The first solution that came to my mind was using something like <a rel="noreferrer noopener" aria-label=".net identity (opens in a new tab)" href="https://docs.microsoft.com/en-us/aspnet/identity/overview/getting-started/introduction-to-aspnet-identity" target="_blank">.net identity</a>, to perform the authentication over the web. Or use other <a rel="noreferrer noopener" aria-label="online identity providers (opens in a new tab)" href="https://docs.microsoft.com/en-us/windows/uwp/security/web-authentication-broker" target="_blank">online identity providers</a> &#8211; it is supported by UWP anyways according to the docs &#8211; I explained to the client that it is possible to sign in users from the UWP app itself using this method. The issue with this approach though is that it won&#8217;t work if there is no internet connection, and that it could cost extra. So it is a no-go.</p>
+
+<p>While walking to school this morning, I remembered that when I first learned making web apps or Web APIs in ASP.NET MVC, I was running the server locally on the desktop machine. What if I do the same thing for this UWP project? This could solve the user authentication issue. I did a quick search online and found sources about ASP.NET Core. Now I have to research connecting a UWP app to a <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.2&tabs=visual-studio" target="_blank" rel="noreferrer noopener" aria-label=".NET Core Identity (opens in a new tab)">.NET Core Identity</a> API, and update the client of my findings.</p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

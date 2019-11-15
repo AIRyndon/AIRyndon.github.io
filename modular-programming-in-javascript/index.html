@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+<title>
+Modular Programming in JavaScript - Introduction
+</title>
+
+
+
+        <meta property="og:title" content="Modular Programming in JavaScript - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Website Description"/>
+<meta property="og:url" content="https://angeloryndon.com/modular-programming-in-javascript/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="sha256-L95h2/FZEvPBElhtQs0fHwmwpvwTQdimuS/PCKulIBE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+                <h1 class="bold-title is-1">Modular Programming in JavaScript</h1>
+                
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
+                  
+                  Project
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+    <div class="container markdown top-pad">
+        <p>I was learning ES6 about <a href="https://angeloryndon.com/learn-javascript-again/">two weeks ago</a>, and it reminded me of how modular programming in JavaScript was done during the years prior. I&#8217;m quite happy with how JavaScript has evolved, I would even say that I&#8217;m starting to like it. Before we go into the &#8220;How to do modular programming in JavaScript today&#8221;, I would like to give my thoughts on modular programming first.</p>
+
+<h2 id="modular-programming">Modular Programming</h2>
+
+<p>Modular programming is about chopping down a <em>big idea</em> (which is the program itself) into <em>little ideas</em> (the program&#8217;s features). You then build each of those <em>little ideas</em> and connect them together to create the <em>big idea</em>. This programming style allows you to create software that is easier to maintain &#8211; I&#8217;m in the opinion though that if you overdo it, your software will be even harder to understand and maintain.</p>
+
+<h2 id="how-is-modular-programming-done-in-javascript">How is modular programming done in JavaScript</h2>
+
+<p>When I first learned C#, modular programming was something I felt closer to &#8211; <em>I want to make small methods, and small classes.</em> Separating your code into smaller classes is built-into C#, and this was not the same with JavaScript. When I first learned JavaScript, there was a weird hack to separate your code into its own modules. You have to use a function that is invoked right after its creation &#8211; the term <a rel="noreferrer noopener" aria-label="IFFE (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE" target="_blank">IFFE</a> was coined for this behavior.</p>
+
+<p>The addition of the <a rel="noreferrer noopener" aria-label="import (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">import</a> and <a rel="noreferrer noopener" aria-label="export (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export" target="_blank">export</a> statements in ES6 means modular programming is now supported natively in JavaScript &#8211; <em>I don&#8217;t have experience with Node.js so I have no clue if ES6 imports and exports also work out-of-the-box there like in current Web Development</em>.</p>
+
+<p>Below is an extremely quick rundown of how modular programming evolved in native JavaScript:</p>
+
+<ol>
+<li>A smart developer thought about IFFE, and the Module Pattern was born in JavaScript</li>
+<li>CommonJS and other libraries made improvements to IFFE, and solved the problems with using it to create modules &#8211; <em>like script files should be loaded in order correctly, and some other problems</em></li>
+<li>ES6 adopted the improvements from CommonJS et al, made some tweaks to it, and now we have module support in native JavaScript</li>
+</ol>
+
+<p>I&#8217;m sure there are tons of resources around the web if you want to know more details about how modules evolved in JavaScript, and how to do it, so I won&#8217;t include it in this post.</p>
+    </div>
+    
+    
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity="sha256-ArYoj81MNYRRZX8Q3F/3dgIp0D33UkO8517u01P0&#43;TU="></script>
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

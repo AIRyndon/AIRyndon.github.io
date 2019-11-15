@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction</title>
+    <link>https://angeloryndon.com/</link>
+    <description>Recent content on Introduction</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jul 2019 10:09:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My thoughts on the 6 week Chingu voyage</title>
+      <link>https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/</link>
+      <pubDate>Mon, 15 Jul 2019 10:09:12 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/</guid>
+      <description>&lt;p&gt;Today marks the end of my &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34;&gt;remote work with other developers&lt;/a&gt;. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;MVP (opens in a new tab)&#34; href=&#34;https://chingu-voyages.github.io/v9-geckos-team-16/&#34; target=&#34;_blank&#34;&gt;MVP&lt;/a&gt;. Our project needs UI and UX updates, and I&amp;#8217;ll work on it again sometime in the future. All in all, I am happy with how it turned out. I&amp;#8217;m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Modular Programming in JavaScript</title>
+      <link>https://angeloryndon.com/modular-programming-in-javascript/</link>
+      <pubDate>Sat, 22 Jun 2019 02:16:30 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/modular-programming-in-javascript/</guid>
+      <description>&lt;p&gt;I was learning ES6 about &lt;a href=&#34;https://angeloryndon.com/learn-javascript-again/&#34;&gt;two weeks ago&lt;/a&gt;, and it reminded me of how modular programming in JavaScript was done during the years prior. I&amp;#8217;m quite happy with how JavaScript has evolved, I would even say that I&amp;#8217;m starting to like it. Before we go into the &amp;#8220;How to do modular programming in JavaScript today&amp;#8221;, I would like to give my thoughts on modular programming first.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn JavaScript again</title>
+      <link>https://angeloryndon.com/learn-javascript-again/</link>
+      <pubDate>Sat, 08 Jun 2019 02:55:40 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/learn-javascript-again/</guid>
+      <description>&lt;p&gt;It is time to learn JavaScript again for me as I &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;just started (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34; target=&#34;_blank&#34;&gt;just started&lt;/a&gt; in a Chingu team project last week. Our team decided that we&amp;#8217;ll make something that is inspired by the &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Momentum (opens in a new tab)&#34; href=&#34;https://momentumdash.com/&#34; target=&#34;_blank&#34;&gt;Momentum&lt;/a&gt; browser extension. Now, on to the part where I write down what I learned this week.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working remotely with other developers</title>
+      <link>https://angeloryndon.com/working-remotely-with-other-developers/</link>
+      <pubDate>Sun, 02 Jun 2019 08:48:52 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/working-remotely-with-other-developers/</guid>
+      <description>&lt;p&gt;I forgot where I learned about &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Chingu (opens in a new tab)&#34; href=&#34;https://chingu.io/&#34; target=&#34;_blank&#34;&gt;Chingu&lt;/a&gt;, what I love about it though is the opportunity to be working remotely with other developers. We are on our first week in a 6-week team project and I&amp;#8217;m both anxious and excited about this opportunity.&lt;/p&gt;
+
+&lt;p&gt;I finished the &lt;a href=&#34;https://angeloryndon.com/portfolio/connect-four/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;prerequisite task (opens in a new tab)&#34;&gt;prerequisite task&lt;/a&gt; to enter the team project on the last day &amp;#8211; because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning ASP.NET Core</title>
+      <link>https://angeloryndon.com/learning-asp-net-core/</link>
+      <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/learning-asp-net-core/</guid>
+      <description>&lt;p&gt;For the last few days, I&amp;#8217;ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don&amp;#8217;t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I&amp;#8217;m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I&amp;#8217;ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Researching on a UWP application for a client</title>
+      <link>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</link>
+      <pubDate>Mon, 08 Apr 2019 22:20:48 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</guid>
+      <description>&lt;p&gt;Yesterday I started researching on a UWP application for a client of mine. This desktop app is supposed to save timesheets of current employees, and it lets them sign in and sign out of the workplace. The main purpose of this application is to save some paper.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Null Object Pattern in C#</title>
+      <link>https://angeloryndon.com/null-object-pattern-in-csharp/</link>
+      <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/null-object-pattern-in-csharp/</guid>
+      <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET Url rewrite module</title>
+      <link>https://angeloryndon.com/asp-net-url-rewrite-module/</link>
+      <pubDate>Fri, 07 Sep 2018 03:12:15 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/asp-net-url-rewrite-module/</guid>
+      <description>&lt;p&gt;I just received some feature requests from my client on &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;this project.&lt;/a&gt; The requests are about improving the site&amp;#8217;s SEO rating. After adding the features, the site is now in the top 5 of google search results for &amp;#8220;Auckland airport motel&amp;#8221;. I used the rewrite module it to move the site to SSL.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Started learning UWP and XAML</title>
+      <link>https://angeloryndon.com/learning-uwp-and-xaml/</link>
+      <pubDate>Mon, 11 Jun 2018 05:02:37 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/learning-uwp-and-xaml/</guid>
+      <description>&lt;p&gt;Around last week, I started learning &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/uwp/index&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;UWP&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;XAML.&lt;/a&gt; After watching some video series to get an idea about both, these were the first impressions I got:&lt;/p&gt;
+
+&lt;h4 id=&#34;xaml-is-easier-to-get-into-for-those-with-designer-backgrounds&#34;&gt;XAML is easier to get into for those with designer backgrounds&lt;/h4&gt;
+
+&lt;p&gt;In the web world, what XAML is fully capable of is when you use the trio of HTML,CSS, and JavaScript. Of course you have to know C# for those other use cases in your application. However, I can confirm that from a designer point of view, you can go a long way into making something without typing code or markup &amp;#8211; I still consider myself a bad designer by the way.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Comparison: WordPress and Umbraco</title>
+      <link>https://angeloryndon.com/comparison-wordpress-umbraco/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:59 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/comparison-wordpress-umbraco/</guid>
+      <description>&lt;p&gt;This post details my first impressions of &lt;a href=&#34;https://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://umbraco.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Umbraco.&lt;/a&gt; I recently learned how to use Umbraco in &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; of my projects, I also played around with WordPress in this blog(only as a power user though at the moment). Now let&amp;#8217;s take a look at what I believe are the pros and cons of each.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio 2017 cannot refresh credentials</title>
+      <link>https://angeloryndon.com/visual-studio-2017-cannot-refresh-credentials/</link>
+      <pubDate>Sun, 11 Jun 2017 21:07:21 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/visual-studio-2017-cannot-refresh-credentials/</guid>
+      <description>&lt;p&gt;This is a quick note when &lt;a href=&#34;http://www.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Visual Studio&lt;/a&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make sure Visual Studio is closed before doing all this&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Coding Bootcamp, should I have attended one?</title>
+      <link>https://angeloryndon.com/coding-bootcamp/</link>
+      <pubDate>Wed, 31 May 2017 21:15:50 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/coding-bootcamp/</guid>
+      <description>&lt;p&gt;From its name alone, a coding bootcamp tells you its intense. After attending &lt;a href=&#34;http://www.industryconnect.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; here in New Zealand, I&amp;#8217;ll list what I think were the major pros and cons for me.&lt;/p&gt;
+
+&lt;h3 id=&#34;pros&#34;&gt;PROS&lt;/h3&gt;
+
+&lt;h4 id=&#34;more-on-self-studying&#34;&gt;More on self studying&lt;/h4&gt;
+
+&lt;p&gt;I was exposed to a DIY environment &amp;#8211; well even the New Zealand work environment is a lot like this. You only ask questions when you get completely stuck. There is little to no hand holding involved. For some this could be a con, but for me it is a pro. Perhaps because I actually like studying and poking around stuff 🙂&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning about ASP.NET MVC 5 Identity</title>
+      <link>https://angeloryndon.com/mvc-5-identity/</link>
+      <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/mvc-5-identity/</guid>
+      <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I&amp;#8217;m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrating your Web App from IIS Express to IIS</title>
+      <link>https://angeloryndon.com/migrating-web-app-iis-express-to-iis/</link>
+      <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/migrating-web-app-iis-express-to-iis/</guid>
+      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I&amp;#8217;ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows Azure configuration for ASP.NET MVC</title>
+      <link>https://angeloryndon.com/windows-azure-configurations/</link>
+      <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/windows-azure-configurations/</guid>
+      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I&amp;#8217;m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won&amp;#8217;t forget that 🙂&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Automate deployment from Github to Windows Azure</title>
+      <link>https://angeloryndon.com/automate-deployment-github-windows-azure/</link>
+      <pubDate>Fri, 21 Apr 2017 10:18:16 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/automate-deployment-github-windows-azure/</guid>
+      <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this &amp;#8211;&lt;/p&gt;
+
+&lt;h4 id=&#34;keep-your-private-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://angeloryndon.com/about/</link>
+      <pubDate>Fri, 14 Apr 2017 05:37:02 +0000</pubDate>
+      
+      <guid>https://angeloryndon.com/about/</guid>
+      <description>Hello and thank you for stopping by! The posts here are mostly about anything I found interesting, or something I am currently doing. Some of the projects I worked on are here as well, and I hope something here becomes useful to you.
+Since I was a kid, I have been fascinated by computers, I remember regularly renting in a computer shop to play games and tinker around. Fast forward to now and I am living my dream.</description>
+    </item>
+    
+  </channel>
+</rss>
