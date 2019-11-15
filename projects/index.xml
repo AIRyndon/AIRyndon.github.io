@@ -12,12 +12,36 @@
     
     
     <item>
+      <title>Connect Four</title>
+      <link>https://angeloryndon.com/projects/connect-four/</link>
+      <pubDate>Sun, 02 Jun 2019 12:18:34 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/projects/connect-four/</guid>
+      <description>View the project
+Challenge Create a Web based Connect Four game. This is required to enter the Chingu team project.
+Response I used native JavaScript, some CSS and HTML for this project. As I was pressed for time while doing this, I used the ASP.NET Core boilerplate in Visual Studio. I believe that is a little overkill for a project of this scope, but I just wanted to get it done quickly.</description>
+    </item>
+    
+    <item>
+      <title>Auckland Airport Motel</title>
+      <link>https://angeloryndon.com/projects/auckland-airport-motel/</link>
+      <pubDate>Tue, 21 Nov 2017 12:00:40 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/projects/auckland-airport-motel/</guid>
+      <description>View the project
+Challenge Build a responsive website for Auckland Airport Motel. The owner also wants to be able to add or edit text and images on the website.
+Response Since the client wants to add or edit content, a CMS came to my mind. I didn’t know how to develop a website using a CMS during this time so I quickly researched one. I decided on using Umbraco CMS because</description>
+    </item>
+    
+    <item>
       <title>Middlemore Motel</title>
       <link>https://angeloryndon.com/projects/middlemore-motel/</link>
-      <pubDate>Thu, 15 Jun 2017 21:29:39 +1300</pubDate>
+      <pubDate>Wed, 14 Jun 2017 21:29:39 +1300</pubDate>
       
       <guid>https://angeloryndon.com/projects/middlemore-motel/</guid>
-      <description>Middlemore Motel A website I built for a motel in Auckland. This is the first project I built when I tried freelancing, I didn&amp;rsquo;t use a CMS as the client said he would rarely update the site&amp;rsquo;s content. I decided to just use ASP.NET, and plain HTML, CSS, and a little JavaScript</description>
+      <description>View the project
+Challenge Rebuild the website of Middlemore Motel. Make the site responsive and user-friendly.
+Response This is a simple website and I want to use just the right tool to complete the task, I didn&amp;rsquo;t use a CMS as the client said he would rarely update the site&amp;rsquo;s content. For development I used – ASP.NET MVC, Javascript, and Bootstrap SASS. I then used Git for version control.</description>
     </item>
     
   </channel>
