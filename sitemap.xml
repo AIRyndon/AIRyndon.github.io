@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://angeloryndon.com/projects/</loc>
+    <lastmod>2018-04-13T08:51:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://angeloryndon.com/posts/</loc>
+    <lastmod>2018-09-25T04:43:12+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://angeloryndon.com/</loc>
     <lastmod>2019-07-15T10:09:12+00:00</lastmod>
   </url>
@@ -73,11 +83,6 @@
   </url>
   
   <url>
-    <loc>https://angeloryndon.com/blog/</loc>
-    <lastmod>2018-09-25T04:43:12+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://angeloryndon.com/asp-net-url-rewrite-module/</loc>
     <lastmod>2018-09-07T03:12:15+00:00</lastmod>
   </url>
@@ -90,11 +95,6 @@
   <url>
     <loc>https://angeloryndon.com/comparison-wordpress-umbraco/</loc>
     <lastmod>2018-04-17T00:00:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://angeloryndon.com/projects/</loc>
-    <lastmod>2018-04-13T08:51:42+00:00</lastmod>
   </url>
   
   <url>
@@ -145,11 +145,6 @@
   <url>
     <loc>https://angeloryndon.com/automate-deployment-github-windows-azure/</loc>
     <lastmod>2017-04-21T10:18:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://angeloryndon.com/about/</loc>
-    <lastmod>2017-04-14T05:37:02+00:00</lastmod>
   </url>
   
 </urlset>
