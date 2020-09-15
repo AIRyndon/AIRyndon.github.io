@@ -17,7 +17,7 @@
       <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
       
       <guid>https://angeloryndon.com/windows-azure-configurations/</guid>
-      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I&amp;#8217;m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won&amp;#8217;t forget that 🙂&lt;/p&gt;</description>
+      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,9 +26,8 @@
       <pubDate>Fri, 21 Apr 2017 10:18:16 +0000</pubDate>
       
       <guid>https://angeloryndon.com/automate-deployment-github-windows-azure/</guid>
-      <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this &amp;#8211;&lt;/p&gt;
-
-&lt;h4 id=&#34;keep-your-private-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/h4&gt;</description>
+      <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
+&lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/h4&gt;</description>
     </item>
     
   </channel>

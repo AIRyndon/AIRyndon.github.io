@@ -17,7 +17,7 @@
       <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
       
       <guid>https://angeloryndon.com/migrating-web-app-iis-express-to-iis/</guid>
-      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I&amp;#8217;ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
     </item>
     
   </channel>

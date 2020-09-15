@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website">
 <title>
-Visual Studio 2017 cannot refresh credentials - Angelo Ryndon
+ - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Visual Studio 2017 cannot refresh credentials - Angelo Ryndon" />
+        <meta property="og:title" content=" - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website"/>
-<meta property="og:url" content="https://angeloryndon.com/visual-studio-2017-cannot-refresh-credentials/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/new-post/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -55,8 +55,10 @@ Visual Studio 2017 cannot refresh credentials - Angelo Ryndon
             
             <div class="container hero  fade-in one ">
                 
-                <h1 class="bold-title is-1">Visual Studio 2017 cannot refresh credentials</h1>
-                
+
+    <h1 class="bold-title is-1">Posts</h1>
+
+
             </div>
             
             <div class="section  fade-in two ">
@@ -144,24 +146,69 @@ Visual Studio 2017 cannot refresh credentials - Angelo Ryndon
 
 
                 
+    <div class="container">
+        <h2 class="title is-1 top-pad strong-post-title">
+            <a href="https://angeloryndon.com/blog/new-post/"></a>
+        </h2>
+        <div class="post-data">
+            
+            2 minutes read
+        </div>
+        
+        <div class="blog-share">
+            Share this:
+            
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%20https%3a%2f%2fangeloryndon.com%2fblog%2fnew-post%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+            
+            
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2fblog%2fnew-post%2f"  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fab fa-facebook-f"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+            
+            
+            
+        </div>
+        
+        
+    </div>
+    
     <div class="container markdown top-pad">
-        <p>This is a quick note when <!-- raw HTML omitted -->Visual Studio<!-- raw HTML omitted --> 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.</p>
-<p><strong>Make sure Visual Studio is closed before doing all this</strong></p>
-<ol>
-<li>
-<p>Go to %localappdata%/.IdentityService</p>
-</li>
-<li>
-<p>Delete IdentityServiceAdalCache.cache (You can also Delete the .IdentityService folder if you like)</p>
-</li>
-<li>
-<p>Restart computer for good measure if you like</p>
-</li>
-<li>
-<p>Reenter credentials in Visual Studio ( sometimes you can delete the account first before reentering it again)</p>
-</li>
-</ol>
-<p>All done 🙂</p>
+        <p>Migrate Asp.net MVC that references .net standard 2.0 from version 4.6 to 4.8</p>
+<blockquote>
+<p>Change project target framework to 4.8
+Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it. I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
+If this project is being referenced by other projects - remove the reference and add it again
+If you get a &ldquo;Could not load file or assembly error&rdquo;
+&gt; Add binding redirect, to do this add these to the project's .csproj file
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+</blockquote>
+<pre><code>&gt; Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file.
+&gt; look for the &lt;runtime&gt; node inside that file and copy all the &lt;assemblyBinding&gt; into the project's Web.config &lt;runtime&gt; node (btw, the runtime node should usually just be a direct child of the &lt;configuration&gt; node)
+&gt; You can now delete the &lt;PropertyGroup&gt; node you just added earlier
+</code></pre>
+<blockquote>
+<p>If you get errors in your razor .cshtml that it can't recognize types from your .netstandard project
+&gt; In the project's Web.config, go in &lt;system.web&gt; and add</p>
+</blockquote>
+<pre><code>&lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
+  &lt;assemblies&gt;
+    &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
+  &lt;/assemblies&gt;
+&lt;/compilation&gt;
+</code></pre>
+<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don't need to delete the lines below from the .csproj file - so we won't need to copy the <!-- raw HTML omitted --> into Web.config (I didn't test this though) 
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+
     </div>
     
     

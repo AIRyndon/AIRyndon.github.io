@@ -14,7 +14,12 @@
   
   <url>
     <loc>https://angeloryndon.com/</loc>
-    <lastmod>2019-07-15T10:09:12+00:00</lastmod>
+    <lastmod>2020-09-15T22:49:36+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://angeloryndon.com/projects/pomodoro/</loc>
+    <lastmod>2020-09-15T22:49:36+12:00</lastmod>
   </url>
   
   <url>
@@ -103,11 +108,6 @@
   </url>
   
   <url>
-    <loc>https://angeloryndon.com/projects/auckland-airport-motel/</loc>
-    <lastmod>2017-11-21T12:00:40+13:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://angeloryndon.com/projects/middlemore-motel/</loc>
     <lastmod>2017-06-14T21:29:39+13:00</lastmod>
   </url>
@@ -160,6 +160,11 @@
   <url>
     <loc>https://angeloryndon.com/automate-deployment-github-windows-azure/</loc>
     <lastmod>2017-04-21T10:18:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://angeloryndon.com/blog/new-post/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

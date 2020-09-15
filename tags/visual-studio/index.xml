@@ -17,8 +17,7 @@
       <pubDate>Sun, 11 Jun 2017 21:07:21 +0000</pubDate>
       
       <guid>https://angeloryndon.com/visual-studio-2017-cannot-refresh-credentials/</guid>
-      <description>&lt;p&gt;This is a quick note when &lt;a href=&#34;http://www.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Visual Studio&lt;/a&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
-
+      <description>&lt;p&gt;This is a quick note when &lt;!-- raw HTML omitted --&gt;Visual Studio&lt;!-- raw HTML omitted --&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Make sure Visual Studio is closed before doing all this&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -28,7 +27,7 @@
       <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
       
       <guid>https://angeloryndon.com/migrating-web-app-iis-express-to-iis/</guid>
-      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I&amp;#8217;ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -39,7 +39,7 @@ Learning ASP.NET Core - Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.2fde61dbf15912f3c112586d42cd1f1f09b0a6fc1341d8a6b92fcf08aba52011.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.cd1625c7d9476ab31916b7a9c1fbe176e25f49a6b7c344c27c5a1125db009573.css" integrity="" crossorigin="anonymous" media="screen">
 
 
 
@@ -145,27 +145,17 @@ Learning ASP.NET Core - Angelo Ryndon
 
                 
     <div class="container markdown top-pad">
-        <p>For the last few days, I&#8217;ve started learning ASP.NET Core. After the initial <a rel="noreferrer noopener" aria-label="research (opens in a new tab)" href="https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/" target="_blank">research</a> on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don&#8217;t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I&#8217;m currently watching a Pluralsight <a rel="noreferrer noopener" aria-label="course (opens in a new tab)" href="https://www.pluralsight.com/courses/aspnet-core-fundamentals" target="_blank">course</a> about it by Scott Allen, I&#8217;ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.</p>
-
-<h2 id="quick-overview-of-model-binding-in-asp-net-core">Quick overview of Model Binding in ASP.NET Core</h2>
-
+        <p>For the last few days, I’ve started learning ASP.NET Core. After the initial <!-- raw HTML omitted -->research<!-- raw HTML omitted --> on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight <!-- raw HTML omitted -->course<!-- raw HTML omitted --> about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.</p>
+<h2 id="quick-overview-of-model-binding-in-aspnet-core">Quick overview of Model Binding in ASP.NET Core</h2>
 <p>The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.</p>
-
-<p>When you make an http request (invoke a method from the PageModel/Controller), the framework&#8217;s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.</p>
-
+<p>When you make an http request (invoke a method from the PageModel/Controller), the framework’s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.</p>
 <p>When the parameter to the method called by the framework (OnGet for example) does not contain anything, ASP.NET Core will default to null if the parameter is a reference type, and throw an exception if the parameter is a value type.</p>
-
 <h2 id="tag-helpers">Tag Helpers</h2>
-
-<p>These tag helpers are new to me &#8211; I don&#8217;t remember it existed before ASP.NET Core &#8211; and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-<anything>.</p>
-
-<p>The <strong>asp-page</strong> tag helper sets an anchor tag to point to a Razor page. On the other hand, the <strong>asp-for</strong> tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don&#8217;t need to type Model.<Property> to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.</p>
-
-<p>First, it sets the html input&#8217;s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request &#8211; <strong>input model</strong>. Second, it fills the html input&#8217;s value when the server populates the page (responds to the request) with values from the Page Model property &#8211; <strong>output model</strong>. The Input model and Output model are two new helpful terms I got from Scott here.</p>
-
-<p>Last, we have <strong>asp-route-<anything>,</strong> this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The <anything> should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.</p>
-
-<p>That&#8217;s it for this post. Now I&#8217;ll continue the course and will likely create a new post about what I learned.</p>
+<p>These tag helpers are new to me – I don’t remember it existed before ASP.NET Core – and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-<!-- raw HTML omitted -->.</p>
+<p>The <strong>asp-page</strong> tag helper sets an anchor tag to point to a Razor page. On the other hand, the <strong>asp-for</strong> tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don’t need to type Model.<!-- raw HTML omitted --> to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.</p>
+<p>First, it sets the html input’s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request – <strong>input model</strong>. Second, it fills the html input’s value when the server populates the page (responds to the request) with values from the Page Model property – <strong>output model</strong>. The Input model and Output model are two new helpful terms I got from Scott here.</p>
+<p>Last, we have <strong>asp-route-<!-- raw HTML omitted -->,</strong> this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The <!-- raw HTML omitted --> should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.</p>
+<p>That’s it for this post. Now I’ll continue the course and will likely create a new post about what I learned.</p>
     </div>
     
     
@@ -190,7 +180,7 @@ Learning ASP.NET Core - Angelo Ryndon
     <div class="container has-text-centered">
     
         <span class="footer-text">
-            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><!-- raw HTML omitted --><!-- raw HTML omitted --> and <!-- raw HTML omitted --><!-- raw HTML omitted --></a> by open source contributors.
         </span>
     
     </div>
