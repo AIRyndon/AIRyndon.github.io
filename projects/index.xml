@@ -17,7 +17,8 @@
       <pubDate>Tue, 15 Sep 2020 22:49:36 +1200</pubDate>
       
       <guid>https://angeloryndon.com/projects/pomodoro/</guid>
-      <description>View the repoChallenge Create a Web based project using Typescript, React, Azure, and ASP.NET Core. This is required to pass phase two of the Microsoft Student Accelerator internship I attended on my first year&#39;s summer break.
+      <description>View the repo
+Challenge Create a Web based project using Typescript, React, Azure, and ASP.NET Core. This is required to pass phase two of the Microsoft Student Accelerator internship I attended on my first year&#39;s summer break.
 Response I quickly read about the required tech-stack - I studied a bit of Typescript and React during those couple of weeks (luckily I already have some background with C# and JavaScript which made this a bit more manageable).</description>
     </item>
     
@@ -27,7 +28,8 @@ Response I quickly read about the required tech-stack - I studied a bit of Types
       <pubDate>Sun, 02 Jun 2019 12:18:34 +1300</pubDate>
       
       <guid>https://angeloryndon.com/projects/connect-four/</guid>
-      <description>View the projectChallenge Create a Web based Connect Four game. This is required to enter the Chingu team project.
+      <description>View the project
+Challenge Create a Web based Connect Four game. This is required to enter the Chingu team project.
 Response I used native JavaScript, some CSS and HTML for this project. As I was pressed for time while doing this, I used the ASP.NET Core boilerplate in Visual Studio. I believe that is a little overkill for a project of this scope, but I just wanted to get it done quickly.</description>
     </item>
     
@@ -37,7 +39,8 @@ Response I used native JavaScript, some CSS and HTML for this project. As I was 
       <pubDate>Wed, 14 Jun 2017 21:29:39 +1300</pubDate>
       
       <guid>https://angeloryndon.com/projects/middlemore-motel/</guid>
-      <description>View the projectChallenge Rebuild the website of Middlemore Motel. Make the site responsive and user-friendly.
+      <description>View the project
+Challenge Rebuild the website of Middlemore Motel. Make the site responsive and user-friendly.
 Response This is a simple website and I want to use just the right tool to complete the task, I didn&#39;t use a CMS as the client said he would rarely update the site&#39;s content. For development I used – ASP.NET MVC, Javascript, and Bootstrap SASS. I then used Git for version control.
 I also used 3rd party services – SocketLabs, Google API, and Welman Booking Engine.</description>
     </item>

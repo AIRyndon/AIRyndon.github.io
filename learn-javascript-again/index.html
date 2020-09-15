@@ -145,43 +145,87 @@ Learn JavaScript again - Angelo Ryndon
 
                 
     <div class="container markdown top-pad">
-        <p>It is time to learn JavaScript again for me as I <!-- raw HTML omitted -->just started<!-- raw HTML omitted --> in a Chingu team project last week. Our team decided that we’ll make something that is inspired by the <!-- raw HTML omitted -->Momentum<!-- raw HTML omitted --> browser extension. Now, on to the part where I write down what I learned this week.</p>
+        <p>It is time to learn JavaScript again for me as I <a rel="noreferrer noopener" aria-label="just started (opens in a new tab)" href="https://angeloryndon.com/working-remotely-with-other-developers/" target="_blank">just started</a> in a Chingu team project last week. Our team decided that we’ll make something that is inspired by the <a rel="noreferrer noopener" aria-label="Momentum (opens in a new tab)" href="https://momentumdash.com/" target="_blank">Momentum</a> browser extension. Now, on to the part where I write down what I learned this week.</p>
 <h2 id="the-let-and-const-keywords">The let and const keywords</h2>
-<p>I am happy that our team decided to use native JavaScript for this project, although I don’t mind if some of my teammates would use a library to build a feature. As the whole point of Chingu anyway is for people to learn and collaborate. I am even happier that I now have to worry less about the <!-- raw HTML omitted -->hoisting issue<!-- raw HTML omitted --> that put me off JavaScript before. That is all thanks to the <!-- raw HTML omitted -->let<!-- raw HTML omitted --> and <!-- raw HTML omitted -->const<!-- raw HTML omitted --> keywords. YAY!</p>
+<p>I am happy that our team decided to use native JavaScript for this project, although I don’t mind if some of my teammates would use a library to build a feature. As the whole point of Chingu anyway is for people to learn and collaborate. I am even happier that I now have to worry less about the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1" target="_blank">hoisting issue</a> that put me off JavaScript before. That is all thanks to the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank">let</a> and <a rel="noreferrer noopener" aria-label="const (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank">const</a> keywords. YAY!</p>
 <p>When you declare a variable using the let keyword, it keeps the variable’s scope to where it was declared, unlike var where it hoists it up to the global or function scope. <strong>Using let or const makes block scope real in JavaScript</strong>. Quirks that happened to me before with the <em>var keyword</em> can now be avoided:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="EnlighterJSRAW" data-enlighter-language="js">function Test(){
+    for (var index = 0; index &lt; 3; index++) {
+        
+        for (var index = 0; index &lt; 3; index++) {
+            
+            console.log(`Inner loop ${index}`);          
+        }
+
+        console.log(`Outer loop ${index}`);
+    }
+};
+</pre>
+<div class="wp-block-image">
+  <figure class="aligncenter"><img src="https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var.jpg" alt="" class="wp-image-930" srcset="https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var.jpg 612w, https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var-300x154.jpg 300w, https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var-500x257.jpg 500w" sizes="(max-width: 612px) 100vw, 612px" /><figcaption>Old JavaScript making me cringe&#8230;</figcaption></figure>
+</div>
 <p>Back then, JavaScript does not have block scope, it has function scope. If you come from a language that is block scoped, the behavior above is confusing. JavaScript’s little goblins take all those variable declarations and puts them at the top – either global, or at the start of a function. What really happened above was there was only one index variable in the Test function, even though you intended to have two. <em>What made me mad with JavaScript before, is why didn’t it complain about the same variable names if it would put them all up there anyway?!</em> It printed 3 once because that is the value of index when the inner loop finished. Because of this behavior, you might be unaware that you created an infinite loop when you have nested for loops – <em>it sure caught me before.</em> Compare that to the code below:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="EnlighterJSRAW" data-enlighter-language="js">function TestTwo(){
+    for (let index = 0; index &lt; 3; index++) {
+        
+        for (let index = 0; index &lt; 3; index++) {
+            
+            console.log(`Inner loop ${index}`);          
+        }
+
+        console.log(`Outer loop ${index}`);
+    }
+};</pre>
+<div class="wp-block-image">
+  <figure class="aligncenter"><img src="https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg" alt="" class="wp-image-935" srcset="https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg 512w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-300x261.jpg 300w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-500x436.jpg 500w" sizes="(max-width: 512px) 100vw, 512px" /><figcaption>Block scope as it should be</figcaption></figure>
+</div>
 <p>Using the <em>let keyword</em> allows you to write code that executes the way you think it should. On the other hand, the <em>const keyword</em> is much like <em>let</em>, but the variable cannot be reassigned, I think this feels correct because that is what a constant should be. Note to self – <em>use const for variables that most likely will not be reassigned (functions, etc) and use let for those variables that you know will be.</em></p>
 <h2 id="the-fat-arrow-function">The fat arrow function</h2>
-<p>The <!-- raw HTML omitted -->arrow function<!-- raw HTML omitted --> is another lovely addition for me. Since arrow functions do not have their own <em>this</em>, it will use the <em>this</em> of whatever function or object it was declared in. That change is important if you want to write in an Object Oriented style in my opinion.</p>
+<p>The <a rel="noreferrer noopener" aria-label="arrow function (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">arrow function</a> is another lovely addition for me. Since arrow functions do not have their own <em>this</em>, it will use the <em>this</em> of whatever function or object it was declared in. That change is important if you want to write in an Object Oriented style in my opinion.</p>
 <p>Instead of using an old hack like below, where you save the value of <em>this</em> to another variable to have access to it later:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="EnlighterJSRAW" data-enlighter-language="js">function Library() {
+    var me = this;
+    me.books = 0;
+    
+    setInterval(function addBook() {
+        
+        me.books++;
+    }, 1000);
+}</pre>
 <p>You can write code like the one below:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>To me, that feels more object oriented, and you don’t have to write a little hack to achieve it. You also save typing some characters with arrow functions, and when you are writing function expressions, callback functions after an ajax call, etc. those saved characters all add up. Note, There are two rules from an <!-- raw HTML omitted -->excellent post<!-- raw HTML omitted --> about arrow functions that I agree with:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="js">function Library() {
+    this.books = 0;
+
+    setInterval(() =&gt; {
+
+        this.books++;
+    }, 1000);
+}</pre>
+<p>To me, that feels more object oriented, and you don’t have to write a little hack to achieve it. You also save typing some characters with arrow functions, and when you are writing function expressions, callback functions after an ajax call, etc. those saved characters all add up. Note, There are two rules from an <a rel="noreferrer noopener" aria-label=" excellent post (opens in a new tab)" href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/" target="_blank">excellent post</a> about arrow functions that I agree with:</p>
 <p>In ES6, <code>this</code> hacks mostly go away if you follow these rules:</p>
 <ul>
 <li>Use non-arrow functions for methods that will be called using the <code>object.method()</code> syntax. Those are the functions that will receive a <em>meaningful</em> <code>this</code> value from their caller.</li>
 <li>Use arrow functions for everything else.</li>
 </ul>
 <h2 id="string-interpolation">String Interpolation</h2>
-<p><!-- raw HTML omitted -->String interpolation<!-- raw HTML omitted --> is one of those parts that I dread about old JavaScript. I’m sure any person that wrote some JavaScript before needed to write code like the one below:</p>
-<!-- raw HTML omitted -->
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank" rel="noreferrer noopener" aria-label="String interpolation (opens in a new tab)">String interpolation</a> is one of those parts that I dread about old JavaScript. I’m sure any person that wrote some JavaScript before needed to write code like the one below:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="js">'Why on earth ' + (is + JS + string + interpolation) + ' like this ' + (junk + here) + '.'</pre>
 <p>This much awaited change is what this language <strong>needed</strong>. Now you can write strings like this:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="EnlighterJSRAW" data-enlighter-language="js">function add(){
+    let a = 1;
+    let b = 2;
+    let total = a + b;
+    
+    console.log(`${total} is the result of adding ${a} and ${b}.`);
+}
+</pre>
 <p>Note that there are other uses for this <em>template literals</em> as they are called in JavaScript, just the one above is already a big win though.</p>
 <h2 id="unfortunately-there-is-still-no-pass-by-reference-option-in-javascript">Unfortunately, there is still no pass by reference option in JavaScript</h2>
-<p>I had an issue with the pomodoro timer that I was building for our team project, I only need to pass something by reference to persist changes to its value. I asked in Chingu’s chatroom and one of my colleagues said “Yes! Pass by reference is in JS when you pass objects, but not primitive types”. My colleague gave a <!-- raw HTML omitted -->blog post<!-- raw HTML omitted --> to support his statement – <em>which is why we should always take whatever we read online with a few cups of rice.</em></p>
+<p>I had an issue with the pomodoro timer that I was building for our team project, I only need to pass something by reference to persist changes to its value. I asked in Chingu’s chatroom and one of my colleagues said “Yes! Pass by reference is in JS when you pass objects, but not primitive types”. My colleague gave a <a rel="noreferrer noopener" aria-label="blog post (opens in a new tab)" href="https://medium.com/nodesimplified/javascript-pass-by-value-and-pass-by-reference-in-javascript-fcf10305aa9c" target="_blank">blog post</a> to support his statement – <em>which is why we should always take whatever we read online with a few cups of rice.</em></p>
 <p>I knew before that JS does not have this in the language, and I was thrilled to test if this exists now. Below is a quick test code in a browser’s console:</p>
-<!-- raw HTML omitted -->
+<div class="wp-block-image">
+  <figure class="aligncenter"><img src="https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg" alt="" class="wp-image-944" srcset="https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg 381w, https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript-300x230.jpg 300w" sizes="(max-width: 381px) 100vw, 381px" /></figure>
+</div>
 <p>Sadly, we can see in that image that there is still no pass by reference in JavaScript – <em>I hope I’m wrong though or that this feature gets added later.</em> The first arrow above points to where the passed argument is assigned to a new and different object. The second arrow points to the call to this function with <em>object a</em> passed to it, and the third arrow points to where the content of <em>object a</em> is printed out after passing it to the function. We can see here that outside the function’s scope, the changes to <em>object a</em> does not persist. That proves to me that even for objects, JavaScript still passes by value.</p>
 <p>I think the confusion happens when it comes to reference types because when these are passed to functions, by default a copy of the reference – <em>a pointer</em> – is created (in JavaScript and C# anyway). Since changes to the value of an item (object properties for instance) that a reference <strong>points to</strong> will be visible to all other pointers, this could be confusing, as it may seem that changes to the object inside the function persists outside of it.</p>
     </div>
@@ -208,7 +252,7 @@ Learn JavaScript again - Angelo Ryndon
     <div class="container has-text-centered">
     
         <span class="footer-text">
-            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><!-- raw HTML omitted --><!-- raw HTML omitted --> and <!-- raw HTML omitted --><!-- raw HTML omitted --></a> by open source contributors.
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
         </span>
     
     </div>

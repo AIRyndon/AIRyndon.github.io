@@ -184,10 +184,10 @@ Rebuild the project - if you get a warning about a package that needs to be rein
 If this project is being referenced by other projects - remove the reference and add it again
 If you get a &ldquo;Could not load file or assembly error&rdquo;
 &gt; Add binding redirect, to do this add these to the project's .csproj file
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
-<!-- raw HTML omitted --></p>
+<PropertyGroup>
+<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+</PropertyGroup></p>
 </blockquote>
 <pre><code>&gt; Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file.
 &gt; look for the &lt;runtime&gt; node inside that file and copy all the &lt;assemblyBinding&gt; into the project's Web.config &lt;runtime&gt; node (btw, the runtime node should usually just be a direct child of the &lt;configuration&gt; node)
@@ -203,11 +203,11 @@ If you get a &ldquo;Could not load file or assembly error&rdquo;
   &lt;/assemblies&gt;
 &lt;/compilation&gt;
 </code></pre>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don't need to delete the lines below from the .csproj file - so we won't need to copy the <!-- raw HTML omitted --> into Web.config (I didn't test this though) 
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->true<!-- raw HTML omitted -->
-<!-- raw HTML omitted --></p>
+<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don't need to delete the lines below from the .csproj file - so we won't need to copy the <assemblyBindings> into Web.config (I didn't test this though) 
+<PropertyGroup>
+<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+</PropertyGroup></p>
 
     </div>
     
@@ -233,7 +233,7 @@ If you get a &ldquo;Could not load file or assembly error&rdquo;
     <div class="container has-text-centered">
     
         <span class="footer-text">
-            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><!-- raw HTML omitted --><!-- raw HTML omitted --> and <!-- raw HTML omitted --><!-- raw HTML omitted --></a> by open source contributors.
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
         </span>
     
     </div>
