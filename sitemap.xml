@@ -14,7 +14,12 @@
   
   <url>
     <loc>https://angeloryndon.com/</loc>
-    <lastmod>2020-09-15T22:49:36+12:00</lastmod>
+    <lastmod>2020-11-08T11:56:35+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/</loc>
+    <lastmod>2020-11-08T11:56:35+13:00</lastmod>
   </url>
   
   <url>
@@ -160,10 +165,6 @@
   <url>
     <loc>https://angeloryndon.com/automate-deployment-github-windows-azure/</loc>
     <lastmod>2017-04-21T10:18:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://angeloryndon.com/blog/new-post/</loc>
   </url>
   
 </urlset>

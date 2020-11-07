@@ -6,7 +6,19 @@
     <description>Recent content on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 22:49:36 +1200</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 11:56:35 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</title>
+      <link>https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/</link>
+      <pubDate>Sun, 08 Nov 2020 11:56:35 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/</guid>
+      <description>In Visual Studio, change project target framework to 4.8
+  Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.
+ I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects
+Remove the reference and add it again if you get a &amp;ldquo;Could not load file or assembly error&amp;rdquo;</description>
+    </item>
+    
     <item>
       <title>MSA Project</title>
       <link>https://angeloryndon.com/projects/pomodoro/</link>
@@ -191,16 +203,6 @@ I also used 3rd party services – SocketLabs, Google API, and Welman Booking En
       <guid>https://angeloryndon.com/automate-deployment-github-windows-azure/</guid>
       <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
 &lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://angeloryndon.com/blog/new-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/new-post/</guid>
-      <description>Migrate Asp.net MVC that references .net standard 2.0 from version 4.6 to 4.8
- Change project target framework to 4.8 Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it. I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects - remove the reference and add it again If you get a &amp;ldquo;Could not load file or assembly error&amp;rdquo; &amp;gt; Add binding redirect, to do this add these to the project&amp;rsquo;s .</description>
     </item>
     
   </channel>

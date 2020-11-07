@@ -145,16 +145,19 @@ Posts - Angelo Ryndon
         
         <h2 class="title is-2 top-pad">Latest Post</h2>
         
-        <div class="summary">Jul 15, 2019
+        <div class="summary">Nov 8, 2020
             <h3 class="title is-3 strong-post-title">
-                <a href="https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/">
-                    My thoughts on the 6 week Chingu voyage
+                <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">
+                    Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8
                 </a>
             </h3>
             <div class="markdown">
-                <p>Today marks the end of my <a rel="noreferrer noopener" href="https://angeloryndon.com/working-remotely-with-other-developers/">remote work with other developers</a>. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our <a rel="noreferrer noopener" aria-label="MVP (opens in a new tab)" href="https://chingu-voyages.github.io/v9-geckos-team-16/" target="_blank">MVP</a>. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.</p>
+                In Visual Studio, change project target framework to 4.8
+  Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.
+ I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects
+Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;
                 
-                <a href="https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/">Read more</a>
+                <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Read more</a>
                 
             </div>
         </div>
@@ -163,6 +166,10 @@ Posts - Angelo Ryndon
         
         <h2 class="title is-2 top-pad">All Posts</h2>
         
+    <li class="post-item">
+        <span><a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a></span> - <span>Nov 8, 2020</span>
+    </li>
+
     <li class="post-item">
         <span><a href="https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/">My thoughts on the 6 week Chingu voyage</a></span> - <span>Jul 15, 2019</span>
     </li>
@@ -225,10 +232,6 @@ Posts - Angelo Ryndon
 
     <li class="post-item">
         <span><a href="https://angeloryndon.com/automate-deployment-github-windows-azure/">Automate deployment from Github to Windows Azure</a></span> - <span>Apr 21, 2017</span>
-    </li>
-
-    <li class="post-item">
-        <span><a href="https://angeloryndon.com/blog/new-post/"></a></span>
     </li>
 
 
