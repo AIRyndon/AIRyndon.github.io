@@ -6,11 +6,7 @@
     <description>Recent content in Projects on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Apr 2018 08:51:42 +0000</lastBuildDate>
-    
-	<atom:link href="https://angeloryndon.com/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 13 Apr 2018 08:51:42 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MSA Project</title>
       <link>https://angeloryndon.com/projects/pomodoro/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://angeloryndon.com/projects/pomodoro/</guid>
       <description>View the repo
-Challenge Create a Web based project using Typescript, React, Azure, and ASP.NET Core. This is required to pass phase two of the Microsoft Student Accelerator internship I attended on my first year&#39;s summer break.
+Challenge Create a Web based project using Typescript, React, Azure, and ASP.NET Core. This is required to pass phase two of the Microsoft Student Accelerator internship I attended on my first year&amp;rsquo;s summer break.
 Response I quickly read about the required tech-stack - I studied a bit of Typescript and React during those couple of weeks (luckily I already have some background with C# and JavaScript which made this a bit more manageable).</description>
     </item>
     
@@ -41,7 +37,7 @@ Response I used native JavaScript, some CSS and HTML for this project. As I was 
       <guid>https://angeloryndon.com/projects/middlemore-motel/</guid>
       <description>View the project
 Challenge Rebuild the website of Middlemore Motel. Make the site responsive and user-friendly.
-Response This is a simple website and I want to use just the right tool to complete the task, I didn&#39;t use a CMS as the client said he would rarely update the site&#39;s content. For development I used – ASP.NET MVC, Javascript, and Bootstrap SASS. I then used Git for version control.
+Response This is a simple website and I want to use just the right tool to complete the task, I didn&amp;rsquo;t use a CMS as the client said he would rarely update the site&amp;rsquo;s content. For development I used – ASP.NET MVC, Javascript, and Bootstrap SASS. I then used Git for version control.
 I also used 3rd party services – SocketLabs, Google API, and Welman Booking Engine.</description>
     </item>
     

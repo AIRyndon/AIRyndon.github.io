@@ -39,7 +39,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.cd1625c7d9476ab31916b7a9c1fbe176e25f49a6b7c344c27c5a1125db009573.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.88f527276f54e7435c7a5df174d5a0d6a8ab589bc11c263599fadf15565d14b1.css" integrity="" crossorigin="anonymous" media="screen">
 
 
 
@@ -183,7 +183,7 @@
 Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it. I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
 If this project is being referenced by other projects - remove the reference and add it again
 If you get a &ldquo;Could not load file or assembly error&rdquo;
-&gt; Add binding redirect, to do this add these to the project's .csproj file
+&gt; Add binding redirect, to do this add these to the project&rsquo;s .csproj file
 <PropertyGroup>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
@@ -194,8 +194,8 @@ If you get a &ldquo;Could not load file or assembly error&rdquo;
 &gt; You can now delete the &lt;PropertyGroup&gt; node you just added earlier
 </code></pre>
 <blockquote>
-<p>If you get errors in your razor .cshtml that it can't recognize types from your .netstandard project
-&gt; In the project's Web.config, go in &lt;system.web&gt; and add</p>
+<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
+&gt; In the project&rsquo;s Web.config, go in &lt;system.web&gt; and add</p>
 </blockquote>
 <pre><code>&lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
   &lt;assemblies&gt;
@@ -203,7 +203,7 @@ If you get a &ldquo;Could not load file or assembly error&rdquo;
   &lt;/assemblies&gt;
 &lt;/compilation&gt;
 </code></pre>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don't need to delete the lines below from the .csproj file - so we won't need to copy the <assemblyBindings> into Web.config (I didn't test this though) 
+<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <assemblyBindings> into Web.config (I didn&rsquo;t test this though) 
 <PropertyGroup>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>

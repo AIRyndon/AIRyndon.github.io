@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Sep 2018 04:43:12 +0000</lastBuildDate>
-    
-	<atom:link href="https://angeloryndon.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 25 Sep 2018 04:43:12 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My thoughts on the 6 week Chingu voyage</title>
       <link>https://angeloryndon.com/my-thoughts-on-the-6-week-chingu-voyage/</link>
@@ -170,7 +166,7 @@
       
       <guid>https://angeloryndon.com/blog/new-post/</guid>
       <description>Migrate Asp.net MVC that references .net standard 2.0 from version 4.6 to 4.8
- Change project target framework to 4.8 Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it. I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects - remove the reference and add it again If you get a &amp;ldquo;Could not load file or assembly error&amp;rdquo; &amp;gt; Add binding redirect, to do this add these to the project&#39;s .</description>
+ Change project target framework to 4.8 Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it. I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects - remove the reference and add it again If you get a &amp;ldquo;Could not load file or assembly error&amp;rdquo; &amp;gt; Add binding redirect, to do this add these to the project&amp;rsquo;s .</description>
     </item>
     
   </channel>

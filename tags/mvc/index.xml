@@ -6,11 +6,7 @@
     <description>Recent content in MVC on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 May 2017 19:51:33 +0000</lastBuildDate>
-    
-	<atom:link href="https://angeloryndon.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 15 May 2017 19:51:33 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning about ASP.NET MVC 5 Identity</title>
       <link>https://angeloryndon.com/mvc-5-identity/</link>
