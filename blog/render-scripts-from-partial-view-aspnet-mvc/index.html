@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website">
 <title>
-Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon
+Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website"/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -148,23 +148,23 @@ Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - 
                 
     <div class="container">
         <h2 class="title is-1 top-pad strong-post-title">
-            <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+            <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a>
         </h2>
         <div class="post-data">
-            Nov 8, 2020 |
+            Nov 10, 2020 |
             2 minutes read
         </div>
         
         <div class="blog-share">
             Share this:
             
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Migrate%20Asp.net%20MVC%20that%20references%20.NET%20standard%202.0%20from%20version%204.6%20to%204.8%20https%3a%2f%2fangeloryndon.com%2fblog%2fmigrate-asp-net-mvc-to-net48%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Render%20scripts%20from%20Partial%20Views%20in%20ASP.NET%20MVC%205%20https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fab fa-twitter"></i>
                 <span class="hidden">Twitter</span>
             </a>
             
             
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2fblog%2fmigrate-asp-net-mvc-to-net48%2f"  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f"  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fab fa-facebook-f"></i>
                 <span class="hidden">Facebook</span>
             </a>
@@ -177,46 +177,85 @@ Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - 
     </div>
     
     <div class="container markdown top-pad">
-        <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
+        <h2 id="scenario">Scenario</h2>
+<p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
+<h2 id="issue">Issue</h2>
+<p>Partial Views in ASP.NET MVC do not support section areas</p>
+<pre><code>@section scripts{
+    //not supported in Partial Views :(
+}
 </code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
+<h2 id="workaround-one">Workaround One</h2>
+<ul>
+<li>Trigger a custom event when your ajax call has finished updating the page&rsquo;s html</li>
+<li>Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)</li>
 </ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
+<h4 id="sample-code">Sample Code</h4>
+<pre><code>public static firePartialViewEvent(): void
+{
+    /*
+    * longer way of writing is to maintain IE compatibility
+    * https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+    *
+    */
+    const loadEvent = document.createEvent('Event');
+    loadEvent.initEvent('finished:loading', true, true);
+    document.querySelector('body').dispatchEvent(loadEvent);
+}
+
+/**
+* Call this from the partial view's script, if doing an ajax request
+* @param script the partial view script to call
+*/
+public static loadPartialViewScript(script: () =&gt; void): void
+{
+    const body = document.querySelector('body');
+    const options: AddEventListenerOptions = {
+        once: true,
+    }
+
+    body.addEventListener('finished:loading', () =&gt;
+    {
+        script();
+    }, options);
+}
 </code></pre>
+<br/>
+<h4 id="usage">Usage</h4>
+<pre><code>//in your JavaScript/TypeScript file's ajax call
+$.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
+
+//in your Partial View
+@if (Request.IsAjaxRequest()) // you usually only want to call this in an ajax request where the main view is ideally not returned
+{
+    &lt;script&gt;
+        (() =&gt;
+        {
+            loadPartialViewScript(() =&gt; &lt;your partial view script&gt;);
+        })();
+    &lt;/script&gt;
+}
+//and in your main view you have the usual  @section scripts that will render the needed scripts of the Partial View (duplicate call)
+</code></pre>
+<br/>
+<h2 id="workaround-two">Workaround Two</h2>
+<ul>
+<li>put the IIFE that calls your partial view in a separate script file</li>
+<li>use <code>&lt;script defer&gt;</code> in the Partial View</li>
+</ul>
+<h4 id="sample-code-1">Sample Code</h4>
+<pre><code>//on a JS file somewhere (i.e partial-view-caller.js)
+(() =&gt; &lt;your partial view script&gt;)();
+
+//in your Partial View
+&lt;script src=&quot;~/partial-view-caller.js&quot; defer&gt;&lt;/script&gt;
+
+//you can actually just straight call your partial view script living in an external file - I just prefer having an initialization method :)
+</code></pre>
+<br/>
+<h4 id="conclusion">Conclusion</h4>
+<p>I personally prefer <strong>Workaround Two</strong> for its simplicity - however, I implemented <strong>Workaround One</strong> first - cause I&rsquo;m an idiot who didn&rsquo;t know how to properly use defer :D <br/>
+Maybe because I didn&rsquo;t need to worry about this in modern Javascript, or maybe because this is my first time working on a large (and aging) codebase.</p>
 
     </div>
     

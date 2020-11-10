@@ -39,7 +39,7 @@ Posts - Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.88f527276f54e7435c7a5df174d5a0d6a8ab589bc11c263599fadf15565d14b1.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.6dc03a29fbcd803fd50e842ab6c88f83f5dc02ce8fb3c13322ff7a983f0856fb.css" integrity="" crossorigin="anonymous" media="screen">
 
 
 
@@ -145,19 +145,18 @@ Posts - Angelo Ryndon
         
         <h2 class="title is-2 top-pad">Latest Post</h2>
         
-        <div class="summary">Nov 8, 2020
+        <div class="summary">Nov 10, 2020
             <h3 class="title is-3 strong-post-title">
-                <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">
-                    Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8
+                <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">
+                    Render scripts from Partial Views in ASP.NET MVC 5
                 </a>
             </h3>
             <div class="markdown">
-                In Visual Studio, change project target framework to 4.8
-  Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.
- I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed If this project is being referenced by other projects
-Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;
+                Scenario You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.
+Issue Partial Views in ASP.NET MVC do not support section areas
+@section scripts{ //not supported in Partial Views :( }  Workaround One  Trigger a custom event when your ajax call has finished updating the page&rsquo;s html Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)  Sample Code public static firePartialViewEvent(): void { /* * longer way of writing is to maintain IE compatibility * https://developer.
                 
-                <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Read more</a>
+                <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Read more</a>
                 
             </div>
         </div>
@@ -166,6 +165,10 @@ Remove the reference and add it again if you get a &ldquo;Could not load file or
         
         <h2 class="title is-2 top-pad">All Posts</h2>
         
+    <li class="post-item">
+        <span><a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a></span> - <span>Nov 10, 2020</span>
+    </li>
+
     <li class="post-item">
         <span><a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a></span> - <span>Nov 8, 2020</span>
     </li>
