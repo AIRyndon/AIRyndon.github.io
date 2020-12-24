@@ -13,9 +13,14 @@
       <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
       
       <guid>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</guid>
-      <description>Scenario You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.
-Issue Partial Views in ASP.NET MVC do not support section areas
-@section scripts{ //not supported in Partial Views :( }  Workaround One  Trigger a custom event when your ajax call has finished updating the page&amp;rsquo;s html Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)  Sample Code public static firePartialViewEvent(): void { /* * longer way of writing is to maintain IE compatibility * https://developer.</description>
+      <description>&lt;h2 id=&#34;scenario&#34;&gt;Scenario&lt;/h2&gt;
+&lt;p&gt;You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.&lt;/p&gt;
+&lt;h2 id=&#34;issue&#34;&gt;Issue&lt;/h2&gt;
+&lt;p&gt;Partial Views in ASP.NET MVC do not support section areas&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@section scripts{
+    //not supported in Partial Views :(
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -96,15 +101,6 @@ Response I used native JavaScript, some CSS and HTML for this project. As I was 
       
       <guid>https://angeloryndon.com/learning-asp-net-core/</guid>
       <description>&lt;p&gt;For the last few days, I’ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Researching on a UWP application for a client</title>
-      <link>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</link>
-      <pubDate>Mon, 08 Apr 2019 22:20:48 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</guid>
-      <description>&lt;p&gt;Yesterday I started researching on a UWP application for a client of mine. This desktop app is supposed to save timesheets of current employees, and it lets them sign in and sign out of the workplace. The main purpose of this application is to save some paper.&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -6,16 +6,7 @@
     <description>Recent content in UWP on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2019 22:20:48 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/uwp/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Researching on a UWP application for a client</title>
-      <link>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</link>
-      <pubDate>Mon, 08 Apr 2019 22:20:48 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</guid>
-      <description>&lt;p&gt;Yesterday I started researching on a UWP application for a client of mine. This desktop app is supposed to save timesheets of current employees, and it lets them sign in and sign out of the workplace. The main purpose of this application is to save some paper.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 11 Jun 2018 05:02:37 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/uwp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Started learning UWP and XAML</title>
       <link>https://angeloryndon.com/learning-uwp-and-xaml/</link>

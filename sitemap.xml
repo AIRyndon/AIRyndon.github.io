@@ -88,16 +88,6 @@
   </url>
   
   <url>
-    <loc>https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/</loc>
-    <lastmod>2019-04-08T22:20:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://angeloryndon.com/tags/uwp/</loc>
-    <lastmod>2019-04-08T22:20:48+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://angeloryndon.com/null-object-pattern-in-csharp/</loc>
     <lastmod>2018-10-04T09:28:49+00:00</lastmod>
   </url>
@@ -109,6 +99,11 @@
   
   <url>
     <loc>https://angeloryndon.com/learning-uwp-and-xaml/</loc>
+    <lastmod>2018-06-11T05:02:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://angeloryndon.com/tags/uwp/</loc>
     <lastmod>2018-06-11T05:02:37+00:00</lastmod>
   </url>
   

@@ -40,7 +40,7 @@ Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.6dc03a29fbcd803fd50e842ab6c88f83f5dc02ce8fb3c13322ff7a983f0856fb.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.13a39665d8dab425831a3954427af0982de0d930390f1f04d55e9396c54471cf.css" integrity="" crossorigin="anonymous" media="screen">
 
 
 
@@ -422,9 +422,14 @@ I then used an App Service and hosted the site on Windows Azure.</p>
             <div class="summary">Nov 10, 2020
                 <h3 class="title is-3 latest-post-title"><a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a></h3>
                     <div class="markdown">
-                    Scenario You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.
-Issue Partial Views in ASP.NET MVC do not support section areas
-@section scripts{ //not supported in Partial Views :( }  Workaround One  Trigger a custom event when your ajax call has finished updating the page&rsquo;s html Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)  Sample Code public static firePartialViewEvent(): void { /* * longer way of writing is to maintain IE compatibility * https://developer.
+                    <h2 id="scenario">Scenario</h2>
+<p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
+<h2 id="issue">Issue</h2>
+<p>Partial Views in ASP.NET MVC do not support section areas</p>
+<pre><code>@section scripts{
+    //not supported in Partial Views :(
+}
+</code></pre>
                     
                     <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Read more</a>
                     
@@ -432,7 +437,9 @@ Issue Partial Views in ASP.NET MVC do not support section areas
             </div>
             
         
-        
+    </div>
+</div>
+
         <div class="container has-text-centered top-pad">
             <a href="https://angeloryndon.com/blog/">All Posts</a>
         </div>
