@@ -23,7 +23,8 @@
       
       <guid>https://angeloryndon.com/automate-deployment-github-windows-azure/</guid>
       <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
-&lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/h4&gt;</description>
+
+&lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
   </channel>

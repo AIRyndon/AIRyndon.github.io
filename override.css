@@ -1,0 +1,15 @@
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s; 
+}
+.fade-in.one {
+    animation-delay: 0.2s; 
+}
+.fade-in.two {
+    animation-delay: 0.4s; 
+}
+.fade-in.three {
+    animation-delay: 0.6s;
+}

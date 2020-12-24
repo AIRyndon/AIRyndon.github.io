@@ -10,7 +10,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains some of his projects and blog posts">
 <title>
-Windows Azure configuration for ASP.NET MVC - Angelo Ryndon
+Windows Azure Configuration for a S P. N E T M v C - Angelo Ryndon
 </title>
 
 
@@ -39,11 +39,12 @@ Windows Azure configuration for ASP.NET MVC - Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.13a39665d8dab425831a3954427af0982de0d930390f1f04d55e9396c54471cf.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.b6abcbc8fc09b12d44c3c6de59e0af0834eec106fc4ce0238e296e9cf89fb818.css" integrity="sha256-tqvLyPwJsS1Ew8beWeCvCDTuwQb8TOAjjilunPifuBg=" crossorigin="anonymous" media="screen">
 
 
 
 
+    <link rel="stylesheet" href="/override.css" integrity="" crossorigin="anonymous" media="screen">
 
         
         
@@ -75,65 +76,36 @@ Windows Azure configuration for ASP.NET MVC - Angelo Ryndon
             
             
             
-            <a class="navbar-item" href="/">main</a>
-            
-
-            
-            
-
-            
+            <a class="navbar-item" href="/">
                 
-            
-
-            
+                Home
                 
-            
-
-            
+            </a>
             
             
+            
+            <a class="navbar-item" href="/projects/">
                 
+                Projects
                 
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
                 
+                Posts
                 
-                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
-                  
-                  Project
-                  
-                  </a>
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#contact">
                 
+                Contact
                 
+            </a>
             
-            
-            
-            
-            
-                
-                
-                
-                
-                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
-                  
-                  Back to Posts
-                  
-                  </a>
-                
-                
-            
-            
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="/#contact">Contact</a>
-            
-            
-
-            
-
             
             
         </div>
@@ -146,13 +118,15 @@ Windows Azure configuration for ASP.NET MVC - Angelo Ryndon
                 
     <div class="container markdown top-pad">
         <p>The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. <em>By convention, your action name in Web API should match/contain the Http Verb name.</em> I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂</p>
-<h4 id="windowsazureconfiguration">Windows Azure configuration</h4>
+
+<h4 id="windowsazureconfiguration" class="anchor-link"><a href="#windowsazureconfiguration">Windows Azure configuration</a></h4>
 <p>IIS or Windows Azure does not recognize DELETE, PUT and some other Http verbs by default. I found this fix online while trying to fix an Http 404 error from my Web API controller.</p>
 <p>Below is the exact code I used:</p>
 <p><code>&lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot;&lt;br /&gt; path=&quot;*.&quot;&lt;br /&gt; verb=&quot;GET,HEAD,POST,DEBUG,DELETE,PUT&quot;&lt;br /&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;br /&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;/handlers&gt;</code></p>
 <p>If the code above does not fix your issue, I read that removing “WebDav” and “WebDavModule” could help resolve the issue. Below is the complete snippet – <em>the snippet I used in bold</em></p>
 <p><code>&lt;system.webServer&gt;&lt;br /&gt; &lt;validation validateIntegratedModeConfiguration=&quot;false&quot; /&gt;&lt;br /&gt; &lt;modules runAllManagedModulesForAllRequests=&quot;true&quot;&gt;&lt;br /&gt; &lt;remove name=&quot;WebDAVModule&quot;/&gt;&lt;br /&gt; &lt;/modules&gt;&lt;br /&gt; &lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;WebDav&quot;/&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness32&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness64&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; type=&quot;System.Web.Handlers.TransferRequestHandler&quot; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot; path=&quot;*.&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;/handlers&gt;&lt;br /&gt; &lt;/system.webServer&gt;</code></p>
-<h4 id="usual-media-types-to-add-to-your-windows-azure-configuration">Usual Media types to add to your Windows Azure configuration</h4>
+
+<h4 id="usual-media-types-to-add-to-your-windows-azure-configuration" class="anchor-link"><a href="#usual-media-types-to-add-to-your-windows-azure-configuration">Usual Media types to add to your Windows Azure configuration</a></h4>
 <p>The code snippet below is for media types we usually use on the web to keep IIS or Windows Azure happy serving static content, you can add/remove stuff depending on your needs. _Please note this is also inside &lt;_system.webServer&gt; of your Web.config.</p>
 <p><code>&lt;staticContent&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.eot&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ttf&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.otf&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.woff&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.mp4&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ogv&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.webm&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.svg&quot;/&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.eot&quot; mimeType=&quot;application/vnd.ms-fontobject&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ttf&quot; mimeType=&quot;font/ttf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.otf&quot; mimeType=&quot;font/otf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff&quot; mimeType=&quot;application/font-woff&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff2&quot; mimeType=&quot;application/font-woff2&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.mp4&quot; mimeType=&quot;video/mp4&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ogv&quot; mimeType=&quot;video/ogg&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.webm&quot; mimeType=&quot;video/webm&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.svg&quot; mimeType=&quot;image/svg+xml&quot;/&gt;&lt;br /&gt; &lt;/staticContent&gt;</code></p>
 <p> </p>
@@ -194,7 +168,10 @@ Windows Azure configuration for ASP.NET MVC - Angelo Ryndon
         
 
 
-<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity=""></script>
+<script src="https://angeloryndon.com/js/bundle.8b77b63e5197d7777848e24ba70612839fe8d02e9599db63365da671cb233a8a.js" integrity="sha256-i3e2PlGX13d4SOJLpwYSg5/o0C6VmdtjNl2mccsjOoo="></script>
+
+
+
 
 
 

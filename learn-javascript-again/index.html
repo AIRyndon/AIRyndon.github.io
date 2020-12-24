@@ -10,7 +10,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains some of his projects and blog posts">
 <title>
-Learn JavaScript again - Angelo Ryndon
+Learn Java Script Again - Angelo Ryndon
 </title>
 
 
@@ -39,11 +39,12 @@ Learn JavaScript again - Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.13a39665d8dab425831a3954427af0982de0d930390f1f04d55e9396c54471cf.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.b6abcbc8fc09b12d44c3c6de59e0af0834eec106fc4ce0238e296e9cf89fb818.css" integrity="sha256-tqvLyPwJsS1Ew8beWeCvCDTuwQb8TOAjjilunPifuBg=" crossorigin="anonymous" media="screen">
 
 
 
 
+    <link rel="stylesheet" href="/override.css" integrity="" crossorigin="anonymous" media="screen">
 
         
         
@@ -75,65 +76,36 @@ Learn JavaScript again - Angelo Ryndon
             
             
             
-            <a class="navbar-item" href="/">main</a>
-            
-
-            
-            
-
-            
+            <a class="navbar-item" href="/">
                 
-            
-
-            
+                Home
                 
-            
-
-            
+            </a>
             
             
+            
+            <a class="navbar-item" href="/projects/">
                 
+                Projects
                 
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
                 
+                Posts
                 
-                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
-                  
-                  Project
-                  
-                  </a>
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#contact">
                 
+                Contact
                 
+            </a>
             
-            
-            
-            
-            
-                
-                
-                
-                
-                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
-                  
-                  Back to Posts
-                  
-                  </a>
-                
-                
-            
-            
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="/#contact">Contact</a>
-            
-            
-
-            
-
             
             
         </div>
@@ -146,7 +118,8 @@ Learn JavaScript again - Angelo Ryndon
                 
     <div class="container markdown top-pad">
         <p>It is time to learn JavaScript again for me as I <a rel="noreferrer noopener" aria-label="just started (opens in a new tab)" href="https://angeloryndon.com/working-remotely-with-other-developers/" target="_blank">just started</a> in a Chingu team project last week. Our team decided that we’ll make something that is inspired by the <a rel="noreferrer noopener" aria-label="Momentum (opens in a new tab)" href="https://momentumdash.com/" target="_blank">Momentum</a> browser extension. Now, on to the part where I write down what I learned this week.</p>
-<h2 id="the-let-and-const-keywords">The let and const keywords</h2>
+
+<h2 id="the-let-and-const-keywords" class="anchor-link"><a href="#the-let-and-const-keywords">The let and const keywords</a></h2>
 <p>I am happy that our team decided to use native JavaScript for this project, although I don’t mind if some of my teammates would use a library to build a feature. As the whole point of Chingu anyway is for people to learn and collaborate. I am even happier that I now have to worry less about the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1" target="_blank">hoisting issue</a> that put me off JavaScript before. That is all thanks to the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank">let</a> and <a rel="noreferrer noopener" aria-label="const (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank">const</a> keywords. YAY!</p>
 <p>When you declare a variable using the let keyword, it keeps the variable’s scope to where it was declared, unlike var where it hoists it up to the global or function scope. <strong>Using let or const makes block scope real in JavaScript</strong>. Quirks that happened to me before with the <em>var keyword</em> can now be avoided:</p>
 <pre class="EnlighterJSRAW" data-enlighter-language="js">function Test(){
@@ -180,7 +153,8 @@ Learn JavaScript again - Angelo Ryndon
   <figure class="aligncenter"><img src="https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg" alt="" class="wp-image-935" srcset="https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg 512w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-300x261.jpg 300w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-500x436.jpg 500w" sizes="(max-width: 512px) 100vw, 512px" /><figcaption>Block scope as it should be</figcaption></figure>
 </div>
 <p>Using the <em>let keyword</em> allows you to write code that executes the way you think it should. On the other hand, the <em>const keyword</em> is much like <em>let</em>, but the variable cannot be reassigned, I think this feels correct because that is what a constant should be. Note to self – <em>use const for variables that most likely will not be reassigned (functions, etc) and use let for those variables that you know will be.</em></p>
-<h2 id="the-fat-arrow-function">The fat arrow function</h2>
+
+<h2 id="the-fat-arrow-function" class="anchor-link"><a href="#the-fat-arrow-function">The fat arrow function</a></h2>
 <p>The <a rel="noreferrer noopener" aria-label="arrow function (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">arrow function</a> is another lovely addition for me. Since arrow functions do not have their own <em>this</em>, it will use the <em>this</em> of whatever function or object it was declared in. That change is important if you want to write in an Object Oriented style in my opinion.</p>
 <p>Instead of using an old hack like below, where you save the value of <em>this</em> to another variable to have access to it later:</p>
 <pre class="EnlighterJSRAW" data-enlighter-language="js">function Library() {
@@ -207,7 +181,8 @@ Learn JavaScript again - Angelo Ryndon
 <li>Use non-arrow functions for methods that will be called using the <code>object.method()</code> syntax. Those are the functions that will receive a <em>meaningful</em> <code>this</code> value from their caller.</li>
 <li>Use arrow functions for everything else.</li>
 </ul>
-<h2 id="string-interpolation">String Interpolation</h2>
+
+<h2 id="string-interpolation" class="anchor-link"><a href="#string-interpolation">String Interpolation</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank" rel="noreferrer noopener" aria-label="String interpolation (opens in a new tab)">String interpolation</a> is one of those parts that I dread about old JavaScript. I’m sure any person that wrote some JavaScript before needed to write code like the one below:</p>
 <pre class="EnlighterJSRAW" data-enlighter-language="js">'Why on earth ' + (is + JS + string + interpolation) + ' like this ' + (junk + here) + '.'</pre>
 <p>This much awaited change is what this language <strong>needed</strong>. Now you can write strings like this:</p>
@@ -220,7 +195,8 @@ Learn JavaScript again - Angelo Ryndon
 }
 </pre>
 <p>Note that there are other uses for this <em>template literals</em> as they are called in JavaScript, just the one above is already a big win though.</p>
-<h2 id="unfortunately-there-is-still-no-pass-by-reference-option-in-javascript">Unfortunately, there is still no pass by reference option in JavaScript</h2>
+
+<h2 id="unfortunately-there-is-still-no-pass-by-reference-option-in-javascript" class="anchor-link"><a href="#unfortunately-there-is-still-no-pass-by-reference-option-in-javascript">Unfortunately, there is still no pass by reference option in JavaScript</a></h2>
 <p>I had an issue with the pomodoro timer that I was building for our team project, I only need to pass something by reference to persist changes to its value. I asked in Chingu’s chatroom and one of my colleagues said “Yes! Pass by reference is in JS when you pass objects, but not primitive types”. My colleague gave a <a rel="noreferrer noopener" aria-label="blog post (opens in a new tab)" href="https://medium.com/nodesimplified/javascript-pass-by-value-and-pass-by-reference-in-javascript-fcf10305aa9c" target="_blank">blog post</a> to support his statement – <em>which is why we should always take whatever we read online with a few cups of rice.</em></p>
 <p>I knew before that JS does not have this in the language, and I was thrilled to test if this exists now. Below is a quick test code in a browser’s console:</p>
 <div class="wp-block-image">
@@ -265,7 +241,10 @@ Learn JavaScript again - Angelo Ryndon
         
 
 
-<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity=""></script>
+<script src="https://angeloryndon.com/js/bundle.8b77b63e5197d7777848e24ba70612839fe8d02e9599db63365da671cb233a8a.js" integrity="sha256-i3e2PlGX13d4SOJLpwYSg5/o0C6VmdtjNl2mccsjOoo="></script>
+
+
+
 
 
 

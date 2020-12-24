@@ -10,7 +10,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains some of his projects and blog posts">
 <title>
-Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
+Render Scripts From Partial Views in a S P. N E T M v C 5 - Angelo Ryndon
 </title>
 
 
@@ -39,11 +39,12 @@ Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
 
 
 
-<link rel="stylesheet" href="/css/main.min.13a39665d8dab425831a3954427af0982de0d930390f1f04d55e9396c54471cf.css" integrity="" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.b6abcbc8fc09b12d44c3c6de59e0af0834eec106fc4ce0238e296e9cf89fb818.css" integrity="sha256-tqvLyPwJsS1Ew8beWeCvCDTuwQb8TOAjjilunPifuBg=" crossorigin="anonymous" media="screen">
 
 
 
 
+    <link rel="stylesheet" href="/override.css" integrity="" crossorigin="anonymous" media="screen">
 
         
         
@@ -56,7 +57,7 @@ Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
             <div class="container hero  fade-in one ">
                 
 
-    <h1 class="bold-title is-1">Posts</h1>
+<h1 class="bold-title is-1">Posts</h1>
 
 
             </div>
@@ -77,65 +78,36 @@ Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
             
             
             
-            <a class="navbar-item" href="/">main</a>
-            
-
-            
-            
-
-            
+            <a class="navbar-item" href="/">
                 
-            
-
-            
+                Home
                 
-            
-
-            
+            </a>
             
             
+            
+            <a class="navbar-item" href="/projects/">
                 
+                Projects
                 
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
                 
+                Posts
                 
-                  <a class="navbar-item" href="https://angeloryndon.com/projects/">
-                  
-                  Project
-                  
-                  </a>
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#contact">
                 
+                Contact
                 
+            </a>
             
-            
-            
-            
-            
-                
-                
-                
-                
-                  <a class="navbar-item" href="https://angeloryndon.com/blog/">
-                  
-                  Back to Posts
-                  
-                  </a>
-                
-                
-            
-            
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="/#contact">Contact</a>
-            
-            
-
-            
-
             
             
         </div>
@@ -146,51 +118,66 @@ Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon
 
 
                 
-    <div class="container">
-        <h2 class="title is-1 top-pad strong-post-title">
-            <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a>
-        </h2>
-        <div class="post-data">
-            Nov 10, 2020 |
-            2 minutes read
-        </div>
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a>
+    </h2>
+    <div class="post-data">
+        Nov 10, 2020 |
+        2 minutes read
+    </div>
+    
+    <div class="blog-share">
+        Share this:
         
-        <div class="blog-share">
-            Share this:
-            
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Render%20scripts%20from%20Partial%20Views%20in%20ASP.NET%20MVC%205%20https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fab fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-            
-            
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f"  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fab fa-facebook-f"></i>
-                <span class="hidden">Facebook</span>
-            </a>
-            
-            
-            
-        </div>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Render%20scripts%20from%20Partial%20Views%20in%20ASP.NET%20MVC%205%20https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+        
+        
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2fblog%2frender-scripts-from-partial-view-aspnet-mvc%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fab fa-facebook-f"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+        
         
         
     </div>
     
-    <div class="container markdown top-pad">
-        <h2 id="scenario">Scenario</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <h2 id="scenario" class="anchor-link"><a href="#scenario">Scenario</a></h2>
 <p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
-<h2 id="issue">Issue</h2>
+
+<h2 id="issue" class="anchor-link"><a href="#issue">Issue</a></h2>
 <p>Partial Views in ASP.NET MVC do not support section areas</p>
 <pre><code>@section scripts{
     //not supported in Partial Views :(
 }
 </code></pre>
-<h2 id="workaround-one">Workaround One</h2>
+
+<h2 id="workaround-one" class="anchor-link"><a href="#workaround-one">Workaround One</a></h2>
 <ul>
 <li>Trigger a custom event when your ajax call has finished updating the page&rsquo;s html</li>
 <li>Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)</li>
 </ul>
-<h4 id="sample-code">Sample Code</h4>
+
+<h4 id="sample-code" class="anchor-link"><a href="#sample-code">Sample Code</a></h4>
 <pre><code>public static firePartialViewEvent(): void
 {
     /*
@@ -221,7 +208,8 @@ public static loadPartialViewScript(script: () =&gt; void): void
 }
 </code></pre>
 <br/>
-<h4 id="usage">Usage</h4>
+
+<h4 id="usage" class="anchor-link"><a href="#usage">Usage</a></h4>
 <pre><code>//in your JavaScript/TypeScript file's ajax call
 $.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
 
@@ -238,12 +226,14 @@ $.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
 //and in your main view you have the usual  @section scripts that will render the needed scripts of the Partial View (duplicate call)
 </code></pre>
 <br/>
-<h2 id="workaround-two">Workaround Two</h2>
+
+<h2 id="workaround-two" class="anchor-link"><a href="#workaround-two">Workaround Two</a></h2>
 <ul>
 <li>put the IIFE that calls your partial view in a separate script file</li>
 <li>use <code>&lt;script defer&gt;</code> in the Partial View</li>
 </ul>
-<h4 id="sample-code-1">Sample Code</h4>
+
+<h4 id="sample-code-1" class="anchor-link"><a href="#sample-code-1">Sample Code</a></h4>
 <pre><code>//on a JS file somewhere (i.e partial-view-caller.js)
 (() =&gt; &lt;your partial view script&gt;)();
 
@@ -253,13 +243,14 @@ $.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
 //you can actually just straight call your partial view script living in an external file - I just prefer having an initialization method :)
 </code></pre>
 <br/>
-<h4 id="closing-thoughts">Closing thoughts</h4>
+
+<h4 id="closing-thoughts" class="anchor-link"><a href="#closing-thoughts">Closing thoughts</a></h4>
 <p>I personally prefer <strong>Workaround Two</strong> for its simplicity. However, I implemented <strong>Workaround One</strong> first - cause I&rsquo;m an idiot who didn&rsquo;t know how to properly use defer :D <br/>
 <br/>
 However, <strong>Workaround One</strong> is in my opinion the ideal way in case you want to pass some data from your C# ViewModel to that Partial View script, which is also a common scenario. Therefore, both methods are useful - it depends on your situation.</p>
-    </div>
-    
-    
+</div>
+
+
 
 
 
@@ -294,7 +285,10 @@ However, <strong>Workaround One</strong> is in my opinion the ideal way in case 
         
 
 
-<script src="https://angeloryndon.com/js/bundle.02b6288fcd4c358451657f10dc5ff7760229d03df75243bce75eeed353f4f935.js" integrity=""></script>
+<script src="https://angeloryndon.com/js/bundle.8b77b63e5197d7777848e24ba70612839fe8d02e9599db63365da671cb233a8a.js" integrity="sha256-i3e2PlGX13d4SOJLpwYSg5/o0C6VmdtjNl2mccsjOoo="></script>
+
+
+
 
 
 
