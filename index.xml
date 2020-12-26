@@ -6,17 +6,7 @@
     <description>Recent content on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 19:07:20 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Create a Simple Posts Archive in Hugo</title>
-      <link>https://angeloryndon.com/blog/create-a-simple-posts-archive-in-hugo/</link>
-      <pubDate>Thu, 24 Dec 2020 19:07:20 +1300</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/create-a-simple-posts-archive-in-hugo/</guid>
-      <description>&lt;h2 id=&#34;disclaimer&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#disclaimer&#34;&gt;Disclaimer&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I haven&amp;rsquo;t used the &lt;a href=&#34;https://golang.org/&#34;&gt;Go language&lt;/a&gt; before today - I just added the archive functionality to this site, which I got from &lt;a href=&#34;https://github.com/victoriadrake/hugo-theme-introduction&#34;&gt;this template&lt;/a&gt; :) so I&amp;rsquo;m guessing there are better ways to achieve this. I hope this can still be helpful to someone else later.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
       <link>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</link>

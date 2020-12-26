@@ -357,13 +357,20 @@ I remember being very happy when my teamate on that internship said I was techni
         
         <h2 class="title is-2 has-text-centered">Latest Post</h2>
             
-            <div class="summary">Dec 24, 2020
-                <h3 class="title is-3 latest-post-title"><a href="https://angeloryndon.com/blog/create-a-simple-posts-archive-in-hugo/">Create a Simple Posts Archive in Hugo</a></h3>
+            <div class="summary">Nov 10, 2020
+                <h3 class="title is-3 latest-post-title"><a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a></h3>
                     <div class="markdown">
-                    <h2 id="disclaimer" class="anchor-link"><a href="#disclaimer">Disclaimer</a></h2>
-<p>I haven&rsquo;t used the <a href="https://golang.org/">Go language</a> before today - I just added the archive functionality to this site, which I got from <a href="https://github.com/victoriadrake/hugo-theme-introduction">this template</a> :) so I&rsquo;m guessing there are better ways to achieve this. I hope this can still be helpful to someone else later.</p>
+                    <h2 id="scenario" class="anchor-link"><a href="#scenario">Scenario</a></h2>
+<p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
+
+<h2 id="issue" class="anchor-link"><a href="#issue">Issue</a></h2>
+<p>Partial Views in ASP.NET MVC do not support section areas</p>
+<pre><code>@section scripts{
+    //not supported in Partial Views :(
+}
+</code></pre>
                     
-                    <a href="https://angeloryndon.com/blog/create-a-simple-posts-archive-in-hugo/">Read more</a>
+                    <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Read more</a>
                     
                     </div>
             </div>
