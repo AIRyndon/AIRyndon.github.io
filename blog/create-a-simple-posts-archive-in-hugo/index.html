@@ -8,7 +8,7 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains some of his projects and blog posts">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
 Create a Simple Posts Archive in Hugo - Angelo Ryndon
 </title>
@@ -17,7 +17,7 @@ Create a Simple Posts Archive in Hugo - Angelo Ryndon
 
         <meta property="og:title" content="Create a Simple Posts Archive in Hugo - Angelo Ryndon" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains some of his projects and blog posts"/>
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
 <meta property="og:url" content="https://angeloryndon.com/blog/create-a-simple-posts-archive-in-hugo/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
@@ -161,10 +161,29 @@ Create a Simple Posts Archive in Hugo - Angelo Ryndon
 </div>
 
 <div class="container markdown top-pad">
-    
-<h2 id="disclaimer" class="anchor-link"><a href="#disclaimer">Disclaimer</a></h2>
-<p>I don&rsquo;t know the <a href="https://golang.org/">Go language</a> - I used it just now to add the archive functionality to this site, which I got from this template :). So I&rsquo;m guessing there are better ways to achieve this.</p>
+    <h2 id="disclaimer" class="anchor-link"><a href="#disclaimer">Disclaimer</a></h2>
+<p>I haven&rsquo;t used the <a href="https://golang.org/">Go language</a> before today - I just added the archive functionality to this site, which I got from <a href="https://github.com/victoriadrake/hugo-theme-introduction">this template</a> :) so I&rsquo;m guessing there are better ways to achieve this. I hope this can still be helpful to someone else later.</p>
 
+<h2 id="what-i-did" class="anchor-link"><a href="#what-i-did">What I did</a></h2>
+<pre><code>&lt;section&gt;
+    {{ $prev := 2100}} &lt;!--start at year 2100--&gt;
+    {{range .Pages.ByPublishDate.Reverse}}
+      {{if .Date}}
+      {{$curr := .Date.Format &quot;2006&quot;}}
+        {{if gt $prev ($curr)}}
+            &lt;h2 class=&quot;title is-2 top-pad&quot;&gt;{{ $curr }}&lt;/h2&gt;
+        {{end}}
+      &lt;li class=&quot;post-item&quot;&gt;
+        {{ if .Params.date }}
+            &lt;span&gt;{{ .Date.Format (.Site.Params.dateFormat | default &quot;Jan 02, 2006&quot;) }}&lt;/span&gt; -
+        {{ end }}
+        &lt;span&gt;&lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ .Title | markdownify }}&lt;/a&gt;&lt;/span&gt;
+      &lt;/li&gt;
+        {{ $prev = $curr}}
+      {{end}}
+    {{end}}   
+&lt;/section&gt;
+</code></pre>
 </div>
 
 
@@ -188,9 +207,7 @@ Create a Simple Posts Archive in Hugo - Angelo Ryndon
                 <div class="section" id="footer">
     <div class="container has-text-centered">
     
-        <span class="footer-text">
-            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
-        </span>
+        Disclaimer: The opinions here are my own and do not represent anyone&rsquo;s view in any way.
     
     </div>
 </div>
