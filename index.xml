@@ -6,7 +6,18 @@
     <description>Recent content on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Sep 2021 13:53:00 +1200</lastBuildDate><atom:link href="https://angeloryndon.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Co-Op Game</title>
+      <link>https://angeloryndon.com/projects/unity-project/</link>
+      <pubDate>Sun, 05 Sep 2021 13:53:00 +1200</pubDate>
+      
+      <guid>https://angeloryndon.com/projects/unity-project/</guid>
+      <description>View the repo
+ChallengeIn one of my university papers, the task is to create any kind of software product as a team. Any technology can be used, and the only prerequisite is that the project should be complex enough (for students) relative to your team&amp;rsquo;s size, and that the team must use Github for collaboration.
+ResponseBecause we were a team of 5, we were told by our teacher that we need to build something bigger compared to a team of 2-3.</description>
+    </item>
+    
     <item>
       <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
       <link>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</link>
