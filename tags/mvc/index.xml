@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 15 May 2017 19:51:33 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning about ASP.NET MVC 5 Identity</title>
-      <link>https://angeloryndon.com/mvc-5-identity/</link>
+      <link>https://angeloryndon.com/blog/2017-05-16-mvc-5-identity/</link>
       <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
       
-      <guid>https://angeloryndon.com/mvc-5-identity/</guid>
+      <guid>https://angeloryndon.com/blog/2017-05-16-mvc-5-identity/</guid>
       <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I’m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;</description>
     </item>
     

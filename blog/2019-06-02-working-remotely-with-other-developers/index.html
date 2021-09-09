@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Working Remotely With Other Developers - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Working remotely with other developers - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2019-06-02-working-remotely-with-other-developers/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2019-06-02-working-remotely-with-other-developers/">Working remotely with other developers</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        Jun 2, 2019 |
         2 minutes read
     </div>
     
@@ -163,51 +163,33 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/Opinions">Opinions</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>I forgot where I learned about <a rel="noreferrer noopener" aria-label="Chingu (opens in a new tab)" href="https://chingu.io/" target="_blank">Chingu</a>, what I love about it though is the opportunity to be working remotely with other developers. We are on our first week in a 6-week team project and I’m both anxious and excited about this opportunity.</p>
+<p>I finished the <a href="https://angeloryndon.com/portfolio/connect-four/" target="_blank" rel="noreferrer noopener" aria-label="prerequisite task (opens in a new tab)">prerequisite task</a> to enter the team project on the last day – because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.</p>
 
+<h2 id="clearly-written-tasks" class="anchor-link"><a href="#clearly-written-tasks">Clearly written tasks</a></h2>
+<p>I think most if not all developers know that clearly written tasks is key to a successful project. The problem for me is I haven’t worked remotely with anyone before, and I rarely write down a clear to-do-list. I hope some of my team members love doing this, as I will suck at it. However, I have to step up because this is a crucial skill, even my current university instructor keeps telling me to WRITE-THINGS-DOWN.</p>
+
+<h2 id="the-git-workflow" class="anchor-link"><a href="#the-git-workflow">The Git workflow</a></h2>
+<p>I’m fairly comfortable with Git when I’m alone, not so much when working remotely with other developers though. I read about some Git workflows before writing this, and I hope we don’t get stuck with sticky problems related to Git.</p>
+
+<h2 id="differences-in-character-traits" class="anchor-link"><a href="#differences-in-character-traits">Differences in character traits</a></h2>
+<p>I hope this does not become a major issue, I consider myself chill so I hope it won’t be. Maybe I’m just overthinking things again, maybe our team project will run smoothly. Bottom-line is, I can’t wait to finish this strong.</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

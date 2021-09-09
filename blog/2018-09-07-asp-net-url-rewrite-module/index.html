@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Asp. Net URL Rewrite Module - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="ASP.NET Url rewrite module - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2018-09-07-asp-net-url-rewrite-module/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2018-09-07-asp-net-url-rewrite-module/">ASP.NET Url rewrite module</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        Sep 7, 2018 |
         2 minutes read
     </div>
     
@@ -163,51 +163,59 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/ASP.NET">ASP.NET</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>I just received some feature requests from my client on <a href="https://angeloryndon.com/portfolio/auckland-airport-motel/" target="_blank" rel="noopener noreferrer">this project.</a> The requests are about improving the site’s SEO rating. After adding the features, the site is now in the top 5 of google search results for “Auckland airport motel”. I used the rewrite module it to move the site to SSL.</p>
 
+<h2 id="a-few-sample-rules" class="anchor-link"><a href="#a-few-sample-rules">A few sample rules</a></h2>
+<p>Below are sample rules that I believe are helpful to any site – the 2 rules below redirects to HTTPS, and picks a canonical host name (the one here is for Non-WWW).``</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="xml">&lt;system.webServer&gt;
+  &lt;rewrite&gt;
+    &lt;rules&gt;
+      &lt;rule name="Redirect to HTTPS"&gt;
+        &lt;match url="(.*)" /&gt;
+        &lt;conditions&gt;
+          &lt;add input="{HTTPS}" pattern="OFF" /&gt;
+        &lt;/conditions&gt;
+        &lt;action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" appendQueryString="false" redirectType="Permanent" /&gt;
+      &lt;/rule&gt;
+      &lt;rule name="Canonical Host Name" stopProcessing="true"&gt;
+        &lt;match url="(.*)" /&gt;
+        &lt;conditions&gt;
+          &lt;add input="{HTTP_HOST}" pattern="^www\." /&gt;
+        &lt;/conditions&gt;
+        &lt;action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" appendQueryString="false" redirectType="Permanent" /&gt;
+      &lt;/rule&gt;
+    &lt;/rules&gt;
+  &lt;/rewrite&gt;
+&lt;system.webServer&gt;</pre>
+<p>The rewrite module does its job in three steps:</p>
+<ol>
+<li>Check if the incoming URL can be matched with the pattern inside the <match/> element</li>
+<li>If the optional <conditions> element is available, further compare the URL pattern to other rules you specified</li>
+<li>If the incoming URL matches the pattern or passed the conditions, execute what is inside the <action> element</li>
+</ol>
+<p>I found that the rewrite module can perform 3 types of actions – Redirect, Rewrite, and Custom Action. I’ll just quickly write the main difference between a <strong>Redirect</strong> and a <strong>Rewrite.</strong></p>
+<p>A Redirect action type will change the address bar’s URL to what you specify in the <action> element. A Rewrite will not change that URL and will just silently send the site visitor to the URL inside the <action> element.</p>
+<p>I’ll use this sample URL – http://<host>:<port>/<path>?<querystring> – to quickly explain the server variables used in the rules above:</p>
+<p>the {HTTPS} variable checks if the request is secure</p>
+<p>the {HTTP_HOST} variable grabs the <host> part</p>
+<p>the {REQUEST_URI} grabs the <path> and the <querystring></p>
+<p>The rewrite module is extremely flexible once you get comfortable with it. Microsoft’s detailed docs can be found <a href="https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" target="_blank" rel="noopener noreferrer">here.</a></p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ASP.NET on Angelo Ryndon</title>
-    <link>https://angeloryndon.com/tags/asp.net/</link>
-    <description>Recent content in ASP.NET on Angelo Ryndon</description>
+    <title>csharp on Angelo Ryndon</title>
+    <link>https://angeloryndon.com/tags/csharp/</link>
+    <description>Recent content in csharp on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
-      <link>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</link>
-      <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</guid>
-      <description>&lt;h2 id=&#34;scenario&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#scenario&#34;&gt;Scenario&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.&lt;/p&gt;
-
-&lt;h2 id=&#34;issue&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#issue&#34;&gt;Issue&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Partial Views in ASP.NET MVC do not support section areas&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@section scripts{
-    //not supported in Partial Views :(
-}
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
+    <lastBuildDate>Tue, 16 Apr 2019 00:57:22 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning ASP.NET Core</title>
       <link>https://angeloryndon.com/blog/2019-04-16-learning-asp-net-core/</link>
@@ -34,12 +17,12 @@
     </item>
     
     <item>
-      <title>ASP.NET Url rewrite module</title>
-      <link>https://angeloryndon.com/blog/2018-09-07-asp-net-url-rewrite-module/</link>
-      <pubDate>Fri, 07 Sep 2018 03:12:15 +0000</pubDate>
+      <title>Null Object Pattern in C#</title>
+      <link>https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/</link>
+      <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
       
-      <guid>https://angeloryndon.com/blog/2018-09-07-asp-net-url-rewrite-module/</guid>
-      <description>&lt;p&gt;I just received some feature requests from my client on &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;this project.&lt;/a&gt; The requests are about improving the site’s SEO rating. After adding the features, the site is now in the top 5 of google search results for “Auckland airport motel”. I used the rewrite module it to move the site to SSL.&lt;/p&gt;</description>
+      <guid>https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/</guid>
+      <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;</description>
     </item>
     
     <item>

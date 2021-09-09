@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on Angelo Ryndon</title>
+    <link>https://angeloryndon.com/tags/tips/</link>
+    <description>Recent content in tips on Angelo Ryndon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
+      <link>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</link>
+      <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/</guid>
+      <description>&lt;h2 id=&#34;scenario&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#scenario&#34;&gt;Scenario&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.&lt;/p&gt;
+
+&lt;h2 id=&#34;issue&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#issue&#34;&gt;Issue&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Partial Views in ASP.NET MVC do not support section areas&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@section scripts{
+    //not supported in Partial Views :(
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

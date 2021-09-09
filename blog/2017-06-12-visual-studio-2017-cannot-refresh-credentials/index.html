@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Visual Studio 2017 Cannot Refresh Credentials - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Visual Studio 2017 cannot refresh credentials - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2017-06-12-visual-studio-2017-cannot-refresh-credentials/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,11 +120,11 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2017-06-12-visual-studio-2017-cannot-refresh-credentials/">Visual Studio 2017 cannot refresh credentials</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
-        2 minutes read
+        Jun 11, 2017 |
+        1 minute read
     </div>
     
 <div class="posts-contact-area">
@@ -163,51 +163,39 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/Visual%20Studio">Visual Studio</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
+    <p>This is a quick note when <a href="http://www.visualstudio.com" target="_blank" rel="noopener noreferrer">Visual Studio</a> 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.</p>
+<p><strong>Make sure Visual Studio is closed before doing all this</strong></p>
+<ol>
 <li>
-<p>In Visual Studio, change project target framework to 4.8</p>
+<p>Go to %localappdata%/.IdentityService</p>
 </li>
 <li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
+<p>Delete IdentityServiceAdalCache.cache (You can also Delete the .IdentityService folder if you like)</p>
 </li>
 <li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
+<p>Restart computer for good measure if you like</p>
 </li>
 <li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
+<p>Reenter credentials in Visual Studio ( sometimes you can delete the account first before reentering it again)</p>
 </li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
-
+</ol>
+<p>All done 🙂</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

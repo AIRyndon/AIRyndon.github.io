@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Modular Programming in Java Script - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Modular Programming in JavaScript - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2019-06-22-modular-programming-in-javascript/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2019-06-22-modular-programming-in-javascript/">Modular Programming in JavaScript</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        Jun 22, 2019 |
         2 minutes read
     </div>
     
@@ -163,51 +163,37 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/JavaScript">JavaScript</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>I was learning ES6 about <a href="https://angeloryndon.com/learn-javascript-again/">two weeks ago</a>, and it reminded me of how modular programming in JavaScript was done during the years prior. I’m quite happy with how JavaScript has evolved, I would even say that I’m starting to like it. Before we go into the “How to do modular programming in JavaScript today”, I would like to give my thoughts on modular programming first.</p>
 
+<h2 id="modular-programming" class="anchor-link"><a href="#modular-programming">Modular Programming</a></h2>
+<p>Modular programming is about chopping down a <em>big idea</em> (which is the program itself) into <em>little ideas</em> (the program’s features). You then build each of those <em>little ideas</em> and connect them together to create the <em>big idea</em>. This programming style allows you to create software that is easier to maintain – I’m in the opinion though that if you overdo it, your software will be even harder to understand and maintain.</p>
+
+<h2 id="how-is-modular-programming-done-in-javascript" class="anchor-link"><a href="#how-is-modular-programming-done-in-javascript">How is modular programming done in JavaScript</a></h2>
+<p>When I first learned C#, modular programming was something I felt closer to – <em>I want to make small methods, and small classes.</em> Separating your code into smaller classes is built-into C#, and this was not the same with JavaScript. When I first learned JavaScript, there was a weird hack to separate your code into its own modules. You have to use a function that is invoked right after its creation – the term <a rel="noreferrer noopener" aria-label="IFFE (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE" target="_blank">IFFE</a> was coined for this behavior.</p>
+<p>The addition of the <a rel="noreferrer noopener" aria-label="import (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">import</a> and <a rel="noreferrer noopener" aria-label="export (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export" target="_blank">export</a> statements in ES6 means modular programming is now supported natively in JavaScript – <em>I don’t have experience with Node.js so I have no clue if ES6 imports and exports also work out-of-the-box there like in current Web Development</em>.</p>
+<p>Below is an extremely quick rundown of how modular programming evolved in native JavaScript:</p>
+<ol>
+<li>A smart developer thought about IFFE, and the Module Pattern was born in JavaScript</li>
+<li>CommonJS and other libraries made improvements to IFFE, and solved the problems with using it to create modules – <em>like script files should be loaded in order correctly, and some other problems</em></li>
+<li>ES6 adopted the improvements from CommonJS et al, made some tweaks to it, and now we have module support in native JavaScript</li>
+</ol>
+<p>I’m sure there are tons of resources around the web if you want to know more details about how modules evolved in JavaScript, and how to do it, so I won’t include it in this post.</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

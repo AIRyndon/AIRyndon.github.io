@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Render Scripts From Partial Views in Asp. Net Mvc 5 - Angelo Ryndon
+Automate Deployment From Github to Windows Azure - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon" />
+        <meta property="og:title" content="Automate deployment from Github to Windows Azure - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2017-04-21-automate-deployment-github-windows-azure/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,11 +120,11 @@ Render Scripts From Partial Views in Asp. Net Mvc 5 - Angelo Ryndon
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a>
+        <a href="https://angeloryndon.com/blog/2017-04-21-automate-deployment-github-windows-azure/">Automate deployment from Github to Windows Azure</a>
     </h2>
     <div class="post-data">
-        Nov 10, 2020 |
-        2 minutes read
+        Apr 21, 2017 |
+        3 minutes read
     </div>
     
 <div class="posts-contact-area">
@@ -169,9 +169,7 @@ Render Scripts From Partial Views in Asp. Net Mvc 5 - Angelo Ryndon
             Tags: 
         
         
-        <a href="/tags/tips">tips</a>,
-        
-        <a href="/tags/asp.net">asp.net</a>
+        <a href="/tags/Azure">Azure</a>
                 
     </p>
     
@@ -181,93 +179,29 @@ Render Scripts From Partial Views in Asp. Net Mvc 5 - Angelo Ryndon
 </div>
 
 <div class="container markdown top-pad">
-    <h2 id="scenario" class="anchor-link"><a href="#scenario">Scenario</a></h2>
-<p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
+    <p>There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –</p>
 
-<h2 id="issue" class="anchor-link"><a href="#issue">Issue</a></h2>
-<p>Partial Views in ASP.NET MVC do not support section areas</p>
-<pre><code>@section scripts{
-    //not supported in Partial Views :(
-}
-</code></pre>
+<h4 id="keepyourprivate-stuff-out-of-source-control" class="anchor-link"><a href="#keepyourprivate-stuff-out-of-source-control">Keep your private stuff out of source control</a></h4>
+<p>I’m not sure if every developer once made the mistake of putting private stuff in source control, I sure did and it bit me bad. When I found out I checked in a private connection string a couple of days after the fact, my response was to <strong>delete my repository</strong>. I’m pretty sure there is a way to untrack and remove a file from Github. I didn’t bother to research about it during that time though, perhaps I was in panic mode.</p>
+<p>Here is what I found out on Azure. Your connection strings in web.config will get updated by what you have written in a configuration section at Azure portal. Here is a screenshot</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png"><img class="aligncenter size-medium wp-image-493" src="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png" alt="" width="300" height="61" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-768x156.png 768w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1024x208.png 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1100x223.png 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png 1556w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p> </p>
+<p>Its found in the <strong>Application Settings</strong> section of your App Service. Just make sure <strong>the Name or the Key</strong> you write in Azure Portal matches the Name/Key of the setting in your development machine. Azure will then use the <strong>Value</strong> you wrote in Azure Portal (the private area) when you publish. Just put a dummy value on your development machine’s settings before you check in to Github. <em>Please note that I haven’t tried using a different name on my Dev machine and on Azure configuration section to see if it’ll still work.</em></p>
+<p>If you have complete control of your server, which you won’t have in an Azure App Service, you can save a configuration file that contains the private data on your server. You can then reference the file on your web.config. <em>By the way, you can have a unique extension for these external files so you’ll know they have secret stuff.</em></p>
+<p>For connection strings, use the <strong>configSource</strong> property to reference the file:</p>
+<p><code>&lt;connectionStrings configSource=&quot;secretStuff.config&quot;&gt;&lt;br /&gt; &lt;connectionStrings/&gt;</code></p>
+<p>For app settings, use the <strong>file</strong> property:</p>
+<p><code>&lt;appSettings file=&quot;secretStuff.config&quot;&gt;&lt;br /&gt; &lt;appSettings/&gt;</code></p>
+<p>The settings you have on the external file will then get merged on runtime.</p>
 
-<h2 id="workaround-one" class="anchor-link"><a href="#workaround-one">Workaround One</a></h2>
-<ul>
-<li>Trigger a custom event when your ajax call has finished updating the page&rsquo;s html</li>
-<li>Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)</li>
-</ul>
-
-<h4 id="sample-code" class="anchor-link"><a href="#sample-code">Sample Code</a></h4>
-<pre><code>public static firePartialViewEvent(): void
-{
-    /*
-    * longer way of writing is to maintain IE compatibility
-    * https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
-    *
-    */
-    const loadEvent = document.createEvent('Event');
-    loadEvent.initEvent('finished:loading', true, true);
-    document.querySelector('body').dispatchEvent(loadEvent);
-}
-
-/**
-* Call this from the partial view's script, if doing an ajax request
-* @param script the partial view script to call
-*/
-public static loadPartialViewScript(script: () =&gt; void): void
-{
-    const body = document.querySelector('body');
-    const options: AddEventListenerOptions = {
-        once: true,
-    }
-
-    body.addEventListener('finished:loading', () =&gt;
-    {
-        script();
-    }, options);
-}
-</code></pre>
-<br/>
-
-<h4 id="usage" class="anchor-link"><a href="#usage">Usage</a></h4>
-<pre><code>//in your JavaScript/TypeScript file's ajax call
-$.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
-
-//in your Partial View
-@if (Request.IsAjaxRequest()) // you usually only want to call this in an ajax request where the main view is ideally not returned
-{
-    &lt;script&gt;
-        (() =&gt;
-        {
-            loadPartialViewScript(() =&gt; &lt;your partial view script&gt;);
-        })();
-    &lt;/script&gt;
-}
-//and in your main view you have the usual  @section scripts that will render the needed scripts of the Partial View (duplicate call)
-</code></pre>
-<br/>
-
-<h2 id="workaround-two" class="anchor-link"><a href="#workaround-two">Workaround Two</a></h2>
-<ul>
-<li>put the IIFE that calls your partial view in a separate script file</li>
-<li>use <code>&lt;script defer&gt;</code> in the Partial View</li>
-</ul>
-
-<h4 id="sample-code-1" class="anchor-link"><a href="#sample-code-1">Sample Code</a></h4>
-<pre><code>//on a JS file somewhere (i.e partial-view-caller.js)
-(() =&gt; &lt;your partial view script&gt;)();
-
-//in your Partial View
-&lt;script src=&quot;~/partial-view-caller.js&quot; defer&gt;&lt;/script&gt;
-
-//you can actually just straight call your partial view script living in an external file - I just prefer having an initialization method :)
-</code></pre>
-<br/>
-
-<h4 id="closing-thoughts" class="anchor-link"><a href="#closing-thoughts">Closing thoughts</a></h4>
-<p>I personally prefer <strong>Workaround Two</strong> for its simplicity. However, I implemented <strong>Workaround One</strong> first - cause I&rsquo;m an idiot who didn&rsquo;t know how to properly use defer :D <br/>
-<br/>
-However, <strong>Workaround One</strong> is in my opinion the ideal way in case you want to pass some data from your C# ViewModel to that Partial View script, which is also a common scenario. Therefore, both methods are useful - it depends on your situation.</p>
+<h4 id="to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu" class="anchor-link"><a href="#to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu">To automate deployment in Windows Azure, sometimes you have to delete files in Kudu</a></h4>
+<p>This one took me some time to figure out. I kept getting deployment errors on Windows Azure. You set this up in the <strong>Deployment Options</strong> section of your App Service.</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png"><img class="aligncenter size-medium wp-image-494" src="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png" alt="" width="300" height="128" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png 559w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>By the way <a href="https://github.com/projectkudu/kudu" target="_blank" rel="noopener noreferrer">Kudu</a> is this nifty little tool that I just found out about while trying to fix the deployment errors I kept getting. I tried republishing the Web App, disconnecting and redeploying from Github, recreating the database and a couple of other things – trial and error – to fix the deployment problems. Then I found out simply deleting the <strong>repository</strong> folder and the <strong>wwwroot</strong> on Kudu’s debug console, then setting up deployment again fixes my issue. You can access Kudu by adding scm to your site url – _yoursite.scm.azurewebsites.net – _or by clicking <strong>Advanced Tools</strong> on the Development Tools of your App Service.</p>
+<p>If you encounter this error – <em>Azure: The system cannot find the path specified.</em> There’s a quick fix I found on the Github <a href="https://github.com/madskristensen/WebCompiler/issues/146" target="_blank" rel="noopener">forum</a>, while on Kudu console you do these commands:</p>
+<p>Go to – local/temp/webcompiler.[version]</p>
+<p>Run – cmd /c prepare.cmd</p>
+<p>That’s it! I hope this could help someone who wants to automate deployment using Github and Windows Azure.</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Learning Asp. Net Core - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Learning ASP.NET Core - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2019-04-16-learning-asp-net-core/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,11 +120,11 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2019-04-16-learning-asp-net-core/">Learning ASP.NET Core</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
-        2 minutes read
+        Apr 16, 2019 |
+        3 minutes read
     </div>
     
 <div class="posts-contact-area">
@@ -163,51 +163,37 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/ASP.NET">ASP.NET</a>,
+        
+        <a href="/tags/csharp">csharp</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>For the last few days, I’ve started learning ASP.NET Core. After the initial <a rel="noreferrer noopener" aria-label="research (opens in a new tab)" href="https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/" target="_blank">research</a> on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight <a rel="noreferrer noopener" aria-label="course (opens in a new tab)" href="https://www.pluralsight.com/courses/aspnet-core-fundamentals" target="_blank">course</a> about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.</p>
 
+<h2 id="quick-overview-of-model-binding-in-aspnet-core" class="anchor-link"><a href="#quick-overview-of-model-binding-in-aspnet-core">Quick overview of Model Binding in ASP.NET Core</a></h2>
+<p>The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.</p>
+<p>When you make an http request (invoke a method from the PageModel/Controller), the framework’s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.</p>
+<p>When the parameter to the method called by the framework (OnGet for example) does not contain anything, ASP.NET Core will default to null if the parameter is a reference type, and throw an exception if the parameter is a value type.</p>
+
+<h2 id="tag-helpers" class="anchor-link"><a href="#tag-helpers">Tag Helpers</a></h2>
+<p>These tag helpers are new to me – I don’t remember it existed before ASP.NET Core – and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-<anything>.</p>
+<p>The <strong>asp-page</strong> tag helper sets an anchor tag to point to a Razor page. On the other hand, the <strong>asp-for</strong> tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don’t need to type Model.<Property> to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.</p>
+<p>First, it sets the html input’s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request – <strong>input model</strong>. Second, it fills the html input’s value when the server populates the page (responds to the request) with values from the Page Model property – <strong>output model</strong>. The Input model and Output model are two new helpful terms I got from Scott here.</p>
+<p>Last, we have <strong>asp-route-<anything>,</strong> this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The <anything> should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.</p>
+<p>That’s it for this post. Now I’ll continue the course and will likely create a new post about what I learned.</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

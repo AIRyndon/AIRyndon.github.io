@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Null Object Pattern in C# - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Null Object Pattern in C# - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/">Null Object Pattern in C#</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        Oct 4, 2018 |
         2 minutes read
     </div>
     
@@ -163,51 +163,56 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/csharp">csharp</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>I recently just learned about the Null Object Pattern in C# through <a href="https://app.pluralsight.com" target="_blank" rel="noopener noreferrer">Pluralsight</a>. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.</p>
 
+<h2 id="the-basic-goal-of-the-null-object-pattern" class="anchor-link"><a href="#the-basic-goal-of-the-null-object-pattern">The basic goal of the Null Object Pattern</a></h2>
+<p>This pattern aims to decrease or greatly minimize the need for null checking code in parts of a code base. I think no one wants writing boilerplate like the if clause below.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp">public YourMethod(someVariable)
+{
+  if(someVariable != null)
+  {
+     CallSomeMethod(someVariable)
+  }
+}</pre>
+<p> </p>
+<p>Another main goal of this pattern is to eliminate or decrease the occurrence of the dreaded null-reference exception during an application’s run-time.</p>
+
+<h2 id="high-level-overview-of-the-patternnbsp" class="anchor-link"><a href="#high-level-overview-of-the-patternnbsp">High level overview of the Pattern </a></h2>
+<div class="wp-block-image">
+  <figure class="aligncenter"><a href="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png"><img src="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png" alt="Overview of Null Object Pattern in C#" class="wp-image-687" srcset="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w" sizes="(max-width: 300px) 100vw, 300px" /></a></figure>
+</div>
+<p>The image above shows what the pattern is conceptually. Imagine you have an abstraction containing only a method signature, this abstraction could be an Interface or an Abstract Class. This then has a real implementation(s) and a null object implementation(s). The key here is this:</p>
+<blockquote class="wp-block-quote">
+  <p>
+    <br /><em>To client code, a real object and a null object can be treated equally.</em>
+  </p>
+</blockquote>
+<p>Because the client code is only referencing the abstraction, the implementation (Real or Null) is not its concern.</p>
+
+<h2 id="implementing-the-null-object-pattern-in-c" class="anchor-link"><a href="#implementing-the-null-object-pattern-in-c">Implementing the Null Object Pattern in C#</a></h2>
+<p>Here is a <a href="https://github.com/AIRyndon/CSharpNullObjectPattern" target="_blank" rel="noopener noreferrer">Github repo</a> that illustrates the pattern’s basic implementation.</p>
+<p>Some things to take note when using the pattern:</p>
+<ul>
+<li>When working with others, your team should know what parts of your project uses the null object pattern – or else other team members might use magic numbers or perform manual null checks instead</li>
+<li>Client code that uses the null object should agree on what the null behavior is – problems could arise if different clients expect something unique to them for null behavior. If clients are like this, it is better to have different null object implementations</li>
+<li>You usually do not want to use the null object pattern for error handling – actual errors should be handled correctly (e.g. throw an exception quick), using the null object pattern when errors happen can potentially create difficult debugging scenarios later on</li>
+</ul>
     <div class="top-pad">
         
 <div class="posts-contact-area">

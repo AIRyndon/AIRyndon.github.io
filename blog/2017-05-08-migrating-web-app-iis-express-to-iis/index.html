@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+Migrating Your Web App From Iis Express to Iis - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="Migrating your Web App from IIS Express to IIS - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2017-05-08-migrating-web-app-iis-express-to-iis/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2017-05-08-migrating-web-app-iis-express-to-iis/">Migrating your Web App from IIS Express to IIS</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        May 8, 2017 |
         2 minutes read
     </div>
     
@@ -163,51 +163,42 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/IIS">IIS</a>,
+        
+        <a href="/tags/Visual%20Studio">Visual Studio</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.</p>
 
+<h4 id="from-iis-express-to-iis" class="anchor-link"><a href="#from-iis-express-to-iis">From IIS Express to IIS</a></h4>
+<p>I did these on a machine that runs VS2017, SQL Server 2016 and IIS10. The <a href="https://msdn.microsoft.com/en-us/library/dd547590(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web App</a> project was first on LocalDb.</p>
+<p>First make changes to the project on Visual Studio. Go to your project’s properties, then select Local IIS. Then click Create Virtual Directory.</p>
+<p> </p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg"><img class="aligncenter wp-image-478 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg" alt="" width="300" height="72" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Second, assuming you have a database on SQL Server, update your connection strings on Web.config accordingly.</p>
+<p>Third, create a <a href="https://msdn.microsoft.com/en-us/library/dd465323(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web Package.</a> Select IIS as the publish target, then pick Web Deploy Package as the publish method ( I like creating a Web Package compared to publishing directly, pretty sure publishing directly will work too).</p>
+
+<h4 id="publishing-to-iis" class="anchor-link"><a href="#publishing-to-iis">Publishing to IIS</a></h4>
+<p>This one is pretty easy once you have the required services running. __<em>I’m not sure if all these services I turned on are required.</em> Main thing for me is it worked 🙂</p>
+<p>First, check if IIS is running or not. It’s at Control Panel &gt; Program and Features &gt; Turn Windows Features On/Off – the boxes I ticked are on the screenshot below.</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg"><img class="aligncenter wp-image-477 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg" alt="" width="300" height="135" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p> </p>
+<p>Then check if you have Web Deploy installed, I did this by searching for it in <a href="https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads" target="_blank" rel="noopener noreferrer">Web Platform Installer</a>. <em>Again I’m uncertain if you need to install everything with Web Deploy in there to get this next key option to show.</em></p>
+<p>Finally, open IIS Manager (inetmgr from Windows Run). Then go to Sites – you can use the Default Web Site – and on the Actions Pane click on Import Application and use your Web Package’s zip file. The Import Application link was missing on my installation of IIS, installing Web Deploy fixed the issue on my machine.</p>
+<p>Hopefully, the import should go smoothly and you’ll have your Web App on IIS 🙂</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">

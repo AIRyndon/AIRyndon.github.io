@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Angelo Ryndon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jul 2019 10:09:12 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASP.NET</title>
+      <link>https://angeloryndon.com/tags/asp.net/</link>
+      <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/tags/asp.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>https://angeloryndon.com/tags/tips/</link>
+      <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+      
+      <guid>https://angeloryndon.com/tags/tips/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Opinions</title>
       <link>https://angeloryndon.com/tags/opinions/</link>
@@ -26,29 +44,11 @@
     </item>
     
     <item>
-      <title>ASP.NET</title>
-      <link>https://angeloryndon.com/tags/asp.net/</link>
+      <title>csharp</title>
+      <link>https://angeloryndon.com/tags/csharp/</link>
       <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
       
-      <guid>https://angeloryndon.com/tags/asp.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C#</title>
-      <link>https://angeloryndon.com/tags/c#/</link>
-      <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/tags/c#/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UWP</title>
-      <link>https://angeloryndon.com/tags/uwp/</link>
-      <pubDate>Mon, 11 Jun 2018 05:02:37 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/tags/uwp/</guid>
+      <guid>https://angeloryndon.com/tags/csharp/</guid>
       <description></description>
     </item>
     

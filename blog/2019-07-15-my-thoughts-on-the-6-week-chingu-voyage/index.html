@@ -10,15 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 - Angelo Ryndon
+My Thoughts on the 6 Week Chingu Voyage - Angelo Ryndon
 </title>
 
 
 
-        <meta property="og:title" content="Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8 - Angelo Ryndon" />
+        <meta property="og:title" content="My thoughts on the 6 week Chingu voyage - Angelo Ryndon" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/"/>
+<meta property="og:url" content="https://angeloryndon.com/blog/2019-07-15-my-thoughts-on-the-6-week-chingu-voyage/"/>
 <meta property="og:site_name" content="Angelo Ryndon"/>
 
 
@@ -120,10 +120,10 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/blog/migrate-asp-net-mvc-to-net48/">Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</a>
+        <a href="https://angeloryndon.com/blog/2019-07-15-my-thoughts-on-the-6-week-chingu-voyage/">My thoughts on the 6 week Chingu voyage</a>
     </h2>
     <div class="post-data">
-        Nov 8, 2020 |
+        Jul 15, 2019 |
         2 minutes read
     </div>
     
@@ -163,51 +163,34 @@ Migrate Asp.net Mvc That References . Net Standard 2.0 From Version 4.6 to 4.8 -
     
 
     
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/Opinions">Opinions</a>
+                
+    </p>
+    
+
+    
 
 </div>
 
 <div class="container markdown top-pad">
-    <ul>
-<li>
-<p>In Visual Studio, change project target framework to 4.8</p>
-</li>
-<li>
-<p>Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.</p>
-<blockquote>
-<p>I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
-If this project is being referenced by other projects</p>
-<p>Remove the reference and add it again if you get a &ldquo;Could not load file or assembly error&rdquo;</p>
-</blockquote>
-</li>
-<li>
-<p>Add binding redirect, to do this add these to the project&rsquo;s .csproj file</p>
-<pre><code>  &lt;PropertyGroup&gt;
-      &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-      &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-</li>
-<li>
-<p>Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the <code>&lt;runtime&gt;</code> node inside that file and copy all the <code>&lt;assemblyBinding&gt;</code> into the project&rsquo;s Web.config <code>&lt;runtime&gt;</code> node (btw, the runtime node should usually just be a direct child of the <code>&lt;configuration&gt;</code> node). You can now delete the <code>&lt;PropertyGroup&gt;</code> node you just added earlier</p>
-<blockquote>
-<p>If you get errors in your razor .cshtml that it can&rsquo;t recognize types from your .netstandard project
-In the project&rsquo;s Web.config, go in <code>&lt;system.web&gt;</code> and add</p>
-</blockquote>
-<pre><code>  &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.8&quot;&gt;
-      &lt;assemblies&gt;
-          &lt;add assembly=&quot;netstandard, Version=&lt;your-version&gt;, Culture=neutral, PublicKeyToken=&lt;its-keyToken&gt;&quot; /&gt;
-      &lt;/assemblies&gt;
-  &lt;/compilation&gt;
-</code></pre>
-</li>
-</ul>
-<p>Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&rsquo;t need to delete the lines below from the .csproj file - so we won&rsquo;t need to copy the <code>&lt;assemblyBinding&gt;</code> into Web.config (I didn&rsquo;t test this though)</p>
-<pre><code>&lt;PropertyGroup&gt;
-    &lt;AutoGenerateBindingRedirects&gt;true&lt;/AutoGenerateBindingRedirects&gt;
-    &lt;GenerateBindingRedirectsOutputType&gt;true&lt;/GenerateBindingRedirectsOutputType&gt;
-&lt;/PropertyGroup&gt;
-</code></pre>
+    <p>Today marks the end of my <a rel="noreferrer noopener" href="https://angeloryndon.com/working-remotely-with-other-developers/">remote work with other developers</a>. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our <a rel="noreferrer noopener" aria-label="MVP (opens in a new tab)" href="https://chingu-voyages.github.io/v9-geckos-team-16/" target="_blank">MVP</a>. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.</p>
 
+<h2 id="in-a-team-setting-i-suck-at-establishing-order" class="anchor-link"><a href="#in-a-team-setting-i-suck-at-establishing-order">In a team setting, I suck at establishing order</a></h2>
+<p>At the start, each of us gave ideas on how to build the application, because we didn’t have an appointed leader. Like how to structure the files, what JS library to use, what would be the git workflow, what features to add, etc.</p>
+<p>It was only after a few days of working on the project when someone emerged as the group leader, and its at creating guidelines and keeping all of us in the same page where I failed. In hindsight, I should’ve communicated better. I was able to carry the project through technical skills – <em>because it is a fairly simple application</em> – but I know in complex projects those won’t be enough.</p>
+
+<h2 id="it-seems-that-i-am-terrible-at-motivating-people" class="anchor-link"><a href="#it-seems-that-i-am-terrible-at-motivating-people">It seems that I am terrible at motivating people</a></h2>
+<p>Maybe because there was no money to be made in the project? Perhaps my personal criteria on how much time should be given to the project is different? Or maybe what I think is a passable MVP, is different? I actually don’t know how to pinpoint it, I just know that during the final stretches, it was only me who made contributions to the project.</p>
+<p>Next time, I will try to be better at motivating my teammates. Or perhaps I am just being too hard on myself on this. Maybe when there is more at stake, people will motivate themselves?</p>
+
+<h2 id="for-some-good-news-i-can-learn-new-things-and-come-up-with-solutions-pretty-quickly" class="anchor-link"><a href="#for-some-good-news-i-can-learn-new-things-and-come-up-with-solutions-pretty-quickly">For some good news, I can learn new things and come up with solutions pretty quickly</a></h2>
+<p>I am happy that I have this skill, which I believe is extremely important. I’ve got a lot to learn, especially in the social skills department. I believe being a quick study, and being adaptable can help me shore up my weaknesses.</p>
     <div class="top-pad">
         
 <div class="posts-contact-area">
