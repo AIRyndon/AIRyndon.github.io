@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Automate Deployment From Github to Windows Azure - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Automate deployment from Github to Windows Azure - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile-1.jpg"/>
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/">Automate deployment from Github to Windows Azure</a>
+    </h2>
+    <div class="post-data">
+        Apr 21, 2017 |
+        3 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/Azure">Azure</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <p>There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –</p>
+
+<h4 id="keepyourprivate-stuff-out-of-source-control" class="anchor-link"><a href="#keepyourprivate-stuff-out-of-source-control">Keep your private stuff out of source control</a></h4>
+<p>I’m not sure if every developer once made the mistake of putting private stuff in source control, I sure did and it bit me bad. When I found out I checked in a private connection string a couple of days after the fact, my response was to <strong>delete my repository</strong>. I’m pretty sure there is a way to untrack and remove a file from Github. I didn’t bother to research about it during that time though, perhaps I was in panic mode.</p>
+<p>Here is what I found out on Azure. Your connection strings in web.config will get updated by what you have written in a configuration section at Azure portal. Here is a screenshot</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png"><img class="aligncenter size-medium wp-image-493" src="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png" alt="" width="300" height="61" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-768x156.png 768w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1024x208.png 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1100x223.png 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png 1556w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p> </p>
+<p>Its found in the <strong>Application Settings</strong> section of your App Service. Just make sure <strong>the Name or the Key</strong> you write in Azure Portal matches the Name/Key of the setting in your development machine. Azure will then use the <strong>Value</strong> you wrote in Azure Portal (the private area) when you publish. Just put a dummy value on your development machine’s settings before you check in to Github. <em>Please note that I haven’t tried using a different name on my Dev machine and on Azure configuration section to see if it’ll still work.</em></p>
+<p>If you have complete control of your server, which you won’t have in an Azure App Service, you can save a configuration file that contains the private data on your server. You can then reference the file on your web.config. <em>By the way, you can have a unique extension for these external files so you’ll know they have secret stuff.</em></p>
+<p>For connection strings, use the <strong>configSource</strong> property to reference the file:</p>
+<p><code>&lt;connectionStrings configSource=&quot;secretStuff.config&quot;&gt;&lt;br /&gt; &lt;connectionStrings/&gt;</code></p>
+<p>For app settings, use the <strong>file</strong> property:</p>
+<p><code>&lt;appSettings file=&quot;secretStuff.config&quot;&gt;&lt;br /&gt; &lt;appSettings/&gt;</code></p>
+<p>The settings you have on the external file will then get merged on runtime.</p>
+
+<h4 id="to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu" class="anchor-link"><a href="#to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu">To automate deployment in Windows Azure, sometimes you have to delete files in Kudu</a></h4>
+<p>This one took me some time to figure out. I kept getting deployment errors on Windows Azure. You set this up in the <strong>Deployment Options</strong> section of your App Service.</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png"><img class="aligncenter size-medium wp-image-494" src="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png" alt="" width="300" height="128" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png 559w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>By the way <a href="https://github.com/projectkudu/kudu" target="_blank" rel="noopener noreferrer">Kudu</a> is this nifty little tool that I just found out about while trying to fix the deployment errors I kept getting. I tried republishing the Web App, disconnecting and redeploying from Github, recreating the database and a couple of other things – trial and error – to fix the deployment problems. Then I found out simply deleting the <strong>repository</strong> folder and the <strong>wwwroot</strong> on Kudu’s debug console, then setting up deployment again fixes my issue. You can access Kudu by adding scm to your site url – _yoursite.scm.azurewebsites.net – _or by clicking <strong>Advanced Tools</strong> on the Development Tools of your App Service.</p>
+<p>If you encounter this error – <em>Azure: The system cannot find the path specified.</em> There’s a quick fix I found on the Github <a href="https://github.com/madskristensen/WebCompiler/issues/146" target="_blank" rel="noopener">forum</a>, while on Kudu console you do these commands:</p>
+<p>Go to – local/temp/webcompiler.[version]</p>
+<p>Run – cmd /c prepare.cmd</p>
+<p>That’s it! I hope this could help someone who wants to automate deployment using Github and Windows Azure.</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

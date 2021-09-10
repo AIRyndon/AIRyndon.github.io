@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Modular Programming in Java Script - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Modular Programming in JavaScript - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2019/06/modular-programming-in-javascript/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile-1.jpg"/>
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2019/06/modular-programming-in-javascript/">Modular Programming in JavaScript</a>
+    </h2>
+    <div class="post-data">
+        Jun 22, 2019 |
+        2 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/JavaScript">JavaScript</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <p>I was learning ES6 about <a href="https://angeloryndon.com/learn-javascript-again/">two weeks ago</a>, and it reminded me of how modular programming in JavaScript was done during the years prior. I’m quite happy with how JavaScript has evolved, I would even say that I’m starting to like it. Before we go into the “How to do modular programming in JavaScript today”, I would like to give my thoughts on modular programming first.</p>
+
+<h2 id="modular-programming" class="anchor-link"><a href="#modular-programming">Modular Programming</a></h2>
+<p>Modular programming is about chopping down a <em>big idea</em> (which is the program itself) into <em>little ideas</em> (the program’s features). You then build each of those <em>little ideas</em> and connect them together to create the <em>big idea</em>. This programming style allows you to create software that is easier to maintain – I’m in the opinion though that if you overdo it, your software will be even harder to understand and maintain.</p>
+
+<h2 id="how-is-modular-programming-done-in-javascript" class="anchor-link"><a href="#how-is-modular-programming-done-in-javascript">How is modular programming done in JavaScript</a></h2>
+<p>When I first learned C#, modular programming was something I felt closer to – <em>I want to make small methods, and small classes.</em> Separating your code into smaller classes is built-into C#, and this was not the same with JavaScript. When I first learned JavaScript, there was a weird hack to separate your code into its own modules. You have to use a function that is invoked right after its creation – the term <a rel="noreferrer noopener" aria-label="IFFE (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE" target="_blank">IFFE</a> was coined for this behavior.</p>
+<p>The addition of the <a rel="noreferrer noopener" aria-label="import (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">import</a> and <a rel="noreferrer noopener" aria-label="export (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export" target="_blank">export</a> statements in ES6 means modular programming is now supported natively in JavaScript – <em>I don’t have experience with Node.js so I have no clue if ES6 imports and exports also work out-of-the-box there like in current Web Development</em>.</p>
+<p>Below is an extremely quick rundown of how modular programming evolved in native JavaScript:</p>
+<ol>
+<li>A smart developer thought about IFFE, and the Module Pattern was born in JavaScript</li>
+<li>CommonJS and other libraries made improvements to IFFE, and solved the problems with using it to create modules – <em>like script files should be loaded in order correctly, and some other problems</em></li>
+<li>ES6 adopted the improvements from CommonJS et al, made some tweaks to it, and now we have module support in native JavaScript</li>
+</ol>
+<p>I’m sure there are tons of resources around the web if you want to know more details about how modules evolved in JavaScript, and how to do it, so I won’t include it in this post.</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,47 +1,116 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>csharp on Angelo Ryndon</title>
-    <link>https://angeloryndon.com/tags/csharp/</link>
-    <description>Recent content in csharp on Angelo Ryndon</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 16 Apr 2019 00:57:22 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learning ASP.NET Core</title>
-      <link>https://angeloryndon.com/blog/2019-04-16-learning-asp-net-core/</link>
-      <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2019-04-16-learning-asp-net-core/</guid>
-      <description>&lt;p&gt;For the last few days, I’ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Null Object Pattern in C#</title>
-      <link>https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/</link>
-      <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2018-10-04-null-object-pattern-in-csharp/</guid>
-      <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Learning about ASP.NET MVC 5 Identity</title>
-      <link>https://angeloryndon.com/blog/2017-05-16-mvc-5-identity/</link>
-      <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-05-16-mvc-5-identity/</guid>
-      <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I’m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Windows Azure configuration for ASP.NET MVC</title>
-      <link>https://angeloryndon.com/blog/2017-04-26-windows-azure-configurations/</link>
-      <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-04-26-windows-azure-configurations/</guid>
-      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>csharp on Angelo Ryndon</title>
+        <link>https://angeloryndon.com/tags/csharp/</link>
+        <description>Recent content in csharp on Angelo Ryndon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 16 Apr 2019 00:57:22 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Learning ASP.NET Core</title>
+            <link>https://angeloryndon.com/2019/04/learning-asp-net-core/</link>
+            <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2019/04/learning-asp-net-core/</guid>
+            <description>&lt;p&gt;For the last few days, I’ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-overview-of-model-binding-in-aspnet-core&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#quick-overview-of-model-binding-in-aspnet-core&#34;&gt;Quick overview of Model Binding in ASP.NET Core&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.&lt;/p&gt;
+&lt;p&gt;When you make an http request (invoke a method from the PageModel/Controller), the framework’s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.&lt;/p&gt;
+&lt;p&gt;When the parameter to the method called by the framework (OnGet for example) does not contain anything, ASP.NET Core will default to null if the parameter is a reference type, and throw an exception if the parameter is a value type.&lt;/p&gt;
+
+&lt;h2 id=&#34;tag-helpers&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#tag-helpers&#34;&gt;Tag Helpers&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These tag helpers are new to me – I don’t remember it existed before ASP.NET Core – and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-&lt;anything&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;asp-page&lt;/strong&gt; tag helper sets an anchor tag to point to a Razor page. On the other hand, the &lt;strong&gt;asp-for&lt;/strong&gt; tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don’t need to type Model.&lt;Property&gt; to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.&lt;/p&gt;
+&lt;p&gt;First, it sets the html input’s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request – &lt;strong&gt;input model&lt;/strong&gt;. Second, it fills the html input’s value when the server populates the page (responds to the request) with values from the Page Model property – &lt;strong&gt;output model&lt;/strong&gt;. The Input model and Output model are two new helpful terms I got from Scott here.&lt;/p&gt;
+&lt;p&gt;Last, we have &lt;strong&gt;asp-route-&lt;anything&gt;,&lt;/strong&gt; this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The &lt;anything&gt; should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.&lt;/p&gt;
+&lt;p&gt;That’s it for this post. Now I’ll continue the course and will likely create a new post about what I learned.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Null Object Pattern in C#</title>
+            <link>https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/</link>
+            <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/</guid>
+            <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-basic-goal-of-the-null-object-pattern&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#the-basic-goal-of-the-null-object-pattern&#34;&gt;The basic goal of the Null Object Pattern&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This pattern aims to decrease or greatly minimize the need for null checking code in parts of a code base. I think no one wants writing boilerplate like the if clause below.&lt;/p&gt;
+&lt;pre class=&#34;EnlighterJSRAW&#34; data-enlighter-language=&#34;csharp&#34;&gt;public YourMethod(someVariable)
+{
+  if(someVariable != null)
+  {
+     CallSomeMethod(someVariable)
+  }
+}&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Another main goal of this pattern is to eliminate or decrease the occurrence of the dreaded null-reference exception during an application’s run-time.&lt;/p&gt;
+
+&lt;h2 id=&#34;high-level-overview-of-the-patternnbsp&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#high-level-overview-of-the-patternnbsp&#34;&gt;High level overview of the Pattern &lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;wp-block-image&#34;&gt;
+  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png&#34; alt=&#34;Overview of Null Object Pattern in C#&#34; class=&#34;wp-image-687&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;The image above shows what the pattern is conceptually. Imagine you have an abstraction containing only a method signature, this abstraction could be an Interface or an Abstract Class. This then has a real implementation(s) and a null object implementation(s). The key here is this:&lt;/p&gt;
+&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
+  &lt;p&gt;
+    &lt;br /&gt;&lt;em&gt;To client code, a real object and a null object can be treated equally.&lt;/em&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Because the client code is only referencing the abstraction, the implementation (Real or Null) is not its concern.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementing-the-null-object-pattern-in-c&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#implementing-the-null-object-pattern-in-c&#34;&gt;Implementing the Null Object Pattern in C#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;https://github.com/AIRyndon/CSharpNullObjectPattern&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Github repo&lt;/a&gt; that illustrates the pattern’s basic implementation.&lt;/p&gt;
+&lt;p&gt;Some things to take note when using the pattern:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When working with others, your team should know what parts of your project uses the null object pattern – or else other team members might use magic numbers or perform manual null checks instead&lt;/li&gt;
+&lt;li&gt;Client code that uses the null object should agree on what the null behavior is – problems could arise if different clients expect something unique to them for null behavior. If clients are like this, it is better to have different null object implementations&lt;/li&gt;
+&lt;li&gt;You usually do not want to use the null object pattern for error handling – actual errors should be handled correctly (e.g. throw an exception quick), using the null object pattern when errors happen can potentially create difficult debugging scenarios later on&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Learning about ASP.NET MVC 5 Identity</title>
+            <link>https://angeloryndon.com/2017/05/mvc-5-identity/</link>
+            <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/05/mvc-5-identity/</guid>
+            <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I’m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;
+
+&lt;h4 id=&#34;mvc-5-identity-8211-microsoftaspnetidentitycore&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#mvc-5-identity-8211-microsoftaspnetidentitycore&#34;&gt;MVC 5 Identity – Microsoft.AspNet.Identity.Core&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This is new in MVC 5, the core assembly of MVC 5 provides interfaces that you can implement if you want full control of user creation, authentication, etc. in your application. But I think Microsoft’s implementation is good for most projects.&lt;/p&gt;
+&lt;p&gt;Microsoft’s implementation relies on Entity Framework to talk with a SQL Server Db. If you want to use a different database, implement the interface provided. The diagram below is a quick overview of what I think are the most important core interfaces:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-476&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft is using a repository pattern on this one, the implementation will be hiding behind interfaces which I believe is a good thing. The concrete class UserManager is there to manage users. IUserStore  and its buddies –  IUserLoginStore and IUserPasswordStore, who also implements IUserStore – has methods for database access. The Role interface by the way uses the same pattern as the User interface. It has store interfaces for database access.&lt;/p&gt;
+&lt;p&gt;Reiterating this, a User or Role just holds your data. UserStore etc. puts this on a Database of your choice. You then use the UserManager concrete class to orchestrate, it has your domain logic. Unless you have to do something low level.&lt;/p&gt;
+
+&lt;h4 id=&#34;entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34;&gt;Entity Framework with SQL Server – Microsoft.AspNet.Identity.EntityFramework&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This is one implementation of the core interfaces above. Entity Framework has IdentityUser, IdentityRole, a UserStore class, which I think are the crucial ones. The UserStore class implements IUserStore, IUserLogin and IUserPassword. To talk with SQL Server, it has IdentityDbContext. In conclusion, use this unless you really need some custom implementation. Also, I suggest watching this &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;amp;author=scott-allen&amp;amp;name=aspdotnet-mvc5-fundamentals-m1-introduction&amp;amp;clip=0&#34;&gt;video &lt;/a&gt; since it is awesome 🙂&lt;figure class=&#34;wp-block-image is-resized&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-476&#34; width=&#34;182&#34; height=&#34;182&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Windows Azure configuration for ASP.NET MVC</title>
+            <link>https://angeloryndon.com/2017/04/windows-azure-configurations/</link>
+            <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/04/windows-azure-configurations/</guid>
+            <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;
+
+&lt;h4 id=&#34;windowsazureconfiguration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#windowsazureconfiguration&#34;&gt;Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;IIS or Windows Azure does not recognize DELETE, PUT and some other Http verbs by default. I found this fix online while trying to fix an Http 404 error from my Web API controller.&lt;/p&gt;
+&lt;p&gt;Below is the exact code I used:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot;&amp;lt;br /&amp;gt; path=&amp;quot;*.&amp;quot;&amp;lt;br /&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,DELETE,PUT&amp;quot;&amp;lt;br /&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;br /&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If the code above does not fix your issue, I read that removing “WebDav” and “WebDavModule” could help resolve the issue. Below is the complete snippet – &lt;em&gt;the snippet I used in bold&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;system.webServer&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;validation validateIntegratedModeConfiguration=&amp;quot;false&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;modules runAllManagedModulesForAllRequests=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDAVModule&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/modules&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDav&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness32&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness64&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/system.webServer&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;usual-media-types-to-add-to-your-windows-azure-configuration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#usual-media-types-to-add-to-your-windows-azure-configuration&#34;&gt;Usual Media types to add to your Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The code snippet below is for media types we usually use on the web to keep IIS or Windows Azure happy serving static content, you can add/remove stuff depending on your needs. _Please note this is also inside &amp;lt;_system.webServer&amp;gt; of your Web.config.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;staticContent&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.eot&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.otf&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.woff&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.mp4&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ogv&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.webm&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.svg&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.eot&amp;quot; mimeType=&amp;quot;application/vnd.ms-fontobject&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ttf&amp;quot; mimeType=&amp;quot;font/ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.otf&amp;quot; mimeType=&amp;quot;font/otf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff&amp;quot; mimeType=&amp;quot;application/font-woff&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff2&amp;quot; mimeType=&amp;quot;application/font-woff2&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.mp4&amp;quot; mimeType=&amp;quot;video/mp4&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ogv&amp;quot; mimeType=&amp;quot;video/ogg&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.webm&amp;quot; mimeType=&amp;quot;video/webm&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.svg&amp;quot; mimeType=&amp;quot;image/svg+xml&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/staticContent&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I think you have noticed this by now as well, it is good practice to remove something in your Web.config first before adding it again, to make sure you don’t get duplicates. That’s it for tonight 🙂&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

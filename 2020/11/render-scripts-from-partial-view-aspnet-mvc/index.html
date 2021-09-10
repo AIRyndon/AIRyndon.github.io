@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Render Scripts From Partial Views in Asp. Net Mvc 5 - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Render scripts from Partial Views in ASP.NET MVC 5 - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile-1.jpg"/>
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/">Render scripts from Partial Views in ASP.NET MVC 5</a>
+    </h2>
+    <div class="post-data">
+        Nov 10, 2020 |
+        2 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/tips">tips</a>,
+        
+        <a href="/tags/asp.net">asp.net</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <h2 id="scenario" class="anchor-link"><a href="#scenario">Scenario</a></h2>
+<p>You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.</p>
+
+<h2 id="issue" class="anchor-link"><a href="#issue">Issue</a></h2>
+<p>Partial Views in ASP.NET MVC do not support section areas</p>
+<pre><code>@section scripts{
+    //not supported in Partial Views :(
+}
+</code></pre>
+
+<h2 id="workaround-one" class="anchor-link"><a href="#workaround-one">Workaround One</a></h2>
+<ul>
+<li>Trigger a custom event when your ajax call has finished updating the page&rsquo;s html</li>
+<li>Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)</li>
+</ul>
+
+<h4 id="sample-code" class="anchor-link"><a href="#sample-code">Sample Code</a></h4>
+<pre><code>public static firePartialViewEvent(): void
+{
+    /*
+    * longer way of writing is to maintain IE compatibility
+    * https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+    *
+    */
+    const loadEvent = document.createEvent('Event');
+    loadEvent.initEvent('finished:loading', true, true);
+    document.querySelector('body').dispatchEvent(loadEvent);
+}
+
+/**
+* Call this from the partial view's script, if doing an ajax request
+* @param script the partial view script to call
+*/
+public static loadPartialViewScript(script: () =&gt; void): void
+{
+    const body = document.querySelector('body');
+    const options: AddEventListenerOptions = {
+        once: true,
+    }
+
+    body.addEventListener('finished:loading', () =&gt;
+    {
+        script();
+    }, options);
+}
+</code></pre>
+<br/>
+
+<h4 id="usage" class="anchor-link"><a href="#usage">Usage</a></h4>
+<pre><code>//in your JavaScript/TypeScript file's ajax call
+$.get(&lt;blah blah&gt;).done(() =&gt; firePartialViewEvent());
+
+//in your Partial View
+@if (Request.IsAjaxRequest()) // you usually only want to call this in an ajax request where the main view is ideally not returned
+{
+    &lt;script&gt;
+        (() =&gt;
+        {
+            loadPartialViewScript(() =&gt; &lt;your partial view script&gt;);
+        })();
+    &lt;/script&gt;
+}
+//and in your main view you have the usual  @section scripts that will render the needed scripts of the Partial View (duplicate call)
+</code></pre>
+<br/>
+
+<h2 id="workaround-two" class="anchor-link"><a href="#workaround-two">Workaround Two</a></h2>
+<ul>
+<li>put the IIFE that calls your partial view in a separate script file</li>
+<li>use <code>&lt;script defer&gt;</code> in the Partial View</li>
+</ul>
+
+<h4 id="sample-code-1" class="anchor-link"><a href="#sample-code-1">Sample Code</a></h4>
+<pre><code>//on a JS file somewhere (i.e partial-view-caller.js)
+(() =&gt; &lt;your partial view script&gt;)();
+
+//in your Partial View
+&lt;script src=&quot;~/partial-view-caller.js&quot; defer&gt;&lt;/script&gt;
+
+//you can actually just straight call your partial view script living in an external file - I just prefer having an initialization method :)
+</code></pre>
+<br/>
+
+<h4 id="closing-thoughts" class="anchor-link"><a href="#closing-thoughts">Closing thoughts</a></h4>
+<p>I personally prefer <strong>Workaround Two</strong> for its simplicity. However, I implemented <strong>Workaround One</strong> first - cause I&rsquo;m an idiot who didn&rsquo;t know how to properly use defer :D <br/>
+<br/>
+However, <strong>Workaround One</strong> is in my opinion the ideal way in case you want to pass some data from your C# ViewModel to that Partial View script, which is also a common scenario. Therefore, both methods are useful - it depends on your situation.</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

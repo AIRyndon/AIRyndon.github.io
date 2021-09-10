@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Azure on Angelo Ryndon</title>
-    <link>https://angeloryndon.com/tags/azure/</link>
-    <description>Recent content in Azure on Angelo Ryndon</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 26 Apr 2017 08:13:05 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Windows Azure configuration for ASP.NET MVC</title>
-      <link>https://angeloryndon.com/blog/2017-04-26-windows-azure-configurations/</link>
-      <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-04-26-windows-azure-configurations/</guid>
-      <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Automate deployment from Github to Windows Azure</title>
-      <link>https://angeloryndon.com/blog/2017-04-21-automate-deployment-github-windows-azure/</link>
-      <pubDate>Fri, 21 Apr 2017 10:18:16 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-04-21-automate-deployment-github-windows-azure/</guid>
-      <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
+    <channel>
+        <title>Azure on Angelo Ryndon</title>
+        <link>https://angeloryndon.com/tags/azure/</link>
+        <description>Recent content in Azure on Angelo Ryndon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 26 Apr 2017 08:13:05 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Windows Azure configuration for ASP.NET MVC</title>
+            <link>https://angeloryndon.com/2017/04/windows-azure-configurations/</link>
+            <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/04/windows-azure-configurations/</guid>
+            <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;
 
-&lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-  </channel>
+&lt;h4 id=&#34;windowsazureconfiguration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#windowsazureconfiguration&#34;&gt;Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;IIS or Windows Azure does not recognize DELETE, PUT and some other Http verbs by default. I found this fix online while trying to fix an Http 404 error from my Web API controller.&lt;/p&gt;
+&lt;p&gt;Below is the exact code I used:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot;&amp;lt;br /&amp;gt; path=&amp;quot;*.&amp;quot;&amp;lt;br /&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,DELETE,PUT&amp;quot;&amp;lt;br /&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;br /&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If the code above does not fix your issue, I read that removing “WebDav” and “WebDavModule” could help resolve the issue. Below is the complete snippet – &lt;em&gt;the snippet I used in bold&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;system.webServer&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;validation validateIntegratedModeConfiguration=&amp;quot;false&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;modules runAllManagedModulesForAllRequests=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDAVModule&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/modules&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDav&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness32&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness64&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/system.webServer&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;usual-media-types-to-add-to-your-windows-azure-configuration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#usual-media-types-to-add-to-your-windows-azure-configuration&#34;&gt;Usual Media types to add to your Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The code snippet below is for media types we usually use on the web to keep IIS or Windows Azure happy serving static content, you can add/remove stuff depending on your needs. _Please note this is also inside &amp;lt;_system.webServer&amp;gt; of your Web.config.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;staticContent&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.eot&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.otf&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.woff&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.mp4&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ogv&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.webm&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.svg&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.eot&amp;quot; mimeType=&amp;quot;application/vnd.ms-fontobject&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ttf&amp;quot; mimeType=&amp;quot;font/ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.otf&amp;quot; mimeType=&amp;quot;font/otf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff&amp;quot; mimeType=&amp;quot;application/font-woff&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff2&amp;quot; mimeType=&amp;quot;application/font-woff2&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.mp4&amp;quot; mimeType=&amp;quot;video/mp4&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ogv&amp;quot; mimeType=&amp;quot;video/ogg&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.webm&amp;quot; mimeType=&amp;quot;video/webm&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.svg&amp;quot; mimeType=&amp;quot;image/svg+xml&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/staticContent&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I think you have noticed this by now as well, it is good practice to remove something in your Web.config first before adding it again, to make sure you don’t get duplicates. That’s it for tonight 🙂&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Automate deployment from Github to Windows Azure</title>
+            <link>https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/</link>
+            <pubDate>Fri, 21 Apr 2017 10:18:16 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/</guid>
+            <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
+
+&lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;I’m not sure if every developer once made the mistake of putting private stuff in source control, I sure did and it bit me bad. When I found out I checked in a private connection string a couple of days after the fact, my response was to &lt;strong&gt;delete my repository&lt;/strong&gt;. I’m pretty sure there is a way to untrack and remove a file from Github. I didn’t bother to research about it during that time though, perhaps I was in panic mode.&lt;/p&gt;
+&lt;p&gt;Here is what I found out on Azure. Your connection strings in web.config will get updated by what you have written in a configuration section at Azure portal. Here is a screenshot&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-493&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;61&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-768x156.png 768w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1024x208.png 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1100x223.png 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png 1556w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Its found in the &lt;strong&gt;Application Settings&lt;/strong&gt; section of your App Service. Just make sure &lt;strong&gt;the Name or the Key&lt;/strong&gt; you write in Azure Portal matches the Name/Key of the setting in your development machine. Azure will then use the &lt;strong&gt;Value&lt;/strong&gt; you wrote in Azure Portal (the private area) when you publish. Just put a dummy value on your development machine’s settings before you check in to Github. &lt;em&gt;Please note that I haven’t tried using a different name on my Dev machine and on Azure configuration section to see if it’ll still work.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you have complete control of your server, which you won’t have in an Azure App Service, you can save a configuration file that contains the private data on your server. You can then reference the file on your web.config. &lt;em&gt;By the way, you can have a unique extension for these external files so you’ll know they have secret stuff.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For connection strings, use the &lt;strong&gt;configSource&lt;/strong&gt; property to reference the file:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;connectionStrings configSource=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;connectionStrings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For app settings, use the &lt;strong&gt;file&lt;/strong&gt; property:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;appSettings file=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;appSettings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The settings you have on the external file will then get merged on runtime.&lt;/p&gt;
+
+&lt;h4 id=&#34;to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu&#34;&gt;To automate deployment in Windows Azure, sometimes you have to delete files in Kudu&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This one took me some time to figure out. I kept getting deployment errors on Windows Azure. You set this up in the &lt;strong&gt;Deployment Options&lt;/strong&gt; section of your App Service.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-494&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;128&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png 559w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By the way &lt;a href=&#34;https://github.com/projectkudu/kudu&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Kudu&lt;/a&gt; is this nifty little tool that I just found out about while trying to fix the deployment errors I kept getting. I tried republishing the Web App, disconnecting and redeploying from Github, recreating the database and a couple of other things – trial and error – to fix the deployment problems. Then I found out simply deleting the &lt;strong&gt;repository&lt;/strong&gt; folder and the &lt;strong&gt;wwwroot&lt;/strong&gt; on Kudu’s debug console, then setting up deployment again fixes my issue. You can access Kudu by adding scm to your site url – _yoursite.scm.azurewebsites.net – _or by clicking &lt;strong&gt;Advanced Tools&lt;/strong&gt; on the Development Tools of your App Service.&lt;/p&gt;
+&lt;p&gt;If you encounter this error – &lt;em&gt;Azure: The system cannot find the path specified.&lt;/em&gt; There’s a quick fix I found on the Github &lt;a href=&#34;https://github.com/madskristensen/WebCompiler/issues/146&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;forum&lt;/a&gt;, while on Kudu console you do these commands:&lt;/p&gt;
+&lt;p&gt;Go to – local/temp/webcompiler.[version]&lt;/p&gt;
+&lt;p&gt;Run – cmd /c prepare.cmd&lt;/p&gt;
+&lt;p&gt;That’s it! I hope this could help someone who wants to automate deployment using Github and Windows Azure.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

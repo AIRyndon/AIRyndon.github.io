@@ -1,53 +1,118 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Opinions on Angelo Ryndon</title>
-    <link>https://angeloryndon.com/tags/opinions/</link>
-    <description>Recent content in Opinions on Angelo Ryndon</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jul 2019 10:09:12 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/opinions/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My thoughts on the 6 week Chingu voyage</title>
-      <link>https://angeloryndon.com/blog/2019-07-15-my-thoughts-on-the-6-week-chingu-voyage/</link>
-      <pubDate>Mon, 15 Jul 2019 10:09:12 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2019-07-15-my-thoughts-on-the-6-week-chingu-voyage/</guid>
-      <description>&lt;p&gt;Today marks the end of my &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34;&gt;remote work with other developers&lt;/a&gt;. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;MVP (opens in a new tab)&#34; href=&#34;https://chingu-voyages.github.io/v9-geckos-team-16/&#34; target=&#34;_blank&#34;&gt;MVP&lt;/a&gt;. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Working remotely with other developers</title>
-      <link>https://angeloryndon.com/blog/2019-06-02-working-remotely-with-other-developers/</link>
-      <pubDate>Sun, 02 Jun 2019 08:48:52 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2019-06-02-working-remotely-with-other-developers/</guid>
-      <description>&lt;p&gt;I forgot where I learned about &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Chingu (opens in a new tab)&#34; href=&#34;https://chingu.io/&#34; target=&#34;_blank&#34;&gt;Chingu&lt;/a&gt;, what I love about it though is the opportunity to be working remotely with other developers. We are on our first week in a 6-week team project and I’m both anxious and excited about this opportunity.&lt;/p&gt;
-&lt;p&gt;I finished the &lt;a href=&#34;https://angeloryndon.com/portfolio/connect-four/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;prerequisite task (opens in a new tab)&#34;&gt;prerequisite task&lt;/a&gt; to enter the team project on the last day – because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Comparison: WordPress and Umbraco</title>
-      <link>https://angeloryndon.com/blog/2018-04-17-comparison-wordpress-umbraco/</link>
-      <pubDate>Tue, 17 Apr 2018 00:00:59 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2018-04-17-comparison-wordpress-umbraco/</guid>
-      <description>&lt;p&gt;This post details my first impressions of &lt;a href=&#34;https://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://umbraco.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Umbraco.&lt;/a&gt; I recently learned how to use Umbraco in &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; of my projects, I also played around with WordPress in this blog(only as a power user though at the moment). Now let’s take a look at what I believe are the pros and cons of each.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Coding Bootcamp, should I have attended one?</title>
-      <link>https://angeloryndon.com/blog/2017-06-01-coding-bootcamp/</link>
-      <pubDate>Wed, 31 May 2017 21:15:50 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-06-01-coding-bootcamp/</guid>
-      <description>&lt;p&gt;From its name alone, a coding bootcamp tells you its intense. After attending &lt;a href=&#34;http://www.industryconnect.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; here in New Zealand, I’ll list what I think were the major pros and cons for me.&lt;/p&gt;
+    <channel>
+        <title>Opinions on Angelo Ryndon</title>
+        <link>https://angeloryndon.com/tags/opinions/</link>
+        <description>Recent content in Opinions on Angelo Ryndon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 15 Jul 2019 10:09:12 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/opinions/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>My thoughts on the 6 week Chingu voyage</title>
+            <link>https://angeloryndon.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</link>
+            <pubDate>Mon, 15 Jul 2019 10:09:12 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</guid>
+            <description>&lt;p&gt;Today marks the end of my &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34;&gt;remote work with other developers&lt;/a&gt;. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;MVP (opens in a new tab)&#34; href=&#34;https://chingu-voyages.github.io/v9-geckos-team-16/&#34; target=&#34;_blank&#34;&gt;MVP&lt;/a&gt;. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.&lt;/p&gt;
+
+&lt;h2 id=&#34;in-a-team-setting-i-suck-at-establishing-order&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#in-a-team-setting-i-suck-at-establishing-order&#34;&gt;In a team setting, I suck at establishing order&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At the start, each of us gave ideas on how to build the application, because we didn’t have an appointed leader. Like how to structure the files, what JS library to use, what would be the git workflow, what features to add, etc.&lt;/p&gt;
+&lt;p&gt;It was only after a few days of working on the project when someone emerged as the group leader, and its at creating guidelines and keeping all of us in the same page where I failed. In hindsight, I should’ve communicated better. I was able to carry the project through technical skills – &lt;em&gt;because it is a fairly simple application&lt;/em&gt; – but I know in complex projects those won’t be enough.&lt;/p&gt;
+
+&lt;h2 id=&#34;it-seems-that-i-am-terrible-at-motivating-people&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#it-seems-that-i-am-terrible-at-motivating-people&#34;&gt;It seems that I am terrible at motivating people&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Maybe because there was no money to be made in the project? Perhaps my personal criteria on how much time should be given to the project is different? Or maybe what I think is a passable MVP, is different? I actually don’t know how to pinpoint it, I just know that during the final stretches, it was only me who made contributions to the project.&lt;/p&gt;
+&lt;p&gt;Next time, I will try to be better at motivating my teammates. Or perhaps I am just being too hard on myself on this. Maybe when there is more at stake, people will motivate themselves?&lt;/p&gt;
+
+&lt;h2 id=&#34;for-some-good-news-i-can-learn-new-things-and-come-up-with-solutions-pretty-quickly&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#for-some-good-news-i-can-learn-new-things-and-come-up-with-solutions-pretty-quickly&#34;&gt;For some good news, I can learn new things and come up with solutions pretty quickly&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I am happy that I have this skill, which I believe is extremely important. I’ve got a lot to learn, especially in the social skills department. I believe being a quick study, and being adaptable can help me shore up my weaknesses.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Working remotely with other developers</title>
+            <link>https://angeloryndon.com/2019/06/working-remotely-with-other-developers/</link>
+            <pubDate>Sun, 02 Jun 2019 08:48:52 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2019/06/working-remotely-with-other-developers/</guid>
+            <description>&lt;p&gt;I forgot where I learned about &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Chingu (opens in a new tab)&#34; href=&#34;https://chingu.io/&#34; target=&#34;_blank&#34;&gt;Chingu&lt;/a&gt;, what I love about it though is the opportunity to be working remotely with other developers. We are on our first week in a 6-week team project and I’m both anxious and excited about this opportunity.&lt;/p&gt;
+&lt;p&gt;I finished the &lt;a href=&#34;https://angeloryndon.com/portfolio/connect-four/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;prerequisite task (opens in a new tab)&#34;&gt;prerequisite task&lt;/a&gt; to enter the team project on the last day – because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.&lt;/p&gt;
+
+&lt;h2 id=&#34;clearly-written-tasks&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#clearly-written-tasks&#34;&gt;Clearly written tasks&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I think most if not all developers know that clearly written tasks is key to a successful project. The problem for me is I haven’t worked remotely with anyone before, and I rarely write down a clear to-do-list. I hope some of my team members love doing this, as I will suck at it. However, I have to step up because this is a crucial skill, even my current university instructor keeps telling me to WRITE-THINGS-DOWN.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-git-workflow&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#the-git-workflow&#34;&gt;The Git workflow&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’m fairly comfortable with Git when I’m alone, not so much when working remotely with other developers though. I read about some Git workflows before writing this, and I hope we don’t get stuck with sticky problems related to Git.&lt;/p&gt;
+
+&lt;h2 id=&#34;differences-in-character-traits&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#differences-in-character-traits&#34;&gt;Differences in character traits&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I hope this does not become a major issue, I consider myself chill so I hope it won’t be. Maybe I’m just overthinking things again, maybe our team project will run smoothly. Bottom-line is, I can’t wait to finish this strong.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Comparison: WordPress and Umbraco</title>
+            <link>https://angeloryndon.com/2018/04/comparison-wordpress-umbraco/</link>
+            <pubDate>Tue, 17 Apr 2018 00:00:59 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2018/04/comparison-wordpress-umbraco/</guid>
+            <description>&lt;p&gt;This post details my first impressions of &lt;a href=&#34;https://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://umbraco.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Umbraco.&lt;/a&gt; I recently learned how to use Umbraco in &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; of my projects, I also played around with WordPress in this blog(only as a power user though at the moment). Now let’s take a look at what I believe are the pros and cons of each.&lt;/p&gt;
+
+&lt;h2 id=&#34;wordpress&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#wordpress&#34;&gt;WordPress&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;pros&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#pros&#34;&gt;Pros:&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The ease of setup is the biggest reason to use WordPress. Because of all the themes available, this blog was up and running the same the day I hosted it. I didn’t touch any code&lt;/p&gt;
+&lt;p&gt;There are a lot of plugins to choose from to add behavior to your site. This is very good if you are a business owner, or a blogger who doesn’t want to write code&lt;/p&gt;
+&lt;p&gt;It runs on an open source tech stack. A site running on open source software usually means hosting is cheaper. It is also easier to find hosts ( I recommend FastComet for hosting by the way).&lt;/p&gt;
+&lt;p&gt;It is very popular. I’m sure WordPress became popular because of the ease of setup. It means if you broke your site somehow, it would be easier to find someone who can help you fix it.&lt;/p&gt;
+
+&lt;h4 id=&#34;cons&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#cons&#34;&gt;Cons:&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;WordPress being popular and easy to use I believe is the main cause of my negative feedback. A lot of free plugins and themes to choose from also means a lot of bad code. Now this is the biggest negative issue I found, most of the popular plugins I installed added tons of inline JavaScript to my site and some of the plugins are unnecessarily bloated as well. In my view, things like that are a no-no. I could let it slide if the code won’t be used by anyone else and there are no big performance issues. However, releasing bad code for public use is something I strive to avoid.&lt;/p&gt;
+&lt;p&gt;I feel that because of all the not-so-well-made themes and plugins, a WordPress site meant to have lots of content, user interactions, traffic, etc. will experience speed and maintenance issues if someone is not very careful. And I’m guessing most of our WordPress users belong to the I-cant-be-bothered crowd when it comes to technical topics so there is a good chance some of them will have a hobbling site later on.&lt;/p&gt;
+
+&lt;h2 id=&#34;umbraco&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#umbraco&#34;&gt;Umbraco&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;pros-1&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#pros-1&#34;&gt;Pros:&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;It seems to have been built to be a Content Management System. When I first used it, I felt Umbraco was not made as a blogging platform that later had CMS capabilities added to it&lt;/p&gt;
+&lt;p&gt;It is fast. Well this is coming from a new user, the default Umbraco install I had compared to the default WordPress install is faster (the WordPress install even had a faster host)&lt;/p&gt;
+&lt;p&gt;It is highly customizable when it comes to theming a site. Umbraco can start off as a completely blank slate, your site can look exactly how you want it.&lt;/p&gt;
+&lt;p&gt;Extending a site’s functionality is completely controlled by you. Umbraco’s plugin population is like New Zealand’s, WordPress is like China’s. So you may just want to extend your site by yourself. Luckily, you don’t need to be a God-level developer to extend an Umbraco site, it is relatively easy.&lt;/p&gt;
+
+&lt;h4 id=&#34;cons-1&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#cons-1&#34;&gt;Cons:&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;It feels like it was made with software developers in mind. Now to me that is a huge positive, but to most people who will actually need a CMS that could be a big turn-off. Umbraco won’t be as painless as WordPress when you use it without touching code, it is not at that level yet. However as a software developer, I am actually hoping for Umbraco to not be like what WordPress is now when it comes to that. Because let’s be honest, there are people who claim to be software developers yet the only thing they do is click and install plugins.&lt;/p&gt;
+&lt;p&gt;It is not as popular as WordPress. That means it could also be harder to find someone who can build a site to your liking. It could be tricky to find someone who can fix your site as well in case something breaks.&lt;/p&gt;
+&lt;p&gt;At the moment, it does not run on an open source tech stack. Umbraco itself is open source, however the Microsoft tech it runs on is not (unless Umbraco can painlessly run on .NET Core, use MySQL, and be served from a Linux machine). That means, hosting an Umbraco site will be a little more expensive compared to other setups like WordPress.&lt;/p&gt;
+
+&lt;h4 id=&#34;when-should-you-use-wordpress-or-umbraco&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#when-should-you-use-wordpress-or-umbraco&#34;&gt;When should you use WordPress or Umbraco&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;When you know you only need a blogging platform or an information site about your services – pick WordPress. I believe it will serve you well when you just need a blog or other simple sites. You don’t need to be too worried about security issues, speed issues, etc. when you have something simple with low impact to your business. Pick a theme and install plugins, done. You might ask why did I use Umbraco for a simple site. I really wanted to learn how to use Umbraco that’s why 🙂&lt;/p&gt;
+&lt;p&gt;When you want a site with a lot of functionality – pick Umbraco. However, because Umbraco is not very friendly to regular users, finding a decent/caring developer might be needed for a bespoke site. In my opinion, it will serve you better in the long run. “You get what you pay for” is what they say. Please note though that paid solutions are not always made with pragmatic design decisions, some are also bloated and atrocious.&lt;/p&gt;
+&lt;p&gt;We can also say that you can hire a developer to build your bespoke site for you using WordPress, with all the features you want. Yet when something is popular like WordPress, there is a greater chance of interacting with someone who sells snake-oil, just be careful of that as well.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Coding Bootcamp, should I have attended one?</title>
+            <link>https://angeloryndon.com/2017/05/coding-bootcamp/</link>
+            <pubDate>Wed, 31 May 2017 21:15:50 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/05/coding-bootcamp/</guid>
+            <description>&lt;p&gt;From its name alone, a coding bootcamp tells you its intense. After attending &lt;a href=&#34;http://www.industryconnect.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; here in New Zealand, I’ll list what I think were the major pros and cons for me.&lt;/p&gt;
 
 &lt;h3 id=&#34;pros&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#pros&#34;&gt;PROS&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h4 id=&#34;more-on-self-studying&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#more-on-self-studying&#34;&gt;More on self studying&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;I was exposed to a DIY environment – well even the New Zealand work environment is a lot like this. You only ask questions when you get completely stuck. There is little to no hand holding involved. For some this could be a con, but for me it is a pro. Perhaps because I actually like studying and poking around stuff 🙂&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;p&gt;I was exposed to a DIY environment – well even the New Zealand work environment is a lot like this. You only ask questions when you get completely stuck. There is little to no hand holding involved. For some this could be a con, but for me it is a pro. Perhaps because I actually like studying and poking around stuff 🙂&lt;/p&gt;
+
+&lt;h4 id=&#34;i-started-a-big-project-from-scratch&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#i-started-a-big-project-from-scratch&#34;&gt;I started a big project from scratch&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This is what I loved about the experience, I gained validation that I could start a biggish web &lt;a href=&#34;https://angeloryndon.com/portfolio/property-community/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;project &lt;/a&gt;from nothing and build the prototype that everyone in the team started on. I became a team leader because of that. Though the tech stack used was somewhat old by JavaScript standards ( &lt;a href=&#34;http://knockoutjs.com/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;KnockoutJS&lt;/a&gt;, &lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;JQuery&lt;/a&gt;). All these things I did from back-end to front-end sure made me feel like I really am a developer. I just need more time and experience.&lt;/p&gt;
+
+&lt;h3 id=&#34;cons&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#cons&#34;&gt;CONS&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4 id=&#34;too-crowded&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#too-crowded&#34;&gt;Too crowded&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;When I was there, there were just too many people that I think it wasn’t conducive to learning anymore – that’s Mr. Money rearing its ugly head in my opinion. Some of the participants are also complaining about this during water cooler talks.&lt;/p&gt;
+
+&lt;h4 id=&#34;unclear-structure-when-it-comes-to-the-learning-path&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#unclear-structure-when-it-comes-to-the-learning-path&#34;&gt;Unclear structure when it comes to the learning path&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;I believe this goes hand in hand with the first pro I mentioned. It was like this as well on my Help Desk job here in NZ. Because you are doing stuff on your own, the learning path pretty much becomes find a path for yourself too. This is how it actually turned out when I was there, for some of the participants it meant – sitting there doing little :)&lt;/p&gt;
+
+&lt;h3 id=&#34;my-conclusion&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#my-conclusion&#34;&gt;My Conclusion&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is a mixed bag for me. Although I gained experience working in a team, the major cons are still major. And to top it off, there are tons of resources online that can teach you anything you want these days. In my opinion, if you are driven to begin with, you can study and learn a lot on your own and work on open source projects with others and all that. This method is mostly free or will cost considerably less compared to a bootcamp.&lt;/p&gt;
+&lt;p&gt;However, if you get motivation from studying with others, a bootcamp could be for you. It won’t be cheap though.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

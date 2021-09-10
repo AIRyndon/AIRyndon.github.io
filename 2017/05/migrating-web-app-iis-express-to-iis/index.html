@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Migrating Your Web App From Iis Express to Iis - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Migrating your Web App from IIS Express to IIS - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile-1.jpg"/>
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/">Migrating your Web App from IIS Express to IIS</a>
+    </h2>
+    <div class="post-data">
+        May 8, 2017 |
+        2 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/IIS">IIS</a>,
+        
+        <a href="/tags/Visual%20Studio">Visual Studio</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <p>The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.</p>
+
+<h4 id="from-iis-express-to-iis" class="anchor-link"><a href="#from-iis-express-to-iis">From IIS Express to IIS</a></h4>
+<p>I did these on a machine that runs VS2017, SQL Server 2016 and IIS10. The <a href="https://msdn.microsoft.com/en-us/library/dd547590(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web App</a> project was first on LocalDb.</p>
+<p>First make changes to the project on Visual Studio. Go to your project’s properties, then select Local IIS. Then click Create Virtual Directory.</p>
+<p> </p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg"><img class="aligncenter wp-image-478 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg" alt="" width="300" height="72" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Second, assuming you have a database on SQL Server, update your connection strings on Web.config accordingly.</p>
+<p>Third, create a <a href="https://msdn.microsoft.com/en-us/library/dd465323(v=vs.110).aspx" target="_blank" rel="noopener noreferrer">Web Package.</a> Select IIS as the publish target, then pick Web Deploy Package as the publish method ( I like creating a Web Package compared to publishing directly, pretty sure publishing directly will work too).</p>
+
+<h4 id="publishing-to-iis" class="anchor-link"><a href="#publishing-to-iis">Publishing to IIS</a></h4>
+<p>This one is pretty easy once you have the required services running. __<em>I’m not sure if all these services I turned on are required.</em> Main thing for me is it worked 🙂</p>
+<p>First, check if IIS is running or not. It’s at Control Panel &gt; Program and Features &gt; Turn Windows Features On/Off – the boxes I ticked are on the screenshot below.</p>
+<p><a href="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg"><img class="aligncenter wp-image-477 size-medium" src="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg" alt="" width="300" height="135" srcset="https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p> </p>
+<p>Then check if you have Web Deploy installed, I did this by searching for it in <a href="https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads" target="_blank" rel="noopener noreferrer">Web Platform Installer</a>. <em>Again I’m uncertain if you need to install everything with Web Deploy in there to get this next key option to show.</em></p>
+<p>Finally, open IIS Manager (inetmgr from Windows Run). Then go to Sites – you can use the Default Web Site – and on the Actions Pane click on Import Application and use your Web Package’s zip file. The Import Application link was missing on my installation of IIS, installing Web Deploy fixed the issue on my machine.</p>
+<p>Hopefully, the import should go smoothly and you’ll have your Web App on IIS 🙂</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

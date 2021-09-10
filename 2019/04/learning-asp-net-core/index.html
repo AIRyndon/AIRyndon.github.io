@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Learning Asp. Net Core - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Learning ASP.NET Core - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2019/04/learning-asp-net-core/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile-1.jpg"/>
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2019/04/learning-asp-net-core/">Learning ASP.NET Core</a>
+    </h2>
+    <div class="post-data">
+        Apr 16, 2019 |
+        3 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/ASP.NET">ASP.NET</a>,
+        
+        <a href="/tags/csharp">csharp</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <p>For the last few days, I’ve started learning ASP.NET Core. After the initial <a rel="noreferrer noopener" aria-label="research (opens in a new tab)" href="https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/" target="_blank">research</a> on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight <a rel="noreferrer noopener" aria-label="course (opens in a new tab)" href="https://www.pluralsight.com/courses/aspnet-core-fundamentals" target="_blank">course</a> about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.</p>
+
+<h2 id="quick-overview-of-model-binding-in-aspnet-core" class="anchor-link"><a href="#quick-overview-of-model-binding-in-aspnet-core">Quick overview of Model Binding in ASP.NET Core</a></h2>
+<p>The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.</p>
+<p>When you make an http request (invoke a method from the PageModel/Controller), the framework’s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.</p>
+<p>When the parameter to the method called by the framework (OnGet for example) does not contain anything, ASP.NET Core will default to null if the parameter is a reference type, and throw an exception if the parameter is a value type.</p>
+
+<h2 id="tag-helpers" class="anchor-link"><a href="#tag-helpers">Tag Helpers</a></h2>
+<p>These tag helpers are new to me – I don’t remember it existed before ASP.NET Core – and they remind me of those tags used by AngularJS. The three that I encountered in the course are asp-page, asp-for, and asp-route-<anything>.</p>
+<p>The <strong>asp-page</strong> tag helper sets an anchor tag to point to a Razor page. On the other hand, the <strong>asp-for</strong> tag helper is used to bind a C# property to the html. This tag helper works on inputs and labels. Note that you don’t need to type Model.<Property> to access a property when inside the asp-for tag helper, it assumes you are inside the current model. The asp-for helper in a way does two-way binding.</p>
+<p>First, it sets the html input’s name property, the model binder will try to match this name to a C# property once it checks the query string, route data, etc. when you make an http request – <strong>input model</strong>. Second, it fills the html input’s value when the server populates the page (responds to the request) with values from the Page Model property – <strong>output model</strong>. The Input model and Output model are two new helpful terms I got from Scott here.</p>
+<p>Last, we have <strong>asp-route-<anything>,</strong> this tag helper allows you to pass route data from the html to the method that gets called in the Page Model/Controller. The <anything> should map to the parameter name that the method to be called expects. This tag helper puts the route data in the query string by default.</p>
+<p>That’s it for this post. Now I’ll continue the course and will likely create a new post about what I learned.</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=ASP.NET%20Url%20rewrite%20module%20https%3a%2f%2fangeloryndon.com%2f2018%2f09%2fasp-net-url-rewrite-module%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

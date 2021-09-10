@@ -1,30 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Visual Studio on Angelo Ryndon</title>
-    <link>https://angeloryndon.com/tags/visual-studio/</link>
-    <description>Recent content in Visual Studio on Angelo Ryndon</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jun 2017 21:07:21 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Visual Studio 2017 cannot refresh credentials</title>
-      <link>https://angeloryndon.com/blog/2017-06-12-visual-studio-2017-cannot-refresh-credentials/</link>
-      <pubDate>Sun, 11 Jun 2017 21:07:21 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-06-12-visual-studio-2017-cannot-refresh-credentials/</guid>
-      <description>&lt;p&gt;This is a quick note when &lt;a href=&#34;http://www.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Visual Studio&lt;/a&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Make sure Visual Studio is closed before doing all this&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Migrating your Web App from IIS Express to IIS</title>
-      <link>https://angeloryndon.com/blog/2017-05-08-migrating-web-app-iis-express-to-iis/</link>
-      <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
-      
-      <guid>https://angeloryndon.com/blog/2017-05-08-migrating-web-app-iis-express-to-iis/</guid>
-      <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Visual Studio on Angelo Ryndon</title>
+        <link>https://angeloryndon.com/tags/visual-studio/</link>
+        <description>Recent content in Visual Studio on Angelo Ryndon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 11 Jun 2017 21:07:21 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Visual Studio 2017 cannot refresh credentials</title>
+            <link>https://angeloryndon.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</link>
+            <pubDate>Sun, 11 Jun 2017 21:07:21 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</guid>
+            <description>&lt;p&gt;This is a quick note when &lt;a href=&#34;http://www.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Visual Studio&lt;/a&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make sure Visual Studio is closed before doing all this&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to %localappdata%/.IdentityService&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete IdentityServiceAdalCache.cache (You can also Delete the .IdentityService folder if you like)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart computer for good measure if you like&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reenter credentials in Visual Studio ( sometimes you can delete the account first before reentering it again)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All done 🙂&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Migrating your Web App from IIS Express to IIS</title>
+            <link>https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/</link>
+            <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
+            
+            <guid>https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/</guid>
+            <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.&lt;/p&gt;
+
+&lt;h4 id=&#34;from-iis-express-to-iis&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#from-iis-express-to-iis&#34;&gt;From IIS Express to IIS&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;I did these on a machine that runs VS2017, SQL Server 2016 and IIS10. The &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd547590(v=vs.110).aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web App&lt;/a&gt; project was first on LocalDb.&lt;/p&gt;
+&lt;p&gt;First make changes to the project on Visual Studio. Go to your project’s properties, then select Local IIS. Then click Create Virtual Directory.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-478 size-medium&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;72&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Second, assuming you have a database on SQL Server, update your connection strings on Web.config accordingly.&lt;/p&gt;
+&lt;p&gt;Third, create a &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd465323(v=vs.110).aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web Package.&lt;/a&gt; Select IIS as the publish target, then pick Web Deploy Package as the publish method ( I like creating a Web Package compared to publishing directly, pretty sure publishing directly will work too).&lt;/p&gt;
+
+&lt;h4 id=&#34;publishing-to-iis&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#publishing-to-iis&#34;&gt;Publishing to IIS&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This one is pretty easy once you have the required services running. __&lt;em&gt;I’m not sure if all these services I turned on are required.&lt;/em&gt; Main thing for me is it worked 🙂&lt;/p&gt;
+&lt;p&gt;First, check if IIS is running or not. It’s at Control Panel &amp;gt; Program and Features &amp;gt; Turn Windows Features On/Off – the boxes I ticked are on the screenshot below.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-477 size-medium&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Then check if you have Web Deploy installed, I did this by searching for it in &lt;a href=&#34;https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web Platform Installer&lt;/a&gt;. &lt;em&gt;Again I’m uncertain if you need to install everything with Web Deploy in there to get this next key option to show.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Finally, open IIS Manager (inetmgr from Windows Run). Then go to Sites – you can use the Default Web Site – and on the Actions Pane click on Import Application and use your Web Package’s zip file. The Import Application link was missing on my installation of IIS, installing Web Deploy fixed the issue on my machine.&lt;/p&gt;
+&lt;p&gt;Hopefully, the import should go smoothly and you’ll have your Web App on IIS 🙂&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
