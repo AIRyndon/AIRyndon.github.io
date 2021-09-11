@@ -108,7 +108,9 @@ However, &lt;strong&gt;Workaround One&lt;/strong&gt; is in my opinion the ideal 
             <pubDate>Sun, 08 Nov 2020 11:56:35 +1300</pubDate>
             
             <guid>https://angeloryndon.com/2020/11/migrate-asp-net-mvc-to-net48/</guid>
-            <description>&lt;ul&gt;
+            <description>
+&lt;h2 id=&#34;steps&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#steps&#34;&gt;Steps&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;In Visual Studio, change project target framework to 4.8&lt;/p&gt;
 &lt;/li&gt;
