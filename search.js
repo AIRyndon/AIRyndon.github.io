@@ -672,9 +672,8 @@
   // <stdin>
   var import_fuzzysort = __toModule(require_fuzzysort());
   (() => {
-    let searchIndex;
+    let searchIndex = null;
     const searchContainer = document.getElementById("search-result");
-    console.log("hello");
     const fuzzySearch = async (query, index) => {
       const result = await import_fuzzysort.default.goAsync(query, index, {
         allowTypo: false,
@@ -682,7 +681,6 @@
         threshold: -1e4,
         key: "title"
       });
-      console.log(result);
       if (result.length > 0) {
         const div = document.createElement("div");
         div.setAttribute("class", "box");
@@ -709,7 +707,6 @@
     request.onreadystatechange = () => {
       if (request.readyState === 4 && request.status === 200) {
         searchIndex = JSON.parse(request.responseText);
-        console.log(searchIndex);
       }
     };
     request.open("GET", "/index.json");
