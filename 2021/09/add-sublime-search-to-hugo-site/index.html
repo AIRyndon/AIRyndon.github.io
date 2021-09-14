@@ -129,19 +129,19 @@ Add Basic Search to Your Hugo Website - Angelo Ryndon
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Coding%20Bootcamp%2c%20should%20I%20have%20attended%20one%3f%20https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Coding%20Bootcamp%2c%20should%20I%20have%20attended%20one%3f%20https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>
@@ -193,7 +193,19 @@ in Hugo.</p>
 <li>In your theme&rsquo;s <code>layouts &gt; partials</code> folder, create the html that houses the search input and the results (I&rsquo;m not
 even sure if this folder structure is standard).</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#60a0b0;font-style:italic">&lt;!--The css styles can be ignored.--&gt;</span>
+<div class="highlight"><div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#60a0b0;font-style:italic">&lt;!--The css styles can be ignored.--&gt;</span>
 &lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">id</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;search-container&#34;</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;columns&#34;</span>&gt;
     &lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;column is-three-quarters-desktop&#34;</span>&gt;
         &lt;<span style="color:#062873;font-weight:bold">input</span> <span style="color:#4070a0">placeholder</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;Search all posts...&#34;</span> <span style="color:#4070a0">id</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;search-input&#34;</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;input&#34;</span>/&gt;
@@ -201,15 +213,28 @@ even sure if this folder structure is standard).</li>
         &lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
     &lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>Inside the <code>layouts &gt; _default</code> folder, create an index.json, this will have the data we will search client-side</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="">$</span>.Scratch.Add <span style="color:#4070a0">&#34;index&#34;</span> slice }}
+<div class="highlight"><div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="">$</span>.Scratch.Add <span style="color:#4070a0">&#34;index&#34;</span> slice }}
 {{ <span style="color:#007020;font-weight:bold">range</span> where .Site.RegularPages <span style="color:#4070a0">&#34;Section&#34;</span> <span style="color:#4070a0">&#34;blog&#34;</span> }}
 {{ <span style="">$</span>.Scratch.Add <span style="color:#4070a0">&#34;index&#34;</span> (dict <span style="color:#4070a0">&#34;title&#34;</span> .Title <span style="color:#4070a0">&#34;permalink&#34;</span> .Permalink <span style="color:#4070a0">&#34;tags&#34;</span> .Params.tags ) }}
 {{ end }}
 {{ <span style="">$</span>.Scratch.Get <span style="color:#4070a0">&#34;index&#34;</span> | jsonify }}
-</code></pre></div><p><em>Note: We can get all the regular pages there on the 2nd line, or filter the range to something else.
+</code></pre></td></tr></table>
+</div>
+</div><p><em>Note: We can get all the regular pages there on the 2nd line, or filter the range to something else.
 As for the index, add only the values you want to search <code>(title, link and tags for my case)</code>, to keep it as small as possible</em></p>
 <ul>
 <li>In your <code>config.toml</code>, tell your home page to output json as well</li>
@@ -219,7 +244,89 @@ As for the index, add only the values you want to search <code>(title, link and 
 </code></pre><ul>
 <li>In your <code>assets</code> folder, add the JavaScript file that will do the searching</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">(() =&gt; {
+<div class="highlight"><div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(() =&gt; {
     <span style="color:#007020;font-weight:bold">let</span> searchIndex <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">null</span>;
 
     <span style="color:#60a0b0;font-style:italic">// populate the search index object
@@ -297,10 +404,24 @@ As for the index, add only the values you want to search <code>(title, link and 
         }, <span style="color:#40a070">150</span>);
     });
 })();
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>Then call this script somewhere in your homepage, in my case it is on another partial page</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#666">--</span> At the home page <span style="color:#666">--</span>&gt;
+<div class="highlight"><div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#666">--</span> At the home page <span style="color:#666">--</span>&gt;
 {{ partial <span style="color:#4070a0">&#34;footer/scripts.html&#34;</span> . }}
    
 &lt;!<span style="color:#666">--</span> At the partial page. layouts &gt; partials &gt; footer folder  <span style="color:#666">--</span>&gt;
@@ -308,7 +429,9 @@ As for the index, add only the values you want to search <code>(title, link and 
     {{ <span style="">$</span>script <span style="color:#666">:=</span> resources.Get . | js.<span style="color:#06287e">Build</span> (dict <span style="color:#4070a0">&#34;minify&#34;</span> <span style="color:#007020;font-weight:bold">true</span>) }}
     &lt;script src=<span style="color:#4070a0">&#34;{{ $script.Permalink }}&#34;</span>&gt;&lt;<span style="color:#666">/</span>script&gt;
 {{ end }}
-</code></pre></div><p>Add your own styling to finish it off. Here is a working demo on my site&rsquo;s <a href="https://angeloryndon.com/blog/">blog area</a>.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Add your own styling to finish it off. Here is a working demo on my site&rsquo;s <a href="https://angeloryndon.com/blog/">blog area</a>.</p>
 <p>One downside I can imagine is when there are lots of pages in your site, the index file will be big, which will slow down this solution. If you also search the contents of each
 page, the index file can get bigger even faster. For small sites however (I&rsquo;m guessing less than 5,000 pages without searching the page&rsquo;s content), this solution should work pretty well.</p>
     <div class="top-pad">
@@ -316,19 +439,19 @@ page, the index file can get bigger even faster. For small sites however (I&rsqu
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Coding%20Bootcamp%2c%20should%20I%20have%20attended%20one%3f%20https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Coding%20Bootcamp%2c%20should%20I%20have%20attended%20one%3f%20https%3a%2f%2fangeloryndon.com%2f2017%2f05%2fcoding-bootcamp%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>
