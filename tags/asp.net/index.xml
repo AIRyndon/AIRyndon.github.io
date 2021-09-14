@@ -103,6 +103,57 @@ However, &lt;strong&gt;Workaround One&lt;/strong&gt; is in my opinion the ideal 
         </item>
         
         <item>
+            <title>Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</title>
+            <link>https://angeloryndon.com/2020/11/migrate-asp-net-mvc-to-net48/</link>
+            <pubDate>Sun, 08 Nov 2020 11:56:35 +1300</pubDate>
+            
+            <guid>https://angeloryndon.com/2020/11/migrate-asp-net-mvc-to-net48/</guid>
+            <description>
+&lt;h2 id=&#34;steps&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#steps&#34;&gt;Steps&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In Visual Studio, change project target framework to 4.8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rebuild the project - if you get a warning about a package that needs to be reinstalled, you can reinstall it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I also went to packages.config and renamed the targetFramework from net461 to net48 - not sure if that is needed
+If this project is being referenced by other projects&lt;/p&gt;
+&lt;p&gt;Remove the reference and add it again if you get a &amp;ldquo;Could not load file or assembly error&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add binding redirect, to do this add these to the project&amp;rsquo;s .csproj file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;PropertyGroup&amp;gt;
+      &amp;lt;AutoGenerateBindingRedirects&amp;gt;true&amp;lt;/AutoGenerateBindingRedirects&amp;gt;
+      &amp;lt;GenerateBindingRedirectsOutputType&amp;gt;true&amp;lt;/GenerateBindingRedirectsOutputType&amp;gt;
+  &amp;lt;/PropertyGroup&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then reload the project, and rebuild it - in its bin folder, there should be a (project-name).dll.config file. look for the &lt;code&gt;&amp;lt;runtime&amp;gt;&lt;/code&gt; node inside that file and copy all the &lt;code&gt;&amp;lt;assemblyBinding&amp;gt;&lt;/code&gt; into the project&amp;rsquo;s Web.config &lt;code&gt;&amp;lt;runtime&amp;gt;&lt;/code&gt; node (btw, the runtime node should usually just be a direct child of the &lt;code&gt;&amp;lt;configuration&amp;gt;&lt;/code&gt; node). You can now delete the &lt;code&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/code&gt; node you just added earlier&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you get errors in your razor .cshtml that it can&amp;rsquo;t recognize types from your .netstandard project
+In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;gt;&lt;/code&gt; and add&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;compilation debug=&amp;quot;true&amp;quot; targetFramework=&amp;quot;4.8&amp;quot;&amp;gt;
+      &amp;lt;assemblies&amp;gt;
+          &amp;lt;add assembly=&amp;quot;netstandard, Version=&amp;lt;your-version&amp;gt;, Culture=neutral, PublicKeyToken=&amp;lt;its-keyToken&amp;gt;&amp;quot; /&amp;gt;
+      &amp;lt;/assemblies&amp;gt;
+  &amp;lt;/compilation&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hopefully that would settle those errors. This is what worked for me, after hours of Googling and reading comments in Github and Stackoverflow posts. I also thought about the AutoGenerateBinding, and GenerateBindingRedirectsOutputType - since it generates a .config file in the bin folder, perhaps we don&amp;rsquo;t need to delete the lines below from the .csproj file - so we won&amp;rsquo;t need to copy the &lt;code&gt;&amp;lt;assemblyBinding&amp;gt;&lt;/code&gt; into Web.config (I didn&amp;rsquo;t test this though)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;PropertyGroup&amp;gt;
+    &amp;lt;AutoGenerateBindingRedirects&amp;gt;true&amp;lt;/AutoGenerateBindingRedirects&amp;gt;
+    &amp;lt;GenerateBindingRedirectsOutputType&amp;gt;true&amp;lt;/GenerateBindingRedirectsOutputType&amp;gt;
+&amp;lt;/PropertyGroup&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        
+        <item>
             <title>Learning ASP.NET Core</title>
             <link>https://angeloryndon.com/2019/04/learning-asp-net-core/</link>
             <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>

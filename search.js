@@ -1,1 +1,734 @@
-(()=>{var R=Object.create;var Q=Object.defineProperty;var O=Object.getOwnPropertyDescriptor;var ee=Object.getOwnPropertyNames;var re=Object.getPrototypeOf,ne=Object.prototype.hasOwnProperty;var ae=h=>Q(h,"__esModule",{value:!0});var Z=h=>{if(typeof require!="undefined")return require(h);throw new Error('Dynamic require of "'+h+'" is not supported')};var ie=(h,s)=>()=>(s||h((s={exports:{}}).exports,s),s.exports);var te=(h,s,q)=>{if(s&&typeof s=="object"||typeof s=="function")for(let A of ee(s))!ne.call(h,A)&&A!=="default"&&Q(h,A,{get:()=>s[A],enumerable:!(q=O(s,A))||q.enumerable});return h},fe=h=>te(ae(Q(h!=null?R(re(h)):{},"default",h&&h.__esModule&&"default"in h?{get:()=>h.default,enumerable:!0}:{value:h,enumerable:!0})),h);var j=ie((U,V)=>{(function(h,s){typeof define=="function"&&define.amd?define([],s):typeof V=="object"&&V.exports?V.exports=s():h.fuzzysort=s()})(U,function(){function s(t){var l={single:function(e,n,r){if(!e||(F(e)||(e=l.getPreparedSearch(e)),!n))return null;F(n)||(n=l.getPrepared(n));var u=r&&r.allowTypo!==void 0?r.allowTypo:t&&t.allowTypo!==void 0?t.allowTypo:!0,f=u?l.algorithm:l.algorithmNoTypo;return f(e,n,e[0])},go:function(e,n,r){if(!e)return _;e=l.prepareSearch(e);var u=e[0],f=r&&r.threshold||t&&t.threshold||-9007199254740991,g=r&&r.limit||t&&t.limit||9007199254740991,a=r&&r.allowTypo!==void 0?r.allowTypo:t&&t.allowTypo!==void 0?t.allowTypo:!0,i=a?l.algorithm:l.algorithmNoTypo,v=0,o=0,p=n.length;if(r&&r.keys)for(var k=r.scoreFn||H,I=r.keys,z=I.length,c=p-1;c>=0;--c){for(var y=n[c],x=new Array(z),S=z-1;S>=0;--S){var P=I[S],d=M(y,P);if(!d){x[S]=null;continue}F(d)||(d=l.getPrepared(d)),x[S]=i(e,d,u)}x.obj=y;var b=k(x);b!==null&&(b<f||(x.score=b,v<g?(E.add(x),++v):(++o,b>E.peek().score&&E.replaceTop(x))))}else if(r&&r.key)for(var P=r.key,c=p-1;c>=0;--c){var y=n[c],d=M(y,P);if(!!d){F(d)||(d=l.getPrepared(d));var m=i(e,d,u);m!==null&&(m.score<f||(m={target:m.target,_targetLowerCodes:null,_nextBeginningIndexes:null,score:m.score,indexes:m.indexes,obj:y},v<g?(E.add(m),++v):(++o,m.score>E.peek().score&&E.replaceTop(m))))}}else for(var c=p-1;c>=0;--c){var d=n[c];if(!!d){F(d)||(d=l.getPrepared(d));var m=i(e,d,u);m!==null&&(m.score<f||(v<g?(E.add(m),++v):(++o,m.score>E.peek().score&&E.replaceTop(m))))}}if(v===0)return _;for(var w=new Array(v),c=v-1;c>=0;--c)w[c]=E.poll();return w.total=v+o,w},goAsync:function(e,n,r){var u=!1,f=new Promise(function(g,a){if(!e)return g(_);e=l.prepareSearch(e);var i=e[0],v=Y(),o=n.length-1,p=r&&r.threshold||t&&t.threshold||-9007199254740991,k=r&&r.limit||t&&t.limit||9007199254740991,I=r&&r.allowTypo!==void 0?r.allowTypo:t&&t.allowTypo!==void 0?t.allowTypo:!0,z=I?l.algorithm:l.algorithmNoTypo,c=0,y=0;function x(){if(u)return a("canceled");var S=Date.now();if(r&&r.keys)for(var P=r.scoreFn||H,d=r.keys,b=d.length;o>=0;--o){for(var m=n[o],w=new Array(b),G=b-1;G>=0;--G){var X=d[G],T=M(m,X);if(!T){w[G]=null;continue}F(T)||(T=l.getPrepared(T)),w[G]=z(e,T,i)}w.obj=m;var J=P(w);if(J!==null&&!(J<p)&&(w.score=J,c<k?(v.add(w),++c):(++y,J>v.peek().score&&v.replaceTop(w)),o%1e3==0&&Date.now()-S>=10)){q?setImmediate(x):setTimeout(x);return}}else if(r&&r.key)for(var X=r.key;o>=0;--o){var m=n[o],T=M(m,X);if(!!T){F(T)||(T=l.getPrepared(T));var L=z(e,T,i);if(L!==null&&!(L.score<p)&&(L={target:L.target,_targetLowerCodes:null,_nextBeginningIndexes:null,score:L.score,indexes:L.indexes,obj:m},c<k?(v.add(L),++c):(++y,L.score>v.peek().score&&v.replaceTop(L)),o%1e3==0&&Date.now()-S>=10)){q?setImmediate(x):setTimeout(x);return}}}else for(;o>=0;--o){var T=n[o];if(!!T){F(T)||(T=l.getPrepared(T));var L=z(e,T,i);if(L!==null&&!(L.score<p)&&(c<k?(v.add(L),++c):(++y,L.score>v.peek().score&&v.replaceTop(L)),o%1e3==0&&Date.now()-S>=10)){q?setImmediate(x):setTimeout(x);return}}}if(c===0)return g(_);for(var $=new Array(c),K=c-1;K>=0;--K)$[K]=v.poll();$.total=c+y,g($)}q?setImmediate(x):x()});return f.cancel=function(){u=!0},f},highlight:function(e,n,r){if(e===null)return null;n===void 0&&(n="<b>"),r===void 0&&(r="</b>");for(var u="",f=0,g=!1,a=e.target,i=a.length,v=e.indexes,o=0;o<i;++o){var p=a[o];if(v[f]===o){if(++f,g||(g=!0,u+=n),f===v.length){u+=p+r+a.substr(o+1);break}}else g&&(g=!1,u+=r);u+=p}return u},prepare:function(e){if(!!e)return{target:e,_targetLowerCodes:l.prepareLowerCodes(e),_nextBeginningIndexes:null,score:null,indexes:null,obj:null}},prepareSlow:function(e){if(!!e)return{target:e,_targetLowerCodes:l.prepareLowerCodes(e),_nextBeginningIndexes:l.prepareNextBeginningIndexes(e),score:null,indexes:null,obj:null}},prepareSearch:function(e){if(!!e)return l.prepareLowerCodes(e)},getPrepared:function(e){if(e.length>999)return l.prepare(e);var n=A.get(e);return n!==void 0||(n=l.prepare(e),A.set(e,n)),n},getPreparedSearch:function(e){if(e.length>999)return l.prepareSearch(e);var n=N.get(e);return n!==void 0||(n=l.prepareSearch(e),N.set(e,n)),n},algorithm:function(e,n,r){for(var u=n._targetLowerCodes,f=e.length,g=u.length,a=0,i=0,v=0,o=0;;){var p=r===u[i];if(p){if(B[o++]=i,++a,a===f)break;r=e[v===0?a:v===a?a+1:v===a-1?a-1:a]}if(++i,i>=g)for(;;){if(a<=1)return null;if(v===0){--a;var k=e[a];if(r===k)continue;v=a}else{if(v===1)return null;--v,a=v,r=e[a+1];var k=e[a];if(r===k)continue}o=a,i=B[o-1]+1;break}}var a=0,I=0,z=!1,c=0,y=n._nextBeginningIndexes;y===null&&(y=n._nextBeginningIndexes=l.prepareNextBeginningIndexes(n.target));var x=i=B[0]===0?0:y[B[0]-1];if(i!==g)for(;;)if(i>=g){if(a<=0){if(++I,I>f-2)break;if(e[I]===e[I+1])continue;i=x;continue}--a;var S=C[--c];i=y[S]}else{var p=e[I===0?a:I===a?a+1:I===a-1?a-1:a]===u[i];if(p){if(C[c++]=i,++a,a===f){z=!0;break}++i}else i=y[i]}{if(z)var P=C,d=c;else var P=B,d=o;for(var b=0,m=-1,w=0;w<f;++w){var i=P[w];m!==i-1&&(b-=i),m=i}z?I!==0&&(b+=-20):(b*=1e3,v!==0&&(b+=-20)),b-=g-f,n.score=b,n.indexes=new Array(d);for(var w=d-1;w>=0;--w)n.indexes[w]=P[w];return n}},algorithmNoTypo:function(e,n,r){for(var u=n._targetLowerCodes,f=e.length,g=u.length,a=0,i=0,v=0;;){var o=r===u[i];if(o){if(B[v++]=i,++a,a===f)break;r=e[a]}if(++i,i>=g)return null}var a=0,p=!1,k=0,I=n._nextBeginningIndexes;I===null&&(I=n._nextBeginningIndexes=l.prepareNextBeginningIndexes(n.target));var z=i=B[0]===0?0:I[B[0]-1];if(i!==g)for(;;)if(i>=g){if(a<=0)break;--a;var c=C[--k];i=I[c]}else{var o=e[a]===u[i];if(o){if(C[k++]=i,++a,a===f){p=!0;break}++i}else i=I[i]}{if(p)var y=C,x=k;else var y=B,x=v;for(var S=0,P=-1,d=0;d<f;++d){var i=y[d];P!==i-1&&(S-=i),P=i}p||(S*=1e3),S-=g-f,n.score=S,n.indexes=new Array(x);for(var d=x-1;d>=0;--d)n.indexes[d]=y[d];return n}},prepareLowerCodes:function(e){for(var n=e.length,r=[],u=e.toLowerCase(),f=0;f<n;++f)r[f]=u.charCodeAt(f);return r},prepareBeginningIndexes:function(e){for(var n=e.length,r=[],u=0,f=!1,g=!1,a=0;a<n;++a){var i=e.charCodeAt(a),v=i>=65&&i<=90,o=v||i>=97&&i<=122||i>=48&&i<=57,p=v&&!f||!g||!o;f=v,g=o,p&&(r[u++]=a)}return r},prepareNextBeginningIndexes:function(e){for(var n=e.length,r=l.prepareBeginningIndexes(e),u=[],f=r[0],g=0,a=0;a<n;++a)f>a?u[a]=f:(f=r[++g],u[a]=f===void 0?n:f);return u},cleanup:D,new:s};return l}var q=typeof Z!="undefined"&&typeof window=="undefined",A=new Map,N=new Map,_=[];_.total=0;var B=[],C=[];function D(){A.clear(),N.clear(),B=[],C=[]}function H(t){for(var l=-9007199254740991,e=t.length-1;e>=0;--e){var n=t[e];if(n!==null){var r=n.score;r>l&&(l=r)}}return l===-9007199254740991?null:l}function M(t,l){var e=t[l];if(e!==void 0)return e;var n=l;Array.isArray(l)||(n=l.split("."));for(var r=n.length,u=-1;t&&++u<r;)t=t[n[u]];return t}function F(t){return typeof t=="object"}var Y=function(){var t=[],l=0,e={};function n(){for(var r=0,u=t[r],f=1;f<l;){var g=f+1;r=f,g<l&&t[g].score<t[f].score&&(r=g),t[r-1>>1]=t[r],f=1+(r<<1)}for(var a=r-1>>1;r>0&&u.score<t[a].score;a=(r=a)-1>>1)t[r]=t[a];t[r]=u}return e.add=function(r){var u=l;t[l++]=r;for(var f=u-1>>1;u>0&&r.score<t[f].score;f=(u=f)-1>>1)t[u]=t[f];t[u]=r},e.poll=function(){if(l!==0){var r=t[0];return t[0]=t[--l],n(),r}},e.peek=function(r){if(l!==0)return t[0]},e.replaceTop=function(r){t[0]=r,n()},e},E=Y();return s()})});var W=fe(j());(()=>{let h=null,s=document.getElementById("search-result"),q=async(_,B)=>{let C=await W.default.goAsync(_,B,{allowTypo:!1,limit:5,threshold:-1e3,key:"title"});if(C.length>0){let D=document.createElement("div");return D.setAttribute("class","box"),C.forEach(H=>{let M=document.createElement("a");M.setAttribute("href",H.obj.permalink),M.setAttribute("class","has-text-primary block is-block"),M.innerHTML=`${W.default.highlight(H,"<b>","</b>")}`,D.appendChild(M)}),D}return null},A=document.getElementById("search-input");A?.addEventListener("input",async _=>{let B=await q(_.currentTarget.value,h);s.lastChild&&s.removeChild(s.lastChild),B&&s.appendChild(B)}),A?.addEventListener("focusout",_=>{_.target.value="",setTimeout(()=>{s.lastChild&&s.removeChild(s.lastChild)},150)});let N=new XMLHttpRequest;N.onreadystatechange=()=>{N.readyState===4&&N.status===200&&(h=JSON.parse(N.responseText))},N.open("GET","/index.json"),N.send()})();})();
+(() => {
+  var __create = Object.create;
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getProtoOf = Object.getPrototypeOf;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
+  var __require = (x) => {
+    if (typeof require !== "undefined")
+      return require(x);
+    throw new Error('Dynamic require of "' + x + '" is not supported');
+  };
+  var __commonJS = (cb, mod) => function __require2() {
+    return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  };
+  var __reExport = (target, module, desc) => {
+    if (module && typeof module === "object" || typeof module === "function") {
+      for (let key of __getOwnPropNames(module))
+        if (!__hasOwnProp.call(target, key) && key !== "default")
+          __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
+    }
+    return target;
+  };
+  var __toModule = (module) => {
+    return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
+  };
+
+  // node_modules/fuzzysort/fuzzysort.js
+  var require_fuzzysort = __commonJS({
+    "node_modules/fuzzysort/fuzzysort.js"(exports, module) {
+      (function(root, UMD) {
+        if (typeof define === "function" && define.amd)
+          define([], UMD);
+        else if (typeof module === "object" && module.exports)
+          module.exports = UMD();
+        else
+          root.fuzzysort = UMD();
+      })(exports, function UMD() {
+        function fuzzysortNew(instanceOptions) {
+          var fuzzysort = {
+            single: function(search, target, options) {
+              if (!search)
+                return null;
+              if (!isObj(search))
+                search = fuzzysort.getPreparedSearch(search);
+              if (!target)
+                return null;
+              if (!isObj(target))
+                target = fuzzysort.getPrepared(target);
+              var allowTypo = options && options.allowTypo !== void 0 ? options.allowTypo : instanceOptions && instanceOptions.allowTypo !== void 0 ? instanceOptions.allowTypo : true;
+              var algorithm = allowTypo ? fuzzysort.algorithm : fuzzysort.algorithmNoTypo;
+              return algorithm(search, target, search[0]);
+            },
+            go: function(search, targets, options) {
+              if (!search)
+                return noResults;
+              search = fuzzysort.prepareSearch(search);
+              var searchLowerCode = search[0];
+              var threshold = options && options.threshold || instanceOptions && instanceOptions.threshold || -9007199254740991;
+              var limit = options && options.limit || instanceOptions && instanceOptions.limit || 9007199254740991;
+              var allowTypo = options && options.allowTypo !== void 0 ? options.allowTypo : instanceOptions && instanceOptions.allowTypo !== void 0 ? instanceOptions.allowTypo : true;
+              var algorithm = allowTypo ? fuzzysort.algorithm : fuzzysort.algorithmNoTypo;
+              var resultsLen = 0;
+              var limitedCount = 0;
+              var targetsLen = targets.length;
+              if (options && options.keys) {
+                var scoreFn = options.scoreFn || defaultScoreFn;
+                var keys = options.keys;
+                var keysLen = keys.length;
+                for (var i = targetsLen - 1; i >= 0; --i) {
+                  var obj = targets[i];
+                  var objResults = new Array(keysLen);
+                  for (var keyI = keysLen - 1; keyI >= 0; --keyI) {
+                    var key = keys[keyI];
+                    var target = getValue(obj, key);
+                    if (!target) {
+                      objResults[keyI] = null;
+                      continue;
+                    }
+                    if (!isObj(target))
+                      target = fuzzysort.getPrepared(target);
+                    objResults[keyI] = algorithm(search, target, searchLowerCode);
+                  }
+                  objResults.obj = obj;
+                  var score = scoreFn(objResults);
+                  if (score === null)
+                    continue;
+                  if (score < threshold)
+                    continue;
+                  objResults.score = score;
+                  if (resultsLen < limit) {
+                    q.add(objResults);
+                    ++resultsLen;
+                  } else {
+                    ++limitedCount;
+                    if (score > q.peek().score)
+                      q.replaceTop(objResults);
+                  }
+                }
+              } else if (options && options.key) {
+                var key = options.key;
+                for (var i = targetsLen - 1; i >= 0; --i) {
+                  var obj = targets[i];
+                  var target = getValue(obj, key);
+                  if (!target)
+                    continue;
+                  if (!isObj(target))
+                    target = fuzzysort.getPrepared(target);
+                  var result = algorithm(search, target, searchLowerCode);
+                  if (result === null)
+                    continue;
+                  if (result.score < threshold)
+                    continue;
+                  result = { target: result.target, _targetLowerCodes: null, _nextBeginningIndexes: null, score: result.score, indexes: result.indexes, obj };
+                  if (resultsLen < limit) {
+                    q.add(result);
+                    ++resultsLen;
+                  } else {
+                    ++limitedCount;
+                    if (result.score > q.peek().score)
+                      q.replaceTop(result);
+                  }
+                }
+              } else {
+                for (var i = targetsLen - 1; i >= 0; --i) {
+                  var target = targets[i];
+                  if (!target)
+                    continue;
+                  if (!isObj(target))
+                    target = fuzzysort.getPrepared(target);
+                  var result = algorithm(search, target, searchLowerCode);
+                  if (result === null)
+                    continue;
+                  if (result.score < threshold)
+                    continue;
+                  if (resultsLen < limit) {
+                    q.add(result);
+                    ++resultsLen;
+                  } else {
+                    ++limitedCount;
+                    if (result.score > q.peek().score)
+                      q.replaceTop(result);
+                  }
+                }
+              }
+              if (resultsLen === 0)
+                return noResults;
+              var results = new Array(resultsLen);
+              for (var i = resultsLen - 1; i >= 0; --i)
+                results[i] = q.poll();
+              results.total = resultsLen + limitedCount;
+              return results;
+            },
+            goAsync: function(search, targets, options) {
+              var canceled = false;
+              var p = new Promise(function(resolve, reject) {
+                if (!search)
+                  return resolve(noResults);
+                search = fuzzysort.prepareSearch(search);
+                var searchLowerCode = search[0];
+                var q2 = fastpriorityqueue();
+                var iCurrent = targets.length - 1;
+                var threshold = options && options.threshold || instanceOptions && instanceOptions.threshold || -9007199254740991;
+                var limit = options && options.limit || instanceOptions && instanceOptions.limit || 9007199254740991;
+                var allowTypo = options && options.allowTypo !== void 0 ? options.allowTypo : instanceOptions && instanceOptions.allowTypo !== void 0 ? instanceOptions.allowTypo : true;
+                var algorithm = allowTypo ? fuzzysort.algorithm : fuzzysort.algorithmNoTypo;
+                var resultsLen = 0;
+                var limitedCount = 0;
+                function step() {
+                  if (canceled)
+                    return reject("canceled");
+                  var startMs = Date.now();
+                  if (options && options.keys) {
+                    var scoreFn = options.scoreFn || defaultScoreFn;
+                    var keys = options.keys;
+                    var keysLen = keys.length;
+                    for (; iCurrent >= 0; --iCurrent) {
+                      var obj = targets[iCurrent];
+                      var objResults = new Array(keysLen);
+                      for (var keyI = keysLen - 1; keyI >= 0; --keyI) {
+                        var key = keys[keyI];
+                        var target = getValue(obj, key);
+                        if (!target) {
+                          objResults[keyI] = null;
+                          continue;
+                        }
+                        if (!isObj(target))
+                          target = fuzzysort.getPrepared(target);
+                        objResults[keyI] = algorithm(search, target, searchLowerCode);
+                      }
+                      objResults.obj = obj;
+                      var score = scoreFn(objResults);
+                      if (score === null)
+                        continue;
+                      if (score < threshold)
+                        continue;
+                      objResults.score = score;
+                      if (resultsLen < limit) {
+                        q2.add(objResults);
+                        ++resultsLen;
+                      } else {
+                        ++limitedCount;
+                        if (score > q2.peek().score)
+                          q2.replaceTop(objResults);
+                      }
+                      if (iCurrent % 1e3 === 0) {
+                        if (Date.now() - startMs >= 10) {
+                          isNode ? setImmediate(step) : setTimeout(step);
+                          return;
+                        }
+                      }
+                    }
+                  } else if (options && options.key) {
+                    var key = options.key;
+                    for (; iCurrent >= 0; --iCurrent) {
+                      var obj = targets[iCurrent];
+                      var target = getValue(obj, key);
+                      if (!target)
+                        continue;
+                      if (!isObj(target))
+                        target = fuzzysort.getPrepared(target);
+                      var result = algorithm(search, target, searchLowerCode);
+                      if (result === null)
+                        continue;
+                      if (result.score < threshold)
+                        continue;
+                      result = { target: result.target, _targetLowerCodes: null, _nextBeginningIndexes: null, score: result.score, indexes: result.indexes, obj };
+                      if (resultsLen < limit) {
+                        q2.add(result);
+                        ++resultsLen;
+                      } else {
+                        ++limitedCount;
+                        if (result.score > q2.peek().score)
+                          q2.replaceTop(result);
+                      }
+                      if (iCurrent % 1e3 === 0) {
+                        if (Date.now() - startMs >= 10) {
+                          isNode ? setImmediate(step) : setTimeout(step);
+                          return;
+                        }
+                      }
+                    }
+                  } else {
+                    for (; iCurrent >= 0; --iCurrent) {
+                      var target = targets[iCurrent];
+                      if (!target)
+                        continue;
+                      if (!isObj(target))
+                        target = fuzzysort.getPrepared(target);
+                      var result = algorithm(search, target, searchLowerCode);
+                      if (result === null)
+                        continue;
+                      if (result.score < threshold)
+                        continue;
+                      if (resultsLen < limit) {
+                        q2.add(result);
+                        ++resultsLen;
+                      } else {
+                        ++limitedCount;
+                        if (result.score > q2.peek().score)
+                          q2.replaceTop(result);
+                      }
+                      if (iCurrent % 1e3 === 0) {
+                        if (Date.now() - startMs >= 10) {
+                          isNode ? setImmediate(step) : setTimeout(step);
+                          return;
+                        }
+                      }
+                    }
+                  }
+                  if (resultsLen === 0)
+                    return resolve(noResults);
+                  var results = new Array(resultsLen);
+                  for (var i = resultsLen - 1; i >= 0; --i)
+                    results[i] = q2.poll();
+                  results.total = resultsLen + limitedCount;
+                  resolve(results);
+                }
+                isNode ? setImmediate(step) : step();
+              });
+              p.cancel = function() {
+                canceled = true;
+              };
+              return p;
+            },
+            highlight: function(result, hOpen, hClose) {
+              if (result === null)
+                return null;
+              if (hOpen === void 0)
+                hOpen = "<b>";
+              if (hClose === void 0)
+                hClose = "</b>";
+              var highlighted = "";
+              var matchesIndex = 0;
+              var opened = false;
+              var target = result.target;
+              var targetLen = target.length;
+              var matchesBest = result.indexes;
+              for (var i = 0; i < targetLen; ++i) {
+                var char = target[i];
+                if (matchesBest[matchesIndex] === i) {
+                  ++matchesIndex;
+                  if (!opened) {
+                    opened = true;
+                    highlighted += hOpen;
+                  }
+                  if (matchesIndex === matchesBest.length) {
+                    highlighted += char + hClose + target.substr(i + 1);
+                    break;
+                  }
+                } else {
+                  if (opened) {
+                    opened = false;
+                    highlighted += hClose;
+                  }
+                }
+                highlighted += char;
+              }
+              return highlighted;
+            },
+            prepare: function(target) {
+              if (!target)
+                return;
+              return { target, _targetLowerCodes: fuzzysort.prepareLowerCodes(target), _nextBeginningIndexes: null, score: null, indexes: null, obj: null };
+            },
+            prepareSlow: function(target) {
+              if (!target)
+                return;
+              return { target, _targetLowerCodes: fuzzysort.prepareLowerCodes(target), _nextBeginningIndexes: fuzzysort.prepareNextBeginningIndexes(target), score: null, indexes: null, obj: null };
+            },
+            prepareSearch: function(search) {
+              if (!search)
+                return;
+              return fuzzysort.prepareLowerCodes(search);
+            },
+            getPrepared: function(target) {
+              if (target.length > 999)
+                return fuzzysort.prepare(target);
+              var targetPrepared = preparedCache.get(target);
+              if (targetPrepared !== void 0)
+                return targetPrepared;
+              targetPrepared = fuzzysort.prepare(target);
+              preparedCache.set(target, targetPrepared);
+              return targetPrepared;
+            },
+            getPreparedSearch: function(search) {
+              if (search.length > 999)
+                return fuzzysort.prepareSearch(search);
+              var searchPrepared = preparedSearchCache.get(search);
+              if (searchPrepared !== void 0)
+                return searchPrepared;
+              searchPrepared = fuzzysort.prepareSearch(search);
+              preparedSearchCache.set(search, searchPrepared);
+              return searchPrepared;
+            },
+            algorithm: function(searchLowerCodes, prepared, searchLowerCode) {
+              var targetLowerCodes = prepared._targetLowerCodes;
+              var searchLen = searchLowerCodes.length;
+              var targetLen = targetLowerCodes.length;
+              var searchI = 0;
+              var targetI = 0;
+              var typoSimpleI = 0;
+              var matchesSimpleLen = 0;
+              for (; ; ) {
+                var isMatch = searchLowerCode === targetLowerCodes[targetI];
+                if (isMatch) {
+                  matchesSimple[matchesSimpleLen++] = targetI;
+                  ++searchI;
+                  if (searchI === searchLen)
+                    break;
+                  searchLowerCode = searchLowerCodes[typoSimpleI === 0 ? searchI : typoSimpleI === searchI ? searchI + 1 : typoSimpleI === searchI - 1 ? searchI - 1 : searchI];
+                }
+                ++targetI;
+                if (targetI >= targetLen) {
+                  for (; ; ) {
+                    if (searchI <= 1)
+                      return null;
+                    if (typoSimpleI === 0) {
+                      --searchI;
+                      var searchLowerCodeNew = searchLowerCodes[searchI];
+                      if (searchLowerCode === searchLowerCodeNew)
+                        continue;
+                      typoSimpleI = searchI;
+                    } else {
+                      if (typoSimpleI === 1)
+                        return null;
+                      --typoSimpleI;
+                      searchI = typoSimpleI;
+                      searchLowerCode = searchLowerCodes[searchI + 1];
+                      var searchLowerCodeNew = searchLowerCodes[searchI];
+                      if (searchLowerCode === searchLowerCodeNew)
+                        continue;
+                    }
+                    matchesSimpleLen = searchI;
+                    targetI = matchesSimple[matchesSimpleLen - 1] + 1;
+                    break;
+                  }
+                }
+              }
+              var searchI = 0;
+              var typoStrictI = 0;
+              var successStrict = false;
+              var matchesStrictLen = 0;
+              var nextBeginningIndexes = prepared._nextBeginningIndexes;
+              if (nextBeginningIndexes === null)
+                nextBeginningIndexes = prepared._nextBeginningIndexes = fuzzysort.prepareNextBeginningIndexes(prepared.target);
+              var firstPossibleI = targetI = matchesSimple[0] === 0 ? 0 : nextBeginningIndexes[matchesSimple[0] - 1];
+              if (targetI !== targetLen)
+                for (; ; ) {
+                  if (targetI >= targetLen) {
+                    if (searchI <= 0) {
+                      ++typoStrictI;
+                      if (typoStrictI > searchLen - 2)
+                        break;
+                      if (searchLowerCodes[typoStrictI] === searchLowerCodes[typoStrictI + 1])
+                        continue;
+                      targetI = firstPossibleI;
+                      continue;
+                    }
+                    --searchI;
+                    var lastMatch = matchesStrict[--matchesStrictLen];
+                    targetI = nextBeginningIndexes[lastMatch];
+                  } else {
+                    var isMatch = searchLowerCodes[typoStrictI === 0 ? searchI : typoStrictI === searchI ? searchI + 1 : typoStrictI === searchI - 1 ? searchI - 1 : searchI] === targetLowerCodes[targetI];
+                    if (isMatch) {
+                      matchesStrict[matchesStrictLen++] = targetI;
+                      ++searchI;
+                      if (searchI === searchLen) {
+                        successStrict = true;
+                        break;
+                      }
+                      ++targetI;
+                    } else {
+                      targetI = nextBeginningIndexes[targetI];
+                    }
+                  }
+                }
+              {
+                if (successStrict) {
+                  var matchesBest = matchesStrict;
+                  var matchesBestLen = matchesStrictLen;
+                } else {
+                  var matchesBest = matchesSimple;
+                  var matchesBestLen = matchesSimpleLen;
+                }
+                var score = 0;
+                var lastTargetI = -1;
+                for (var i = 0; i < searchLen; ++i) {
+                  var targetI = matchesBest[i];
+                  if (lastTargetI !== targetI - 1)
+                    score -= targetI;
+                  lastTargetI = targetI;
+                }
+                if (!successStrict) {
+                  score *= 1e3;
+                  if (typoSimpleI !== 0)
+                    score += -20;
+                } else {
+                  if (typoStrictI !== 0)
+                    score += -20;
+                }
+                score -= targetLen - searchLen;
+                prepared.score = score;
+                prepared.indexes = new Array(matchesBestLen);
+                for (var i = matchesBestLen - 1; i >= 0; --i)
+                  prepared.indexes[i] = matchesBest[i];
+                return prepared;
+              }
+            },
+            algorithmNoTypo: function(searchLowerCodes, prepared, searchLowerCode) {
+              var targetLowerCodes = prepared._targetLowerCodes;
+              var searchLen = searchLowerCodes.length;
+              var targetLen = targetLowerCodes.length;
+              var searchI = 0;
+              var targetI = 0;
+              var matchesSimpleLen = 0;
+              for (; ; ) {
+                var isMatch = searchLowerCode === targetLowerCodes[targetI];
+                if (isMatch) {
+                  matchesSimple[matchesSimpleLen++] = targetI;
+                  ++searchI;
+                  if (searchI === searchLen)
+                    break;
+                  searchLowerCode = searchLowerCodes[searchI];
+                }
+                ++targetI;
+                if (targetI >= targetLen)
+                  return null;
+              }
+              var searchI = 0;
+              var successStrict = false;
+              var matchesStrictLen = 0;
+              var nextBeginningIndexes = prepared._nextBeginningIndexes;
+              if (nextBeginningIndexes === null)
+                nextBeginningIndexes = prepared._nextBeginningIndexes = fuzzysort.prepareNextBeginningIndexes(prepared.target);
+              var firstPossibleI = targetI = matchesSimple[0] === 0 ? 0 : nextBeginningIndexes[matchesSimple[0] - 1];
+              if (targetI !== targetLen)
+                for (; ; ) {
+                  if (targetI >= targetLen) {
+                    if (searchI <= 0)
+                      break;
+                    --searchI;
+                    var lastMatch = matchesStrict[--matchesStrictLen];
+                    targetI = nextBeginningIndexes[lastMatch];
+                  } else {
+                    var isMatch = searchLowerCodes[searchI] === targetLowerCodes[targetI];
+                    if (isMatch) {
+                      matchesStrict[matchesStrictLen++] = targetI;
+                      ++searchI;
+                      if (searchI === searchLen) {
+                        successStrict = true;
+                        break;
+                      }
+                      ++targetI;
+                    } else {
+                      targetI = nextBeginningIndexes[targetI];
+                    }
+                  }
+                }
+              {
+                if (successStrict) {
+                  var matchesBest = matchesStrict;
+                  var matchesBestLen = matchesStrictLen;
+                } else {
+                  var matchesBest = matchesSimple;
+                  var matchesBestLen = matchesSimpleLen;
+                }
+                var score = 0;
+                var lastTargetI = -1;
+                for (var i = 0; i < searchLen; ++i) {
+                  var targetI = matchesBest[i];
+                  if (lastTargetI !== targetI - 1)
+                    score -= targetI;
+                  lastTargetI = targetI;
+                }
+                if (!successStrict)
+                  score *= 1e3;
+                score -= targetLen - searchLen;
+                prepared.score = score;
+                prepared.indexes = new Array(matchesBestLen);
+                for (var i = matchesBestLen - 1; i >= 0; --i)
+                  prepared.indexes[i] = matchesBest[i];
+                return prepared;
+              }
+            },
+            prepareLowerCodes: function(str) {
+              var strLen = str.length;
+              var lowerCodes = [];
+              var lower = str.toLowerCase();
+              for (var i = 0; i < strLen; ++i)
+                lowerCodes[i] = lower.charCodeAt(i);
+              return lowerCodes;
+            },
+            prepareBeginningIndexes: function(target) {
+              var targetLen = target.length;
+              var beginningIndexes = [];
+              var beginningIndexesLen = 0;
+              var wasUpper = false;
+              var wasAlphanum = false;
+              for (var i = 0; i < targetLen; ++i) {
+                var targetCode = target.charCodeAt(i);
+                var isUpper = targetCode >= 65 && targetCode <= 90;
+                var isAlphanum = isUpper || targetCode >= 97 && targetCode <= 122 || targetCode >= 48 && targetCode <= 57;
+                var isBeginning = isUpper && !wasUpper || !wasAlphanum || !isAlphanum;
+                wasUpper = isUpper;
+                wasAlphanum = isAlphanum;
+                if (isBeginning)
+                  beginningIndexes[beginningIndexesLen++] = i;
+              }
+              return beginningIndexes;
+            },
+            prepareNextBeginningIndexes: function(target) {
+              var targetLen = target.length;
+              var beginningIndexes = fuzzysort.prepareBeginningIndexes(target);
+              var nextBeginningIndexes = [];
+              var lastIsBeginning = beginningIndexes[0];
+              var lastIsBeginningI = 0;
+              for (var i = 0; i < targetLen; ++i) {
+                if (lastIsBeginning > i) {
+                  nextBeginningIndexes[i] = lastIsBeginning;
+                } else {
+                  lastIsBeginning = beginningIndexes[++lastIsBeginningI];
+                  nextBeginningIndexes[i] = lastIsBeginning === void 0 ? targetLen : lastIsBeginning;
+                }
+              }
+              return nextBeginningIndexes;
+            },
+            cleanup,
+            new: fuzzysortNew
+          };
+          return fuzzysort;
+        }
+        var isNode = typeof __require !== "undefined" && typeof window === "undefined";
+        var preparedCache = new Map();
+        var preparedSearchCache = new Map();
+        var noResults = [];
+        noResults.total = 0;
+        var matchesSimple = [];
+        var matchesStrict = [];
+        function cleanup() {
+          preparedCache.clear();
+          preparedSearchCache.clear();
+          matchesSimple = [];
+          matchesStrict = [];
+        }
+        function defaultScoreFn(a) {
+          var max = -9007199254740991;
+          for (var i = a.length - 1; i >= 0; --i) {
+            var result = a[i];
+            if (result === null)
+              continue;
+            var score = result.score;
+            if (score > max)
+              max = score;
+          }
+          if (max === -9007199254740991)
+            return null;
+          return max;
+        }
+        function getValue(obj, prop) {
+          var tmp = obj[prop];
+          if (tmp !== void 0)
+            return tmp;
+          var segs = prop;
+          if (!Array.isArray(prop))
+            segs = prop.split(".");
+          var len = segs.length;
+          var i = -1;
+          while (obj && ++i < len)
+            obj = obj[segs[i]];
+          return obj;
+        }
+        function isObj(x) {
+          return typeof x === "object";
+        }
+        var fastpriorityqueue = function() {
+          var r = [], o = 0, e = {};
+          function n() {
+            for (var e2 = 0, n2 = r[e2], c = 1; c < o; ) {
+              var f = c + 1;
+              e2 = c, f < o && r[f].score < r[c].score && (e2 = f), r[e2 - 1 >> 1] = r[e2], c = 1 + (e2 << 1);
+            }
+            for (var a = e2 - 1 >> 1; e2 > 0 && n2.score < r[a].score; a = (e2 = a) - 1 >> 1)
+              r[e2] = r[a];
+            r[e2] = n2;
+          }
+          return e.add = function(e2) {
+            var n2 = o;
+            r[o++] = e2;
+            for (var c = n2 - 1 >> 1; n2 > 0 && e2.score < r[c].score; c = (n2 = c) - 1 >> 1)
+              r[n2] = r[c];
+            r[n2] = e2;
+          }, e.poll = function() {
+            if (o !== 0) {
+              var e2 = r[0];
+              return r[0] = r[--o], n(), e2;
+            }
+          }, e.peek = function(e2) {
+            if (o !== 0)
+              return r[0];
+          }, e.replaceTop = function(o2) {
+            r[0] = o2, n();
+          }, e;
+        };
+        var q = fastpriorityqueue();
+        return fuzzysortNew();
+      });
+    }
+  });
+
+  // <stdin>
+  var import_fuzzysort = __toModule(require_fuzzysort());
+  (() => {
+    let searchIndex = null;
+    const request = new XMLHttpRequest();
+    request.onreadystatechange = () => {
+      if (request.readyState === 4 && request.status === 200) {
+        searchIndex = JSON.parse(request.responseText);
+      }
+    };
+    request.open("GET", "/index.json");
+    request.send();
+    const search = async (query, index) => {
+      const regex = new RegExp(query.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+      const keys = ["permalink", "tags", "title"];
+      const result = index.filter((value) => {
+        for (const key of keys) {
+          if (!value[key])
+            continue;
+          if (Array.isArray(value[key])) {
+            if (value[key].some((v) => regex.test(v.toLowerCase())))
+              return true;
+          } else if (regex.test(value[key].toLowerCase()))
+            return true;
+        }
+      });
+      if (result.length > 0) {
+        const ul = document.createElement("ul");
+        ul.setAttribute("class", "pt-1");
+        result.forEach((item) => {
+          const li = document.createElement("li");
+          const aTag = document.createElement("a");
+          li.setAttribute("class", "px-1 py-1");
+          aTag.setAttribute("href", item.permalink);
+          aTag.setAttribute("class", "is-block");
+          aTag.innerHTML = item.title;
+          li.appendChild(aTag);
+          ul.appendChild(li);
+        });
+        return ul;
+      }
+      return null;
+    };
+    const searchResult = document.getElementById("search-result");
+    const searchInput = document.getElementById("search-input");
+    searchInput?.addEventListener("input", async (e) => {
+      let result = null;
+      if (e.currentTarget.value)
+        result = await search(e.currentTarget.value, searchIndex);
+      if (searchResult.lastChild)
+        searchResult.removeChild(searchResult.lastChild);
+      if (result)
+        searchResult.appendChild(result);
+    });
+    searchInput?.addEventListener("focusout", (e) => {
+      e.target.value = "";
+      setTimeout(() => {
+        if (searchResult.lastChild)
+          searchResult.removeChild(searchResult.lastChild);
+      }, 150);
+    });
+  })();
+})();
