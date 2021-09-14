@@ -6,22 +6,31 @@
         <description>Recent content in Tags on Angelo Ryndon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 10 Nov 2020 21:12:01 +1300</lastBuildDate><atom:link href="https://angeloryndon.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sat, 11 Sep 2021 22:13:15 +1200</lastBuildDate><atom:link href="https://angeloryndon.com/tags/index.xml" rel="self" type="application/rss+xml" />
         <item>
-            <title>ASP.NET</title>
-            <link>https://angeloryndon.com/tags/asp.net/</link>
-            <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+            <title>hugo</title>
+            <link>https://angeloryndon.com/tags/hugo/</link>
+            <pubDate>Sat, 11 Sep 2021 22:13:15 +1200</pubDate>
             
-            <guid>https://angeloryndon.com/tags/asp.net/</guid>
+            <guid>https://angeloryndon.com/tags/hugo/</guid>
             <description></description>
         </item>
         
         <item>
             <title>tips</title>
             <link>https://angeloryndon.com/tags/tips/</link>
-            <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+            <pubDate>Sat, 11 Sep 2021 22:13:15 +1200</pubDate>
             
             <guid>https://angeloryndon.com/tags/tips/</guid>
+            <description></description>
+        </item>
+        
+        <item>
+            <title>ASP.NET</title>
+            <link>https://angeloryndon.com/tags/asp.net/</link>
+            <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
+            
+            <guid>https://angeloryndon.com/tags/asp.net/</guid>
             <description></description>
         </item>
         

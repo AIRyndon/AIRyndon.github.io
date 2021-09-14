@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<title>
+Add Basic Search to Your Hugo Website - Angelo Ryndon
+</title>
+
+
+
+        <meta property="og:title" content="Add basic search to your Hugo website - Angelo Ryndon" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angeloryndon.com/2021/09/add-sublime-search-to-hugo-site/"/>
+<meta property="og:site_name" content="Angelo Ryndon"/>
+
+
+
+
+<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.png">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css" crossorigin="anonymous" media="screen">
+
+
+
+
+    <link rel="stylesheet" href="/override.css" crossorigin="anonymous" media="screen">
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Posts</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/projects/">
+                
+                Projects
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/#about-me">
+                
+                About Me
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container bottom-pad">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://angeloryndon.com/2021/09/add-sublime-search-to-hugo-site/">Add basic search to your Hugo website</a>
+    </h2>
+    <div class="post-data">
+        Sep 11, 2021 |
+        4 minutes read
+    </div>
+    
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+     <p>
+        
+            Tags: 
+        
+        
+        <a href="/tags/tips">tips</a>,
+        
+        <a href="/tags/hugo">hugo</a>
+                
+    </p>
+    
+
+    
+
+</div>
+
+<div class="container markdown top-pad">
+    <h2 id="issue" class="anchor-link"><a href="#issue">Issue</a></h2>
+<p>You want to add a basic search functionality to your Hugo website, however the suggestions from the
+<a href="https://gohugo.io/tools/search/">official documentation</a> feels a bit too much for your needs. Like if you want to search by one
+parameter only, or you don&rsquo;t want to install additional packages, then this quick tutorial is a decent way to achieve this.</p>
+
+<h2 id="solution" class="anchor-link"><a href="#solution">Solution</a></h2>
+<p>Full Disclosure on Hugo: I perhaps have less than 24 actual hours of experience with Hugo, just used a theme and
+modified it a bit to get what I want. I apologize in advance as how I do things here aren&rsquo;t best practice
+in Hugo.</p>
+<ul>
+<li>In your theme&rsquo;s <code>layouts &gt; partials</code> folder, create the html that houses the search input and the results (I&rsquo;m not
+even sure if this folder structure is standard).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#60a0b0;font-style:italic">&lt;!--The css styles can be ignored.--&gt;</span>
+&lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">id</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;search-container&#34;</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;columns&#34;</span>&gt;
+    &lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;column is-three-quarters-desktop&#34;</span>&gt;
+        &lt;<span style="color:#062873;font-weight:bold">input</span> <span style="color:#4070a0">placeholder</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;Search all posts...&#34;</span> <span style="color:#4070a0">id</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;search-input&#34;</span> <span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;input&#34;</span>/&gt;
+        &lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">id</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;search-result&#34;</span>&gt;
+        &lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
+    &lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
+&lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
+</code></pre></div><ul>
+<li>Inside the <code>layouts &gt; _default</code> folder, create an index.json, this will have the data we will search client-side</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="">$</span>.Scratch.Add <span style="color:#4070a0">&#34;index&#34;</span> slice }}
+{{ <span style="color:#007020;font-weight:bold">range</span> where .Site.RegularPages <span style="color:#4070a0">&#34;Section&#34;</span> <span style="color:#4070a0">&#34;blog&#34;</span> }}
+{{ <span style="">$</span>.Scratch.Add <span style="color:#4070a0">&#34;index&#34;</span> (dict <span style="color:#4070a0">&#34;title&#34;</span> .Title <span style="color:#4070a0">&#34;permalink&#34;</span> .Permalink <span style="color:#4070a0">&#34;tags&#34;</span> .Params.tags ) }}
+{{ end }}
+{{ <span style="">$</span>.Scratch.Get <span style="color:#4070a0">&#34;index&#34;</span> | jsonify }}
+</code></pre></div><p><em>Note: We can get all the regular pages there on the 2nd line, or filter the range to something else.
+As for the index, add only the values you want to search <code>(title, link and tags for my case)</code>, to keep it as small as possible</em></p>
+<ul>
+<li>In your <code>config.toml</code>, tell your home page to output json as well</li>
+</ul>
+<pre tabindex="0"><code> [outputs]
+    home = ['html','json']
+</code></pre><ul>
+<li>In your <code>assets</code> folder, add the JavaScript file that will do the searching</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">(() =&gt; {
+    <span style="color:#007020;font-weight:bold">let</span> searchIndex <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">null</span>;
+
+    <span style="color:#60a0b0;font-style:italic">// populate the search index object
+</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#007020;font-weight:bold">const</span> request <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> XMLHttpRequest();
+    request.onreadystatechange <span style="color:#666">=</span> () =&gt; {
+        <span style="color:#60a0b0;font-style:italic">// 4 - done request, 200 - OK
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">if</span> (request.readyState <span style="color:#666">===</span> <span style="color:#40a070">4</span> <span style="color:#666">&amp;&amp;</span> request.status <span style="color:#666">===</span> <span style="color:#40a070">200</span>) {
+            searchIndex <span style="color:#666">=</span> JSON.parse(request.responseText);
+        }
+    }
+    request.open(<span style="color:#4070a0">&#39;GET&#39;</span>, <span style="color:#4070a0">&#39;/index.json&#39;</span>);
+    request.send();
+
+    <span style="color:#007020;font-weight:bold">const</span> search <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">async</span> (query, index) =&gt; {
+        <span style="color:#60a0b0;font-style:italic">// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">const</span> regex <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> <span style="color:#007020">RegExp</span>(query.toLowerCase().replace(<span style="color:#235388">/[.*+?^${}()|[\]\\]/g</span>, <span style="color:#4070a0">&#39;\\$&amp;&#39;</span>));
+        <span style="color:#007020;font-weight:bold">const</span> keys <span style="color:#666">=</span> [<span style="color:#4070a0">&#39;permalink&#39;</span>,<span style="color:#4070a0">&#39;tags&#39;</span>,<span style="color:#4070a0">&#39;title&#39;</span>]; <span style="color:#60a0b0;font-style:italic">//can add other keys here if wanted
+</span><span style="color:#60a0b0;font-style:italic"></span>        
+        <span style="color:#60a0b0;font-style:italic">// get only the stuff that matches the regex pattern
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">const</span> result <span style="color:#666">=</span> index.filter((value) =&gt; {
+            <span style="color:#007020;font-weight:bold">for</span> (<span style="color:#007020;font-weight:bold">const</span> key <span style="color:#007020;font-weight:bold">of</span> keys) {
+                <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#666">!</span>value[key]) <span style="color:#007020;font-weight:bold">continue</span>;
+
+                <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Array</span>.isArray(value[key])){ 
+                    <span style="color:#60a0b0;font-style:italic">// search each value in the nested array
+</span><span style="color:#60a0b0;font-style:italic"></span>                    <span style="color:#007020;font-weight:bold">if</span> (value[key].some(v =&gt; regex.test(v.toLowerCase()))) <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">true</span>;
+                }<span style="color:#007020;font-weight:bold">else</span> <span style="color:#007020;font-weight:bold">if</span>(regex.test(value[key].toLowerCase())) <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">true</span>;
+            }
+            
+            <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">false</span>;
+        });
+
+        <span style="color:#60a0b0;font-style:italic">// put the results in a list that&#39;s rendered on the screen
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">if</span> (result.length <span style="color:#666">&gt;</span> <span style="color:#40a070">0</span>) {
+            <span style="color:#007020;font-weight:bold">const</span> ul <span style="color:#666">=</span> <span style="color:#007020">document</span>.createElement(<span style="color:#4070a0">&#39;ul&#39;</span>);
+            ul.setAttribute(<span style="color:#4070a0">&#39;class&#39;</span>,<span style="color:#4070a0">&#39;pt-1&#39;</span>);
+
+            result.forEach(item =&gt; {
+                <span style="color:#007020;font-weight:bold">const</span> li <span style="color:#666">=</span> <span style="color:#007020">document</span>.createElement(<span style="color:#4070a0">&#39;li&#39;</span>);
+                <span style="color:#007020;font-weight:bold">const</span> aTag <span style="color:#666">=</span> <span style="color:#007020">document</span>.createElement(<span style="color:#4070a0">&#39;a&#39;</span>);
+
+                li.setAttribute(<span style="color:#4070a0">&#39;class&#39;</span>,<span style="color:#4070a0">&#39;px-1 py-1&#39;</span>);
+                aTag.setAttribute(<span style="color:#4070a0">&#39;href&#39;</span>, item.permalink);
+                aTag.setAttribute(<span style="color:#4070a0">&#39;class&#39;</span>, <span style="color:#4070a0">&#39;is-block&#39;</span>);
+                aTag.innerHTML <span style="color:#666">=</span> item.title;
+
+                li.appendChild(aTag);
+                ul.appendChild(li);
+            })
+
+            <span style="color:#007020;font-weight:bold">return</span> ul
+        }
+
+        <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">null</span>;
+    }
+
+    <span style="color:#007020;font-weight:bold">const</span> searchResult <span style="color:#666">=</span> <span style="color:#007020">document</span>.getElementById(<span style="color:#4070a0">&#39;search-result&#39;</span>);
+    <span style="color:#007020;font-weight:bold">const</span> searchInput <span style="color:#666">=</span> <span style="color:#007020">document</span>.getElementById(<span style="color:#4070a0">&#39;search-input&#39;</span>);
+
+    <span style="color:#60a0b0;font-style:italic">// search on input
+</span><span style="color:#60a0b0;font-style:italic"></span>    searchInput<span style="color:#666">?</span>.addEventListener(<span style="color:#4070a0">&#39;input&#39;</span>, <span style="color:#007020;font-weight:bold">async</span> (e) =&gt; {
+        <span style="color:#007020;font-weight:bold">let</span> result <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">null</span>;
+        <span style="color:#007020;font-weight:bold">if</span> (e.currentTarget.value) result <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">await</span> search(e.currentTarget.value, searchIndex);
+        <span style="color:#007020;font-weight:bold">if</span> (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
+        <span style="color:#007020;font-weight:bold">if</span> (result) searchResult.appendChild(result);
+    });
+
+    <span style="color:#60a0b0;font-style:italic">// clear the search input - this is so when you press back in your browser, 
+</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#60a0b0;font-style:italic">// the search input is cleared nicely
+</span><span style="color:#60a0b0;font-style:italic"></span>    searchInput<span style="color:#666">?</span>.addEventListener(<span style="color:#4070a0">&#39;focusout&#39;</span>, (e) =&gt; {
+        e.target.value <span style="color:#666">=</span> <span style="color:#4070a0">&#39;&#39;</span>;
+        <span style="color:#60a0b0;font-style:italic">// timeout is there because removing the element instantly won&#39;t let you hit the anchor tag
+</span><span style="color:#60a0b0;font-style:italic"></span>        setTimeout(() =&gt; {
+            <span style="color:#007020;font-weight:bold">if</span> (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
+        }, <span style="color:#40a070">150</span>);
+    });
+})();
+</code></pre></div><ul>
+<li>Then call this script somewhere in your homepage, in my case it is on another partial page</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#666">--</span> At the home page <span style="color:#666">--</span>&gt;
+{{ partial <span style="color:#4070a0">&#34;footer/scripts.html&#34;</span> . }}
+   
+&lt;!<span style="color:#666">--</span> At the partial page. layouts &gt; partials &gt; footer folder  <span style="color:#666">--</span>&gt;
+{{ <span style="color:#007020;font-weight:bold">range</span> <span style="">$</span>value <span style="color:#666">:=</span> .Site.Params.customJS }}
+    {{ <span style="">$</span>script <span style="color:#666">:=</span> resources.Get . | js.<span style="color:#06287e">Build</span> (dict <span style="color:#4070a0">&#34;minify&#34;</span> <span style="color:#007020;font-weight:bold">true</span>) }}
+    &lt;script src=<span style="color:#4070a0">&#34;{{ $script.Permalink }}&#34;</span>&gt;&lt;<span style="color:#666">/</span>script&gt;
+{{ end }}
+</code></pre></div><p>Add your own styling to finish it off. Here is a working demo on my site&rsquo;s <a href="https://angeloryndon.com/blog/">blog area</a>.</p>
+<p>One downside I can imagine is when there are lots of pages in your site, the index file will be big, which will slow down this solution. If you also search the contents of each
+page, the index file can get bigger even faster. For small sites however (I&rsquo;m guessing less than 5,000 pages without searching the page&rsquo;s content), this solution should work pretty well.</p>
+    <div class="top-pad">
+        
+<div class="posts-contact-area">
+    Share on:  
+    
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+        <i class="fab fa-dev"></i>
+        <span class="hidden">DEV.to</span>
+    </a>
+    
+    
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+        <i class="fab fa-facebook"></i>
+        <span class="hidden">Facebook</span>
+    </a>
+    
+    
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+        <i class="fab fa-twitter"></i>
+        <span class="hidden">Twitter</span>
+    </a>
+         
+    
+    
+</div>
+
+    </div>   
+</div>
+
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text">
+        Disclaimer: The opinions here are my own and do not represent anyone else&rsquo;s view in any way.
+        </span>
+        
+        <div>
+        <span class="footer-text">
+            Design based on the <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <i class="fa fa-heart"></i> by open source contributors.
+        </span>
+        </div>
+
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://angeloryndon.com/js/bundle.js"></script>
+
+
+
+
+
+    
+    <script src="https://angeloryndon.com/search.js"></script>
+
+
+        
+        
+        
+        
+    </body>
+</html>

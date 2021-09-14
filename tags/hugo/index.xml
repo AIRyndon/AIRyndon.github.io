@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>tips on Angelo Ryndon</title>
-        <link>https://angeloryndon.com/tags/tips/</link>
-        <description>Recent content in tips on Angelo Ryndon</description>
+        <title>hugo on Angelo Ryndon</title>
+        <link>https://angeloryndon.com/tags/hugo/</link>
+        <description>Recent content in hugo on Angelo Ryndon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 11 Sep 2021 22:13:15 +1200</lastBuildDate><atom:link href="https://angeloryndon.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sat, 11 Sep 2021 22:13:15 +1200</lastBuildDate><atom:link href="https://angeloryndon.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
         <item>
             <title>Add basic search to your Hugo website</title>
             <link>https://angeloryndon.com/2021/09/add-sublime-search-to-hugo-site/</link>
@@ -144,101 +144,6 @@ As for the index, add only the values you want to search &lt;code&gt;(title, lin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add your own styling to finish it off. Here is a working demo on my site&amp;rsquo;s &lt;a href=&#34;https://angeloryndon.com/blog/&#34;&gt;blog area&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One downside I can imagine is when there are lots of pages in your site, the index file will be big, which will slow down this solution. If you also search the contents of each
 page, the index file can get bigger even faster. For small sites however (I&amp;rsquo;m guessing less than 5,000 pages without searching the page&amp;rsquo;s content), this solution should work pretty well.&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
-            <link>https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</link>
-            <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
-            
-            <guid>https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</guid>
-            <description>&lt;h2 id=&#34;scenario&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#scenario&#34;&gt;Scenario&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.&lt;/p&gt;
-
-&lt;h2 id=&#34;issue&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#issue&#34;&gt;Issue&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Partial Views in ASP.NET MVC do not support section areas&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@section scripts{
-    //not supported in Partial Views :(
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;workaround-one&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#workaround-one&#34;&gt;Workaround One&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger a custom event when your ajax call has finished updating the page&amp;rsquo;s html&lt;/li&gt;
-&lt;li&gt;Immediately call an event listener on the Partial View that wants some script loaded (use an IIFE)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;sample-code&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#sample-code&#34;&gt;Sample Code&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;public static firePartialViewEvent(): void
-{
-    /*
-    * longer way of writing is to maintain IE compatibility
-    * https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
-    *
-    */
-    const loadEvent = document.createEvent(&#39;Event&#39;);
-    loadEvent.initEvent(&#39;finished:loading&#39;, true, true);
-    document.querySelector(&#39;body&#39;).dispatchEvent(loadEvent);
-}
-
-/**
-* Call this from the partial view&#39;s script, if doing an ajax request
-* @param script the partial view script to call
-*/
-public static loadPartialViewScript(script: () =&amp;gt; void): void
-{
-    const body = document.querySelector(&#39;body&#39;);
-    const options: AddEventListenerOptions = {
-        once: true,
-    }
-
-    body.addEventListener(&#39;finished:loading&#39;, () =&amp;gt;
-    {
-        script();
-    }, options);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br/&gt;
-
-&lt;h4 id=&#34;usage&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#usage&#34;&gt;Usage&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;//in your JavaScript/TypeScript file&#39;s ajax call
-$.get(&amp;lt;blah blah&amp;gt;).done(() =&amp;gt; firePartialViewEvent());
-
-//in your Partial View
-@if (Request.IsAjaxRequest()) // you usually only want to call this in an ajax request where the main view is ideally not returned
-{
-    &amp;lt;script&amp;gt;
-        (() =&amp;gt;
-        {
-            loadPartialViewScript(() =&amp;gt; &amp;lt;your partial view script&amp;gt;);
-        })();
-    &amp;lt;/script&amp;gt;
-}
-//and in your main view you have the usual  @section scripts that will render the needed scripts of the Partial View (duplicate call)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br/&gt;
-
-&lt;h2 id=&#34;workaround-two&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#workaround-two&#34;&gt;Workaround Two&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;put the IIFE that calls your partial view in a separate script file&lt;/li&gt;
-&lt;li&gt;use &lt;code&gt;&amp;lt;script defer&amp;gt;&lt;/code&gt; in the Partial View&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;sample-code-1&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#sample-code-1&#34;&gt;Sample Code&lt;/a&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;//on a JS file somewhere (i.e partial-view-caller.js)
-(() =&amp;gt; &amp;lt;your partial view script&amp;gt;)();
-
-//in your Partial View
-&amp;lt;script src=&amp;quot;~/partial-view-caller.js&amp;quot; defer&amp;gt;&amp;lt;/script&amp;gt;
-
-//you can actually just straight call your partial view script living in an external file - I just prefer having an initialization method :)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br/&gt;
-
-&lt;h4 id=&#34;closing-thoughts&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#closing-thoughts&#34;&gt;Closing thoughts&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;I personally prefer &lt;strong&gt;Workaround Two&lt;/strong&gt; for its simplicity. However, I implemented &lt;strong&gt;Workaround One&lt;/strong&gt; first - cause I&amp;rsquo;m an idiot who didn&amp;rsquo;t know how to properly use defer :D &lt;br/&gt;
-&lt;br/&gt;
-However, &lt;strong&gt;Workaround One&lt;/strong&gt; is in my opinion the ideal way in case you want to pass some data from your C# ViewModel to that Partial View script, which is also a common scenario. Therefore, both methods are useful - it depends on your situation.&lt;/p&gt;</description>
         </item>
         
     </channel>
