@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Projects on Angelo Ryndon</title>
-        <link>https://angeloryndon.com/projects/</link>
-        <description>Recent content in Projects on Angelo Ryndon</description>
+        <title>Projects on Angelo Corleone</title>
+        <link>https://angelocorleone.com/projects/</link>
+        <description>Recent content in Projects on Angelo Corleone</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 13 Apr 2018 08:51:42 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/projects/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 13 Apr 2018 08:51:42 +0000</lastBuildDate><atom:link href="https://angelocorleone.com/projects/index.xml" rel="self" type="application/rss+xml" />
         <item>
             <title>3D Co-Op Game</title>
-            <link>https://angeloryndon.com/projects/unity-project/</link>
+            <link>https://angelocorleone.com/projects/unity-project/</link>
             <pubDate>Sun, 05 Sep 2021 13:53:00 +1200</pubDate>
             
-            <guid>https://angeloryndon.com/projects/unity-project/</guid>
-            <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;3D Co-Op Game (opens in a new tab)&#34; href=&#34;https://github.com/AIRyndon/Unity-3d-game&#34; target=&#34;_blank&#34;&gt;View the repo&lt;/a&gt;&lt;/p&gt;
+            <guid>https://angelocorleone.com/projects/unity-project/</guid>
+            <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;3D Co-Op Game (opens in a new tab)&#34; href=&#34;https://github.com/ANRCorleone/Unity-3d-game&#34; target=&#34;_blank&#34;&gt;View the repo&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;challenge&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#challenge&#34;&gt;Challenge&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;In one of my university papers, the task is to create any kind of software product as a team. Any technology can be used, and the only prerequisite is that the project should be complex enough (for students) relative to your team&amp;rsquo;s size, and that the team must use Github for collaboration.&lt;/p&gt;
 
 &lt;h4 id=&#34;response&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#response&#34;&gt;Response&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Because we were a team of 5, we were told by our teacher that we need to build something bigger compared to a team of 2-3. We chose to build a 3D multiplayer game, and was told that it would be impressive if we can pull it off given the time constraints. The biggest issue I remember was we had a team member who did very little in the project, this person was not willing to exert the effort to learn and contribute. Below is our contribution chart when the project was finished:
-&lt;img src=&#34;https://angeloryndon.com/img/projects/unity-project/contributions.jpg&#34; alt=&#34;&amp;ldquo;Contributions&amp;rdquo;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://angelocorleone.com/img/projects/unity-project/contributions.jpg&#34; alt=&#34;&amp;amp;ldquo;Contributions&amp;amp;rdquo;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The issue was that there is no documentation work that we can assign this person to, everything is software development, so I did all I could to carry the team. I learned a bit about how multiplayer is implemented, how interactions with the game world can be registered among players in a multiplayer game, how movement and game world interaction is implemented, a little bit of game design, level creation, and so much more.&lt;/p&gt;
 &lt;p&gt;I taught the team what I researched, for example on how to collaborate in Unity using Github, which I learned the hard way that it is not straightforward in game dev compared to something like Perforce. I spent more than 300 hours on a 15 credit project to complete it with satisfactory standards. I was still lucky with some of my teammates though, as they also did their best in this project. I believe we couldn&amp;rsquo;t have finished if we had two deadweight members in that group.&lt;/p&gt;
 
@@ -31,11 +31,11 @@
         
         <item>
             <title>Microsoft Student Accelerator</title>
-            <link>https://angeloryndon.com/projects/pomodoro/</link>
+            <link>https://angelocorleone.com/projects/pomodoro/</link>
             <pubDate>Tue, 15 Sep 2020 22:49:36 +1200</pubDate>
             
-            <guid>https://angeloryndon.com/projects/pomodoro/</guid>
-            <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Microsoft Student Accelerator (opens in a new tab)&#34; href=&#34;https://github.com/AIRyndon/Pomodoro/&#34; target=&#34;_blank&#34;&gt;View the repo&lt;/a&gt;&lt;/p&gt;
+            <guid>https://angelocorleone.com/projects/pomodoro/</guid>
+            <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Microsoft Student Accelerator (opens in a new tab)&#34; href=&#34;https://github.com/ANRCorleone/Pomodoro/&#34; target=&#34;_blank&#34;&gt;View the repo&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;challenge&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#challenge&#34;&gt;Challenge&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Create a Web based project using Typescript, React, Azure, and ASP.NET Core. This is required to pass phase two of the &lt;a href=&#34;https://www.facebook.com/studentaccelerator/&#34; title=&#34;Microsoft Student Accelerator&#34;&gt;Microsoft Student Accelerator&lt;/a&gt; internship I attended on my first year&amp;rsquo;s summer break.&lt;/p&gt;
@@ -51,10 +51,10 @@ I remember being very happy when my teamate on that internship said I was techni
         
         <item>
             <title>Connect Four</title>
-            <link>https://angeloryndon.com/projects/connect-four/</link>
+            <link>https://angelocorleone.com/projects/connect-four/</link>
             <pubDate>Sun, 02 Jun 2019 12:18:34 +1300</pubDate>
             
-            <guid>https://angeloryndon.com/projects/connect-four/</guid>
+            <guid>https://angelocorleone.com/projects/connect-four/</guid>
             <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Connect Four (opens in a new tab)&#34; href=&#34;https://airyndon-connect-4.azurewebsites.net/&#34; target=&#34;_blank&#34;&gt;View the project&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;challenge&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#challenge&#34;&gt;Challenge&lt;/a&gt;&lt;/h4&gt;
@@ -70,10 +70,10 @@ I remember being very happy when my teamate on that internship said I was techni
         
         <item>
             <title>Middlemore Motel</title>
-            <link>https://angeloryndon.com/projects/middlemore-motel/</link>
+            <link>https://angelocorleone.com/projects/middlemore-motel/</link>
             <pubDate>Wed, 14 Jun 2017 21:29:39 +1300</pubDate>
             
-            <guid>https://angeloryndon.com/projects/middlemore-motel/</guid>
+            <guid>https://angelocorleone.com/projects/middlemore-motel/</guid>
             <description>&lt;p&gt;&lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Middlemore Motel (opens in a new tab)&#34; href=&#34;https://middlemoremotel.co.nz&#34; target=&#34;_blank&#34;&gt;View the project&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;challenge&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#challenge&#34;&gt;Challenge&lt;/a&gt;&lt;/h4&gt;

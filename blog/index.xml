@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Angelo Ryndon</title>
-        <link>https://angeloryndon.com/blog/</link>
-        <description>Recent content in Posts on Angelo Ryndon</description>
+        <title>Posts on Angelo Corleone</title>
+        <link>https://angelocorleone.com/blog/</link>
+        <description>Recent content in Posts on Angelo Corleone</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 25 Sep 2018 04:43:12 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Tue, 25 Sep 2018 04:43:12 +0000</lastBuildDate><atom:link href="https://angelocorleone.com/blog/index.xml" rel="self" type="application/rss+xml" />
         <item>
             <title>Add basic search to your Hugo website</title>
-            <link>https://angeloryndon.com/2021/09/add-sublime-search-to-hugo-site/</link>
+            <link>https://angelocorleone.com/2021/09/add-sublime-search-to-hugo-site/</link>
             <pubDate>Sat, 11 Sep 2021 22:13:15 +1200</pubDate>
             
-            <guid>https://angeloryndon.com/2021/09/add-sublime-search-to-hugo-site/</guid>
+            <guid>https://angelocorleone.com/2021/09/add-sublime-search-to-hugo-site/</guid>
             <description>&lt;h2 id=&#34;issue&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#issue&#34;&gt;Issue&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;You want to add a basic search functionality to your Hugo website, however the suggestions from the
+&lt;p&gt;You want to add a basic search functionality to your Hugo website, however the suggestions from the 
 &lt;a href=&#34;https://gohugo.io/tools/search/&#34;&gt;official documentation&lt;/a&gt; feels a bit too much for your needs. Like if you want to search by one
 parameter only, or you don&amp;rsquo;t want to install additional packages, then this quick tutorial is a decent way to achieve this.&lt;/p&gt;
-
 &lt;h2 id=&#34;solution&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#solution&#34;&gt;Solution&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Full Disclosure on Hugo: I perhaps have less than 24 actual hours of experience with Hugo, just used a theme and
 modified it a bit to get what I want. I apologize in advance as how I do things here aren&amp;rsquo;t best practice
@@ -26,255 +25,255 @@ in Hugo.&lt;/p&gt;
 &lt;li&gt;In your theme&amp;rsquo;s &lt;code&gt;layouts &amp;gt; partials&lt;/code&gt; folder, create the html that houses the search input and the results (I&amp;rsquo;m not
 even sure if this folder structure is standard).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&amp;lt;!--The css styles can be ignored.--&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-container&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;columns&amp;#34;&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;column is-three-quarters-desktop&amp;#34;&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;placeholder&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Search all posts...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-input&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;/&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-result&amp;#34;&lt;/span&gt;&amp;gt;
-        &amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-    &amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&amp;lt;!--The css styles can be ignored.--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-container&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;columns&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;column is-three-quarters-desktop&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;placeholder&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Search all posts...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-input&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;search-result&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Inside the &lt;code&gt;layouts &amp;gt; _default&lt;/code&gt; folder, create an index.json, this will have the data we will search client-side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Add &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; slice }}
-{{ &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;range&lt;/span&gt; where .Site.RegularPages &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Section&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;blog&amp;#34;&lt;/span&gt; }}
-{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Add &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; (dict &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt; .Title &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;permalink&amp;#34;&lt;/span&gt; .Permalink &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt; .Params.tags ) }}
-{{ end }}
-{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Get &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; | jsonify }}
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Add &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; slice }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;range&lt;/span&gt; where .Site.RegularPages &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Section&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;blog&amp;#34;&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Add &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; (dict &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt; .Title &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;permalink&amp;#34;&lt;/span&gt; .Permalink &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt; .Params.tags ) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;.Scratch.Get &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt; | jsonify }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: We can get all the regular pages there on the 2nd line, or filter the range to something else.
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: We can get all the regular pages there on the 2nd line, or filter the range to something else. 
 As for the index, add only the values you want to search &lt;code&gt;(title, link and tags for my case)&lt;/code&gt;, to keep it as small as possible&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In your &lt;code&gt;config.toml&lt;/code&gt;, tell your home page to output json as well&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; [outputs]
-    home = [&#39;html&#39;,&#39;json&#39;]
+    home = [&amp;#39;html&amp;#39;,&amp;#39;json&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;In your &lt;code&gt;assets&lt;/code&gt; folder, add the JavaScript file that will do the searching&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;31
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;32
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;33
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;34
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;35
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;36
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;37
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;38
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;39
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;40
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;41
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;42
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;43
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;44
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;45
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;46
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;47
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;48
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;49
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;50
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;51
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;52
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;53
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;54
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;55
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;56
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;57
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;58
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;59
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;60
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;61
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;62
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;63
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;64
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;65
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;66
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;67
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;68
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;69
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;70
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;71
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;72
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;73
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;74
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;75
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;76
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;77
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;78
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;31
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;32
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;33
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;34
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;35
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;36
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;37
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;38
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;39
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;40
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;41
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;42
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;43
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;44
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;45
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;46
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;47
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;48
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;49
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;50
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;51
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;52
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;53
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;54
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;55
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;56
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;57
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;58
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;59
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;60
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;61
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;62
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;63
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;64
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;65
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;66
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;67
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;68
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;69
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;70
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;71
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;72
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;73
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;74
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;75
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;76
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;77
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;78
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;(() =&amp;gt; {
-    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;let&lt;/span&gt; searchIndex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-
-    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// populate the search index object
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; request &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; XMLHttpRequest();
-    request.onreadystatechange &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; () =&amp;gt; {
-        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 4 - done request, 200 - OK
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (request.readyState &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; request.status &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;200&lt;/span&gt;) {
-            searchIndex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; JSON.parse(request.responseText);
-        }
-    }
-    request.open(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;GET&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;/index.json&amp;#39;&lt;/span&gt;);
-    request.send();
-
-    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; search &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;async&lt;/span&gt; (query, index) =&amp;gt; {
-        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; regex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;RegExp&lt;/span&gt;(query.toLowerCase().replace(&lt;span style=&#34;color:#235388&#34;&gt;/[.*+?^${}()|[\]\\]/g&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;\\$&amp;amp;&amp;#39;&lt;/span&gt;));
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; keys &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;permalink&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;]; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//can add other keys here if wanted
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        
-        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// get only the stuff that matches the regex pattern
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; index.filter((value) =&amp;gt; {
-            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; key &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;of&lt;/span&gt; keys) {
-                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;!&lt;/span&gt;value[key]) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;continue&lt;/span&gt;;
-
-                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#007020&#34;&gt;Array&lt;/span&gt;.isArray(value[key])){ 
-                    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// search each value in the nested array
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;                    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (value[key].some(v =&amp;gt; regex.test(v.toLowerCase()))) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;;
-                }&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt;(regex.test(value[key].toLowerCase())) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;;
-            }
-            
-            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;;
-        });
-
-        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// put the results in a list that&amp;#39;s rendered on the screen
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (result.length &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;0&lt;/span&gt;) {
-            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; ul &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;ul&amp;#39;&lt;/span&gt;);
-            ul.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;pt-1&amp;#39;&lt;/span&gt;);
-
-            result.forEach(item =&amp;gt; {
-                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; li &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;li&amp;#39;&lt;/span&gt;);
-                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; aTag &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;);
-
-                li.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;px-1 py-1&amp;#39;&lt;/span&gt;);
-                aTag.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;href&amp;#39;&lt;/span&gt;, item.permalink);
-                aTag.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;is-block&amp;#39;&lt;/span&gt;);
-                aTag.innerHTML &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; item.title;
-
-                li.appendChild(aTag);
-                ul.appendChild(li);
-            })
-
-            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; ul
-        }
-
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-    }
-
-    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; searchResult &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;search-result&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; searchInput &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;search-input&amp;#39;&lt;/span&gt;);
-
-    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// search on input
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    searchInput&lt;span style=&#34;color:#666&#34;&gt;?&lt;/span&gt;.addEventListener(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;input&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;async&lt;/span&gt; (e) =&amp;gt; {
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;let&lt;/span&gt; result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (e.currentTarget.value) result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;await&lt;/span&gt; search(e.currentTarget.value, searchIndex);
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
-        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (result) searchResult.appendChild(result);
-    });
-
-    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// clear the search input - this is so when you press back in your browser, 
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// the search input is cleared nicely
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    searchInput&lt;span style=&#34;color:#666&#34;&gt;?&lt;/span&gt;.addEventListener(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;focusout&amp;#39;&lt;/span&gt;, (e) =&amp;gt; {
-        e.target.value &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// timeout is there because removing the element instantly won&amp;#39;t let you hit the anchor tag
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        setTimeout(() =&amp;gt; {
-            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
-        }, &lt;span style=&#34;color:#40a070&#34;&gt;150&lt;/span&gt;);
-    });
-})();
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(() =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;let&lt;/span&gt; searchIndex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// populate the search index object
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; request &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; XMLHttpRequest();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    request.onreadystatechange &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 4 - done request, 200 - OK
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (request.readyState &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; request.status &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;200&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            searchIndex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; JSON.parse(request.responseText);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    request.open(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;GET&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;/index.json&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    request.send();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; search &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;async&lt;/span&gt; (query, index) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; regex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;RegExp&lt;/span&gt;(query.toLowerCase().replace(&lt;span style=&#34;color:#235388&#34;&gt;/[.*+?^${}()|[\]\\]/g&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;\\$&amp;amp;&amp;#39;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; keys &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;permalink&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;]; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//can add other keys here if wanted
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// get only the stuff that matches the regex pattern
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; index.filter((value) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; key &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;of&lt;/span&gt; keys) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;!&lt;/span&gt;value[key]) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;continue&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#007020&#34;&gt;Array&lt;/span&gt;.isArray(value[key])){ 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// search each value in the nested array
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;                    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (value[key].some(v =&amp;gt; regex.test(v.toLowerCase()))) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt;(regex.test(value[key].toLowerCase())) &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// put the results in a list that&amp;#39;s rendered on the screen
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (result.length &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; ul &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;ul&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ul.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;pt-1&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            result.forEach(item =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; li &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;li&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; aTag &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.createElement(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                li.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;px-1 py-1&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                aTag.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;href&amp;#39;&lt;/span&gt;, item.permalink);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                aTag.setAttribute(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;is-block&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                aTag.innerHTML &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; item.title;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                li.appendChild(aTag);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                ul.appendChild(li);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; ul
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; searchResult &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;search-result&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; searchInput &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;search-input&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// search on input
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    searchInput&lt;span style=&#34;color:#666&#34;&gt;?&lt;/span&gt;.addEventListener(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;input&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;async&lt;/span&gt; (e) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;let&lt;/span&gt; result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (e.currentTarget.value) result &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;await&lt;/span&gt; search(e.currentTarget.value, searchIndex);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (result) searchResult.appendChild(result);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// clear the search input - this is so when you press back in your browser, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// the search input is cleared nicely
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    searchInput&lt;span style=&#34;color:#666&#34;&gt;?&lt;/span&gt;.addEventListener(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;focusout&amp;#39;&lt;/span&gt;, (e) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        e.target.value &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// timeout is there because removing the element instantly won&amp;#39;t let you hit the anchor tag
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        setTimeout(() =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (searchResult.lastChild) searchResult.removeChild(searchResult.lastChild);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }, &lt;span style=&#34;color:#40a070&#34;&gt;150&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;})();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Then call this script somewhere in your homepage, in my case it is on another partial page&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;!&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt; At the home page &lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;&amp;gt;
-{{ partial &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;footer/scripts.html&amp;#34;&lt;/span&gt; . }}
-   
-&amp;lt;!&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt; At the partial page. layouts &amp;gt; partials &amp;gt; footer folder  &lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;&amp;gt;
-{{ &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;value &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; .Site.Params.customJS }}
-    {{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;script &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; resources.Get . | js.&lt;span style=&#34;color:#06287e&#34;&gt;Build&lt;/span&gt; (dict &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;minify&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;) }}
-    &amp;lt;script src=&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;{{ $script.Permalink }}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt;script&amp;gt;
-{{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt; At the home page &lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ partial &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;footer/scripts.html&amp;#34;&lt;/span&gt; . }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt; At the partial page. layouts &amp;gt; partials &amp;gt; footer folder  &lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;value &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; .Site.Params.customJS }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{ &lt;span style=&#34;&#34;&gt;$&lt;/span&gt;script &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; resources.Get . | js.&lt;span style=&#34;color:#06287e&#34;&gt;Build&lt;/span&gt; (dict &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;minify&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;script src=&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;{{ $script.Permalink }}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt;script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Add your own styling to finish it off. Here is a working demo on my site&amp;rsquo;s &lt;a href=&#34;https://angeloryndon.com/blog/&#34;&gt;blog area&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;One downside I can imagine is when there are lots of pages in your site, the index file will be big, which will slow down this solution. If you also search the contents of each
+&lt;/div&gt;&lt;p&gt;Add your own styling to finish it off. Here is a working demo on my site&amp;rsquo;s &lt;a href=&#34;https://angelocorleone.com/blog/&#34;&gt;blog area&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One downside I can imagine is when there are lots of pages in your site, the index file will be big, which will slow down this solution. If you also search the contents of each 
 page, the index file can get bigger even faster. For small sites however (I&amp;rsquo;m guessing less than 5,000 pages without searching the page&amp;rsquo;s content), this solution should work pretty well.&lt;/p&gt;</description>
         </item>
         
         <item>
             <title>Render scripts from Partial Views in ASP.NET MVC 5</title>
-            <link>https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</link>
+            <link>https://angelocorleone.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</link>
             <pubDate>Tue, 10 Nov 2020 21:12:01 +1300</pubDate>
             
-            <guid>https://angeloryndon.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</guid>
+            <guid>https://angelocorleone.com/2020/11/render-scripts-from-partial-view-aspnet-mvc/</guid>
             <description>&lt;h2 id=&#34;scenario&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#scenario&#34;&gt;Scenario&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;You want to render a script specific for your partial view only (usually after an ajax call), however the script is dependent on another script being loaded - like JQuery - and sadly, you are not using javascript modules.&lt;/p&gt;
 
@@ -284,7 +283,6 @@ page, the index file can get bigger even faster. For small sites however (I&amp;
     //not supported in Partial Views :(
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;workaround-one&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#workaround-one&#34;&gt;Workaround One&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Trigger a custom event when your ajax call has finished updating the page&amp;rsquo;s html&lt;/li&gt;
@@ -366,10 +364,10 @@ However, &lt;strong&gt;Workaround One&lt;/strong&gt; is in my opinion the ideal 
         
         <item>
             <title>Migrate Asp.net MVC that references .NET standard 2.0 from version 4.6 to 4.8</title>
-            <link>https://angeloryndon.com/2020/11/migrate-asp-net-mvc-to-net48/</link>
+            <link>https://angelocorleone.com/2020/11/migrate-asp-net-mvc-to-net48/</link>
             <pubDate>Sun, 08 Nov 2020 11:56:35 +1300</pubDate>
             
-            <guid>https://angeloryndon.com/2020/11/migrate-asp-net-mvc-to-net48/</guid>
+            <guid>https://angelocorleone.com/2020/11/migrate-asp-net-mvc-to-net48/</guid>
             <description>
 &lt;h2 id=&#34;steps&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#steps&#34;&gt;Steps&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -417,12 +415,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>My thoughts on the 6 week Chingu voyage</title>
-            <link>https://angeloryndon.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</link>
+            <link>https://angelocorleone.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</link>
             <pubDate>Mon, 15 Jul 2019 10:09:12 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</guid>
-            <description>&lt;p&gt;Today marks the end of my &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34;&gt;remote work with other developers&lt;/a&gt;. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;MVP (opens in a new tab)&#34; href=&#34;https://chingu-voyages.github.io/v9-geckos-team-16/&#34; target=&#34;_blank&#34;&gt;MVP&lt;/a&gt;. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.&lt;/p&gt;
-
+            <guid>https://angelocorleone.com/2019/07/my-thoughts-on-the-6-week-chingu-voyage/</guid>
+            <description>&lt;p&gt;Today marks the end of my &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://angelocorleone.com/working-remotely-with-other-developers/&#34;&gt;remote work with other developers&lt;/a&gt;. Most of my worries at the beginning of this actually came true! In our defense though, we still managed to finish our &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;MVP (opens in a new tab)&#34; href=&#34;https://chingu-voyages.github.io/v9-geckos-team-16/&#34; target=&#34;_blank&#34;&gt;MVP&lt;/a&gt;. Our project needs UI and UX updates, and I’ll work on it again sometime in the future. All in all, I am happy with how it turned out. I’m going to write down what I believe were my biggest weaknesses during the project, while it is still fresh in my brain.&lt;/p&gt;
 &lt;h2 id=&#34;in-a-team-setting-i-suck-at-establishing-order&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#in-a-team-setting-i-suck-at-establishing-order&#34;&gt;In a team setting, I suck at establishing order&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;At the start, each of us gave ideas on how to build the application, because we didn’t have an appointed leader. Like how to structure the files, what JS library to use, what would be the git workflow, what features to add, etc.&lt;/p&gt;
 &lt;p&gt;It was only after a few days of working on the project when someone emerged as the group leader, and its at creating guidelines and keeping all of us in the same page where I failed. In hindsight, I should’ve communicated better. I was able to carry the project through technical skills – &lt;em&gt;because it is a fairly simple application&lt;/em&gt; – but I know in complex projects those won’t be enough.&lt;/p&gt;
@@ -437,12 +434,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Modular Programming in JavaScript</title>
-            <link>https://angeloryndon.com/2019/06/modular-programming-in-javascript/</link>
+            <link>https://angelocorleone.com/2019/06/modular-programming-in-javascript/</link>
             <pubDate>Sat, 22 Jun 2019 02:16:30 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2019/06/modular-programming-in-javascript/</guid>
-            <description>&lt;p&gt;I was learning ES6 about &lt;a href=&#34;https://angeloryndon.com/learn-javascript-again/&#34;&gt;two weeks ago&lt;/a&gt;, and it reminded me of how modular programming in JavaScript was done during the years prior. I’m quite happy with how JavaScript has evolved, I would even say that I’m starting to like it. Before we go into the “How to do modular programming in JavaScript today”, I would like to give my thoughts on modular programming first.&lt;/p&gt;
-
+            <guid>https://angelocorleone.com/2019/06/modular-programming-in-javascript/</guid>
+            <description>&lt;p&gt;I was learning ES6 about &lt;a href=&#34;https://angelocorleone.com/learn-javascript-again/&#34;&gt;two weeks ago&lt;/a&gt;, and it reminded me of how modular programming in JavaScript was done during the years prior. I’m quite happy with how JavaScript has evolved, I would even say that I’m starting to like it. Before we go into the “How to do modular programming in JavaScript today”, I would like to give my thoughts on modular programming first.&lt;/p&gt;
 &lt;h2 id=&#34;modular-programming&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#modular-programming&#34;&gt;Modular Programming&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Modular programming is about chopping down a &lt;em&gt;big idea&lt;/em&gt; (which is the program itself) into &lt;em&gt;little ideas&lt;/em&gt; (the program’s features). You then build each of those &lt;em&gt;little ideas&lt;/em&gt; and connect them together to create the &lt;em&gt;big idea&lt;/em&gt;. This programming style allows you to create software that is easier to maintain – I’m in the opinion though that if you overdo it, your software will be even harder to understand and maintain.&lt;/p&gt;
 
@@ -460,12 +456,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Learn JavaScript again</title>
-            <link>https://angeloryndon.com/2019/06/learn-javascript-again/</link>
+            <link>https://angelocorleone.com/2019/06/learn-javascript-again/</link>
             <pubDate>Sat, 08 Jun 2019 02:55:40 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2019/06/learn-javascript-again/</guid>
-            <description>&lt;p&gt;It is time to learn JavaScript again for me as I &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;just started (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/working-remotely-with-other-developers/&#34; target=&#34;_blank&#34;&gt;just started&lt;/a&gt; in a Chingu team project last week. Our team decided that we’ll make something that is inspired by the &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Momentum (opens in a new tab)&#34; href=&#34;https://momentumdash.com/&#34; target=&#34;_blank&#34;&gt;Momentum&lt;/a&gt; browser extension. Now, on to the part where I write down what I learned this week.&lt;/p&gt;
-
+            <guid>https://angelocorleone.com/2019/06/learn-javascript-again/</guid>
+            <description>&lt;p&gt;It is time to learn JavaScript again for me as I &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;just started (opens in a new tab)&#34; href=&#34;https://angelocorleone.com/working-remotely-with-other-developers/&#34; target=&#34;_blank&#34;&gt;just started&lt;/a&gt; in a Chingu team project last week. Our team decided that we’ll make something that is inspired by the &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Momentum (opens in a new tab)&#34; href=&#34;https://momentumdash.com/&#34; target=&#34;_blank&#34;&gt;Momentum&lt;/a&gt; browser extension. Now, on to the part where I write down what I learned this week.&lt;/p&gt;
 &lt;h2 id=&#34;the-let-and-const-keywords&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#the-let-and-const-keywords&#34;&gt;The let and const keywords&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I am happy that our team decided to use native JavaScript for this project, although I don’t mind if some of my teammates would use a library to build a feature. As the whole point of Chingu anyway is for people to learn and collaborate. I am even happier that I now have to worry less about the &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34; (opens in a new tab)&#34; href=&#34;https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1&#34; target=&#34;_blank&#34;&gt;hoisting issue&lt;/a&gt; that put me off JavaScript before. That is all thanks to the &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34; (opens in a new tab)&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let&#34; target=&#34;_blank&#34;&gt;let&lt;/a&gt; and &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;const (opens in a new tab)&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const&#34; target=&#34;_blank&#34;&gt;const&lt;/a&gt; keywords. YAY!&lt;/p&gt;
 &lt;p&gt;When you declare a variable using the let keyword, it keeps the variable’s scope to where it was declared, unlike var where it hoists it up to the global or function scope. &lt;strong&gt;Using let or const makes block scope real in JavaScript&lt;/strong&gt;. Quirks that happened to me before with the &lt;em&gt;var keyword&lt;/em&gt; can now be avoided:&lt;/p&gt;
@@ -482,7 +477,7 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
 };
 &lt;/pre&gt;
 &lt;div class=&#34;wp-block-image&#34;&gt;
-  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-930&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var.jpg 612w, https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var-300x154.jpg 300w, https://angeloryndon.com/wp-content/uploads/2019/06/function-scope-with-var-500x257.jpg 500w&#34; sizes=&#34;(max-width: 612px) 100vw, 612px&#34; /&gt;&lt;figcaption&gt;Old JavaScript making me cringe&amp;#8230;&lt;/figcaption&gt;&lt;/figure&gt;
+  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/function-scope-with-var.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-930&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/function-scope-with-var.jpg 612w, https://angelocorleone.com/wp-content/uploads/2019/06/function-scope-with-var-300x154.jpg 300w, https://angelocorleone.com/wp-content/uploads/2019/06/function-scope-with-var-500x257.jpg 500w&#34; sizes=&#34;(max-width: 612px) 100vw, 612px&#34; /&gt;&lt;figcaption&gt;Old JavaScript making me cringe&amp;#8230;&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;Back then, JavaScript does not have block scope, it has function scope. If you come from a language that is block scoped, the behavior above is confusing. JavaScript’s little goblins take all those variable declarations and puts them at the top – either global, or at the start of a function. What really happened above was there was only one index variable in the Test function, even though you intended to have two. &lt;em&gt;What made me mad with JavaScript before, is why didn’t it complain about the same variable names if it would put them all up there anyway?!&lt;/em&gt; It printed 3 once because that is the value of index when the inner loop finished. Because of this behavior, you might be unaware that you created an infinite loop when you have nested for loops – &lt;em&gt;it sure caught me before.&lt;/em&gt; Compare that to the code below:&lt;/p&gt;
 &lt;pre class=&#34;EnlighterJSRAW&#34; data-enlighter-language=&#34;js&#34;&gt;function TestTwo(){
@@ -497,7 +492,7 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
     }
 };&lt;/pre&gt;
 &lt;div class=&#34;wp-block-image&#34;&gt;
-  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-935&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg 512w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-300x261.jpg 300w, https://angeloryndon.com/wp-content/uploads/2019/06/block-scope-with-let-1-500x436.jpg 500w&#34; sizes=&#34;(max-width: 512px) 100vw, 512px&#34; /&gt;&lt;figcaption&gt;Block scope as it should be&lt;/figcaption&gt;&lt;/figure&gt;
+  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-935&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/block-scope-with-let-1.jpg 512w, https://angelocorleone.com/wp-content/uploads/2019/06/block-scope-with-let-1-300x261.jpg 300w, https://angelocorleone.com/wp-content/uploads/2019/06/block-scope-with-let-1-500x436.jpg 500w&#34; sizes=&#34;(max-width: 512px) 100vw, 512px&#34; /&gt;&lt;figcaption&gt;Block scope as it should be&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the &lt;em&gt;let keyword&lt;/em&gt; allows you to write code that executes the way you think it should. On the other hand, the &lt;em&gt;const keyword&lt;/em&gt; is much like &lt;em&gt;let&lt;/em&gt;, but the variable cannot be reassigned, I think this feels correct because that is what a constant should be. Note to self – &lt;em&gt;use const for variables that most likely will not be reassigned (functions, etc) and use let for those variables that you know will be.&lt;/em&gt;&lt;/p&gt;
 
@@ -547,7 +542,7 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
 &lt;p&gt;I had an issue with the pomodoro timer that I was building for our team project, I only need to pass something by reference to persist changes to its value. I asked in Chingu’s chatroom and one of my colleagues said “Yes! Pass by reference is in JS when you pass objects, but not primitive types”. My colleague gave a &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;blog post (opens in a new tab)&#34; href=&#34;https://medium.com/nodesimplified/javascript-pass-by-value-and-pass-by-reference-in-javascript-fcf10305aa9c&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; to support his statement – &lt;em&gt;which is why we should always take whatever we read online with a few cups of rice.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I knew before that JS does not have this in the language, and I was thrilled to test if this exists now. Below is a quick test code in a browser’s console:&lt;/p&gt;
 &lt;div class=&#34;wp-block-image&#34;&gt;
-  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-944&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg 381w, https://angeloryndon.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript-300x230.jpg 300w&#34; sizes=&#34;(max-width: 381px) 100vw, 381px&#34; /&gt;&lt;/figure&gt;
+  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-944&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript.jpg 381w, https://angelocorleone.com/wp-content/uploads/2019/06/obj-pass-by-value-javascript-300x230.jpg 300w&#34; sizes=&#34;(max-width: 381px) 100vw, 381px&#34; /&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;Sadly, we can see in that image that there is still no pass by reference in JavaScript – &lt;em&gt;I hope I’m wrong though or that this feature gets added later.&lt;/em&gt; The first arrow above points to where the passed argument is assigned to a new and different object. The second arrow points to the call to this function with &lt;em&gt;object a&lt;/em&gt; passed to it, and the third arrow points to where the content of &lt;em&gt;object a&lt;/em&gt; is printed out after passing it to the function. We can see here that outside the function’s scope, the changes to &lt;em&gt;object a&lt;/em&gt; does not persist. That proves to me that even for objects, JavaScript still passes by value.&lt;/p&gt;
 &lt;p&gt;I think the confusion happens when it comes to reference types because when these are passed to functions, by default a copy of the reference – &lt;em&gt;a pointer&lt;/em&gt; – is created (in JavaScript and C# anyway). Since changes to the value of an item (object properties for instance) that a reference &lt;strong&gt;points to&lt;/strong&gt; will be visible to all other pointers, this could be confusing, as it may seem that changes to the object inside the function persists outside of it.&lt;/p&gt;</description>
@@ -555,13 +550,12 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Working remotely with other developers</title>
-            <link>https://angeloryndon.com/2019/06/working-remotely-with-other-developers/</link>
+            <link>https://angelocorleone.com/2019/06/working-remotely-with-other-developers/</link>
             <pubDate>Sun, 02 Jun 2019 08:48:52 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2019/06/working-remotely-with-other-developers/</guid>
+            <guid>https://angelocorleone.com/2019/06/working-remotely-with-other-developers/</guid>
             <description>&lt;p&gt;I forgot where I learned about &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;Chingu (opens in a new tab)&#34; href=&#34;https://chingu.io/&#34; target=&#34;_blank&#34;&gt;Chingu&lt;/a&gt;, what I love about it though is the opportunity to be working remotely with other developers. We are on our first week in a 6-week team project and I’m both anxious and excited about this opportunity.&lt;/p&gt;
-&lt;p&gt;I finished the &lt;a href=&#34;https://angeloryndon.com/portfolio/connect-four/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;prerequisite task (opens in a new tab)&#34;&gt;prerequisite task&lt;/a&gt; to enter the team project on the last day – because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.&lt;/p&gt;
-
+&lt;p&gt;I finished the &lt;a href=&#34;https://angelocorleone.com/portfolio/connect-four/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;prerequisite task (opens in a new tab)&#34;&gt;prerequisite task&lt;/a&gt; to enter the team project on the last day – because its almost finals week in school. That experience was thrilling and scary. I want to note down what I think are our biggest roadblocks, so we can improve during the next weeks.&lt;/p&gt;
 &lt;h2 id=&#34;clearly-written-tasks&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#clearly-written-tasks&#34;&gt;Clearly written tasks&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I think most if not all developers know that clearly written tasks is key to a successful project. The problem for me is I haven’t worked remotely with anyone before, and I rarely write down a clear to-do-list. I hope some of my team members love doing this, as I will suck at it. However, I have to step up because this is a crucial skill, even my current university instructor keeps telling me to WRITE-THINGS-DOWN.&lt;/p&gt;
 
@@ -574,12 +568,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Learning ASP.NET Core</title>
-            <link>https://angeloryndon.com/2019/04/learning-asp-net-core/</link>
+            <link>https://angelocorleone.com/2019/04/learning-asp-net-core/</link>
             <pubDate>Tue, 16 Apr 2019 00:57:22 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2019/04/learning-asp-net-core/</guid>
-            <description>&lt;p&gt;For the last few days, I’ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angeloryndon.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;
-
+            <guid>https://angelocorleone.com/2019/04/learning-asp-net-core/</guid>
+            <description>&lt;p&gt;For the last few days, I’ve started learning ASP.NET Core. After the initial &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;research (opens in a new tab)&#34; href=&#34;https://angelocorleone.com/researching-on-a-uwp-application-for-a-client/&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on how to build the UWP project for a client of mine, I think my idea of using ASP.NET Core Identity could actually work for this project. Since I don’t know how to use ASP.NET Core yet, I think I want to get comfortable with using it with a Web UI first before I go and build just an API using it. I’m currently watching a Pluralsight &lt;a rel=&#34;noreferrer noopener&#34; aria-label=&#34;course (opens in a new tab)&#34; href=&#34;https://www.pluralsight.com/courses/aspnet-core-fundamentals&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; about it by Scott Allen, I’ll be writing down what I found different on ASP.NET Core compared to ASP.NET MVC to make the idea stick.&lt;/p&gt;
 &lt;h2 id=&#34;quick-overview-of-model-binding-in-aspnet-core&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#quick-overview-of-model-binding-in-aspnet-core&#34;&gt;Quick overview of Model Binding in ASP.NET Core&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The framework needs a matching name in the parameter of the C# method, and in an input inside the Razor View. There are different ways to get data from a request in ASP.NET core. One is using the HttpContext, and the other is model binding. Using the HttpContext for model binding is not considered the best approach according to Scott.&lt;/p&gt;
 &lt;p&gt;When you make an http request (invoke a method from the PageModel/Controller), the framework’s model binder looks in the posted form values, query string, and http headers. You can even make your own custom model binder. The goal of model binding is to move info from the request into an input model.&lt;/p&gt;
@@ -595,12 +588,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Null Object Pattern in C#</title>
-            <link>https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/</link>
+            <link>https://angelocorleone.com/2018/10/null-object-pattern-in-csharp/</link>
             <pubDate>Thu, 04 Oct 2018 09:28:49 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/</guid>
+            <guid>https://angelocorleone.com/2018/10/null-object-pattern-in-csharp/</guid>
             <description>&lt;p&gt;I recently just learned about the Null Object Pattern in C# through &lt;a href=&#34;https://app.pluralsight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pluralsight&lt;/a&gt;. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.&lt;/p&gt;
-
 &lt;h2 id=&#34;the-basic-goal-of-the-null-object-pattern&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#the-basic-goal-of-the-null-object-pattern&#34;&gt;The basic goal of the Null Object Pattern&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This pattern aims to decrease or greatly minimize the need for null checking code in parts of a code base. I think no one wants writing boilerplate like the if clause below.&lt;/p&gt;
 &lt;pre class=&#34;EnlighterJSRAW&#34; data-enlighter-language=&#34;csharp&#34;&gt;public YourMethod(someVariable)
@@ -615,7 +607,7 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
 
 &lt;h2 id=&#34;high-level-overview-of-the-patternnbsp&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#high-level-overview-of-the-patternnbsp&#34;&gt;High level overview of the Pattern &lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&#34;wp-block-image&#34;&gt;
-  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png&#34; alt=&#34;Overview of Null Object Pattern in C#&#34; class=&#34;wp-image-687&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;
+  &lt;figure class=&#34;aligncenter&#34;&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview.png&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png&#34; alt=&#34;Overview of Null Object Pattern in C#&#34; class=&#34;wp-image-687&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;The image above shows what the pattern is conceptually. Imagine you have an abstraction containing only a method signature, this abstraction could be an Interface or an Abstract Class. This then has a real implementation(s) and a null object implementation(s). The key here is this:&lt;/p&gt;
 &lt;blockquote class=&#34;wp-block-quote&#34;&gt;
@@ -626,7 +618,7 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
 &lt;p&gt;Because the client code is only referencing the abstraction, the implementation (Real or Null) is not its concern.&lt;/p&gt;
 
 &lt;h2 id=&#34;implementing-the-null-object-pattern-in-c&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#implementing-the-null-object-pattern-in-c&#34;&gt;Implementing the Null Object Pattern in C#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;https://github.com/AIRyndon/CSharpNullObjectPattern&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Github repo&lt;/a&gt; that illustrates the pattern’s basic implementation.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;https://github.com/ANRCorleone/CSharpNullObjectPattern&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Github repo&lt;/a&gt; that illustrates the pattern’s basic implementation.&lt;/p&gt;
 &lt;p&gt;Some things to take note when using the pattern:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When working with others, your team should know what parts of your project uses the null object pattern – or else other team members might use magic numbers or perform manual null checks instead&lt;/li&gt;
@@ -637,12 +629,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>ASP.NET Url rewrite module</title>
-            <link>https://angeloryndon.com/2018/09/asp-net-url-rewrite-module/</link>
+            <link>https://angelocorleone.com/2018/09/asp-net-url-rewrite-module/</link>
             <pubDate>Fri, 07 Sep 2018 03:12:15 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2018/09/asp-net-url-rewrite-module/</guid>
+            <guid>https://angelocorleone.com/2018/09/asp-net-url-rewrite-module/</guid>
             <description>&lt;p&gt;I just received some feature requests from a client. The requests are about improving the site’s SEO rating. After adding the features, the site is now in the top 5 of google search results for “Auckland airport motel”. I used the rewrite module to move the site to SSL.&lt;/p&gt;
-
 &lt;h2 id=&#34;a-few-sample-rules&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#a-few-sample-rules&#34;&gt;A few sample rules&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Below are sample rules that I believe are helpful to any site – the 2 rules below redirects to HTTPS, and picks a canonical host name (the one here is for Non-WWW).``&lt;/p&gt;
 &lt;pre class=&#34;EnlighterJSRAW&#34; data-enlighter-language=&#34;xml&#34;&gt;&amp;lt;system.webServer&amp;gt;
@@ -682,12 +673,11 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Comparison: WordPress and Umbraco</title>
-            <link>https://angeloryndon.com/2018/04/comparison-wordpress-umbraco/</link>
+            <link>https://angelocorleone.com/2018/04/comparison-wordpress-umbraco/</link>
             <pubDate>Tue, 17 Apr 2018 00:00:59 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2018/04/comparison-wordpress-umbraco/</guid>
-            <description>&lt;p&gt;This post details my first impressions of &lt;a href=&#34;https://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://umbraco.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Umbraco.&lt;/a&gt; I recently learned how to use Umbraco in &lt;a href=&#34;https://angeloryndon.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; of my projects, I also played around with WordPress in this blog(only as a power user though at the moment). Now let’s take a look at what I believe are the pros and cons of each.&lt;/p&gt;
-
+            <guid>https://angelocorleone.com/2018/04/comparison-wordpress-umbraco/</guid>
+            <description>&lt;p&gt;This post details my first impressions of &lt;a href=&#34;https://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://umbraco.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Umbraco.&lt;/a&gt; I recently learned how to use Umbraco in &lt;a href=&#34;https://angelocorleone.com/portfolio/auckland-airport-motel/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; of my projects, I also played around with WordPress in this blog(only as a power user though at the moment). Now let’s take a look at what I believe are the pros and cons of each.&lt;/p&gt;
 &lt;h2 id=&#34;wordpress&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#wordpress&#34;&gt;WordPress&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h4 id=&#34;pros&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#pros&#34;&gt;Pros:&lt;/a&gt;&lt;/h4&gt;
@@ -721,10 +711,10 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Visual Studio 2017 cannot refresh credentials</title>
-            <link>https://angeloryndon.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</link>
+            <link>https://angelocorleone.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</link>
             <pubDate>Sun, 11 Jun 2017 21:07:21 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</guid>
+            <guid>https://angelocorleone.com/2017/06/visual-studio-2017-cannot-refresh-credentials/</guid>
             <description>&lt;p&gt;This is a quick note when &lt;a href=&#34;http://www.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Visual Studio&lt;/a&gt; 2017 cannot refresh credentials. It usually occurs when you change the microsoft account you use to login to your computer.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Make sure Visual Studio is closed before doing all this&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -746,19 +736,18 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Coding Bootcamp, should I have attended one?</title>
-            <link>https://angeloryndon.com/2017/05/coding-bootcamp/</link>
+            <link>https://angelocorleone.com/2017/05/coding-bootcamp/</link>
             <pubDate>Wed, 31 May 2017 21:15:50 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/05/coding-bootcamp/</guid>
+            <guid>https://angelocorleone.com/2017/05/coding-bootcamp/</guid>
             <description>&lt;p&gt;From its name alone, a coding bootcamp tells you its intense. After attending &lt;a href=&#34;http://www.industryconnect.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;one&lt;/a&gt; here in New Zealand, I’ll list what I think were the major pros and cons for me.&lt;/p&gt;
 
 &lt;h3 id=&#34;pros&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#pros&#34;&gt;PROS&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h4 id=&#34;more-on-self-studying&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#more-on-self-studying&#34;&gt;More on self studying&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;I was exposed to a DIY environment – well even the New Zealand work environment is a lot like this. You only ask questions when you get completely stuck. There is little to no hand holding involved. For some this could be a con, but for me it is a pro. Perhaps because I actually like studying and poking around stuff 🙂&lt;/p&gt;
-
 &lt;h4 id=&#34;i-started-a-big-project-from-scratch&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#i-started-a-big-project-from-scratch&#34;&gt;I started a big project from scratch&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;This is what I loved about the experience, I gained validation that I could start a biggish web &lt;a href=&#34;https://angeloryndon.com/portfolio/property-community/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;project &lt;/a&gt;from nothing and build the prototype that everyone in the team started on. I became a team leader because of that. Though the tech stack used was somewhat old by JavaScript standards ( &lt;a href=&#34;http://knockoutjs.com/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;KnockoutJS&lt;/a&gt;, &lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;JQuery&lt;/a&gt;). All these things I did from back-end to front-end sure made me feel like I really am a developer. I just need more time and experience.&lt;/p&gt;
+&lt;p&gt;This is what I loved about the experience, I gained validation that I could start a biggish web &lt;a href=&#34;https://angelocorleone.com/portfolio/property-community/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;project &lt;/a&gt;from nothing and build the prototype that everyone in the team started on. I became a team leader because of that. Though the tech stack used was somewhat old by JavaScript standards ( &lt;a href=&#34;http://knockoutjs.com/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;KnockoutJS&lt;/a&gt;, &lt;a href=&#34;http://jquery.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;JQuery&lt;/a&gt;). All these things I did from back-end to front-end sure made me feel like I really am a developer. I just need more time and experience.&lt;/p&gt;
 
 &lt;h3 id=&#34;cons&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#cons&#34;&gt;CONS&lt;/a&gt;&lt;/h3&gt;
 
@@ -775,44 +764,42 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Learning about ASP.NET MVC 5 Identity</title>
-            <link>https://angeloryndon.com/2017/05/mvc-5-identity/</link>
+            <link>https://angelocorleone.com/2017/05/mvc-5-identity/</link>
             <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/05/mvc-5-identity/</guid>
+            <guid>https://angelocorleone.com/2017/05/mvc-5-identity/</guid>
             <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I’m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;
-
 &lt;h4 id=&#34;mvc-5-identity-8211-microsoftaspnetidentitycore&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#mvc-5-identity-8211-microsoftaspnetidentitycore&#34;&gt;MVC 5 Identity – Microsoft.AspNet.Identity.Core&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This is new in MVC 5, the core assembly of MVC 5 provides interfaces that you can implement if you want full control of user creation, authentication, etc. in your application. But I think Microsoft’s implementation is good for most projects.&lt;/p&gt;
 &lt;p&gt;Microsoft’s implementation relies on Entity Framework to talk with a SQL Server Db. If you want to use a different database, implement the interface provided. The diagram below is a quick overview of what I think are the most important core interfaces:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-476&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-476&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Microsoft is using a repository pattern on this one, the implementation will be hiding behind interfaces which I believe is a good thing. The concrete class UserManager is there to manage users. IUserStore  and its buddies –  IUserLoginStore and IUserPasswordStore, who also implements IUserStore – has methods for database access. The Role interface by the way uses the same pattern as the User interface. It has store interfaces for database access.&lt;/p&gt;
 &lt;p&gt;Reiterating this, a User or Role just holds your data. UserStore etc. puts this on a Database of your choice. You then use the UserManager concrete class to orchestrate, it has your domain logic. Unless you have to do something low level.&lt;/p&gt;
 
 &lt;h4 id=&#34;entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34;&gt;Entity Framework with SQL Server – Microsoft.AspNet.Identity.EntityFramework&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This is one implementation of the core interfaces above. Entity Framework has IdentityUser, IdentityRole, a UserStore class, which I think are the crucial ones. The UserStore class implements IUserStore, IUserLogin and IUserPassword. To talk with SQL Server, it has IdentityDbContext. In conclusion, use this unless you really need some custom implementation. Also, I suggest watching this &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;amp;author=scott-allen&amp;amp;name=aspdotnet-mvc5-fundamentals-m1-introduction&amp;amp;clip=0&#34;&gt;video &lt;/a&gt; since it is awesome 🙂&lt;figure class=&#34;wp-block-image is-resized&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-476&#34; width=&#34;182&#34; height=&#34;182&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-476&#34; width=&#34;182&#34; height=&#34;182&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;</description>
         </item>
         
         <item>
             <title>Migrating your Web App from IIS Express to IIS</title>
-            <link>https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/</link>
+            <link>https://angelocorleone.com/2017/05/migrating-web-app-iis-express-to-iis/</link>
             <pubDate>Mon, 08 May 2017 06:42:00 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/05/migrating-web-app-iis-express-to-iis/</guid>
+            <guid>https://angelocorleone.com/2017/05/migrating-web-app-iis-express-to-iis/</guid>
             <description>&lt;p&gt;The reason I migrated my development from IIS Express to IIS is because of Chrome. It decided not to play an HTML5 video when my project was on IIS Express. I knew the culprit was IIS Express when I opened the html directly from the file system and the video played. I’ve listed a high-level overview of how I did the migration.&lt;/p&gt;
-
 &lt;h4 id=&#34;from-iis-express-to-iis&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#from-iis-express-to-iis&#34;&gt;From IIS Express to IIS&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;I did these on a machine that runs VS2017, SQL Server 2016 and IIS10. The &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd547590(v=vs.110).aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web App&lt;/a&gt; project was first on LocalDb.&lt;/p&gt;
 &lt;p&gt;First make changes to the project on Visual Studio. Go to your project’s properties, then select Local IIS. Then click Create Virtual Directory.&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-478 size-medium&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;72&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Local_IIS.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-478 size-medium&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;72&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Local_IIS-300x72.jpg 300w, https://angelocorleone.com/wp-content/uploads/2018/04/Local_IIS-768x184.jpg 768w, https://angelocorleone.com/wp-content/uploads/2018/04/Local_IIS.jpg 809w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Second, assuming you have a database on SQL Server, update your connection strings on Web.config accordingly.&lt;/p&gt;
 &lt;p&gt;Third, create a &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd465323(v=vs.110).aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web Package.&lt;/a&gt; Select IIS as the publish target, then pick Web Deploy Package as the publish method ( I like creating a Web Package compared to publishing directly, pretty sure publishing directly will work too).&lt;/p&gt;
 
 &lt;h4 id=&#34;publishing-to-iis&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#publishing-to-iis&#34;&gt;Publishing to IIS&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This one is pretty easy once you have the required services running. __&lt;em&gt;I’m not sure if all these services I turned on are required.&lt;/em&gt; Main thing for me is it worked 🙂&lt;/p&gt;
 &lt;p&gt;First, check if IIS is running or not. It’s at Control Panel &amp;gt; Program and Features &amp;gt; Turn Windows Features On/Off – the boxes I ticked are on the screenshot below.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-477 size-medium&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services.jpg&#34;&gt;&lt;img class=&#34;aligncenter wp-image-477 size-medium&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services-300x135.jpg 300w, https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services-768x346.jpg 768w, https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services-1024x462.jpg 1024w, https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services-1100x496.jpg 1100w, https://angelocorleone.com/wp-content/uploads/2018/04/IIS_Services.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Then check if you have Web Deploy installed, I did this by searching for it in &lt;a href=&#34;https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Web Platform Installer&lt;/a&gt;. &lt;em&gt;Again I’m uncertain if you need to install everything with Web Deploy in there to get this next key option to show.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Finally, open IIS Manager (inetmgr from Windows Run). Then go to Sites – you can use the Default Web Site – and on the Actions Pane click on Import Application and use your Web Package’s zip file. The Import Application link was missing on my installation of IIS, installing Web Deploy fixed the issue on my machine.&lt;/p&gt;
@@ -821,50 +808,49 @@ In the project&amp;rsquo;s Web.config, go in &lt;code&gt;&amp;lt;system.web&amp;
         
         <item>
             <title>Windows Azure configuration for ASP.NET MVC</title>
-            <link>https://angeloryndon.com/2017/04/windows-azure-configurations/</link>
+            <link>https://angelocorleone.com/2017/04/windows-azure-configurations/</link>
             <pubDate>Wed, 26 Apr 2017 08:13:05 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/04/windows-azure-configurations/</guid>
+            <guid>https://angelocorleone.com/2017/04/windows-azure-configurations/</guid>
             <description>&lt;p&gt;The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. &lt;em&gt;By convention, your action name in Web API should match/contain the Http Verb name.&lt;/em&gt; I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂&lt;/p&gt;
-
 &lt;h4 id=&#34;windowsazureconfiguration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#windowsazureconfiguration&#34;&gt;Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;IIS or Windows Azure does not recognize DELETE, PUT and some other Http verbs by default. I found this fix online while trying to fix an Http 404 error from my Web API controller.&lt;/p&gt;
 &lt;p&gt;Below is the exact code I used:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot;&amp;lt;br /&amp;gt; path=&amp;quot;*.&amp;quot;&amp;lt;br /&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,DELETE,PUT&amp;quot;&amp;lt;br /&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;br /&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot;&amp;lt;br /&amp;gt; path=&amp;quot;*.&amp;quot;&amp;lt;br /&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,DELETE,PUT&amp;quot;&amp;lt;br /&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;br /&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If the code above does not fix your issue, I read that removing “WebDav” and “WebDavModule” could help resolve the issue. Below is the complete snippet – &lt;em&gt;the snippet I used in bold&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;system.webServer&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;validation validateIntegratedModeConfiguration=&amp;quot;false&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;modules runAllManagedModulesForAllRequests=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDAVModule&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/modules&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDav&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness32&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness64&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/system.webServer&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;system.webServer&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;validation validateIntegratedModeConfiguration=&amp;quot;false&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;modules runAllManagedModulesForAllRequests=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDAVModule&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/modules&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;WebDav&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;remove name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrl-ISAPI-4.0_32bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness32&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; modules=&amp;quot;IsapiModule&amp;quot; scriptProcessor=&amp;quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&amp;quot; preCondition=&amp;quot;classicMode,runtimeVersionv4.0,bitness64&amp;quot; responseBufferLimit=&amp;quot;0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;add name=&amp;quot;ExtensionlessUrlHandler-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;add name=&amp;quot;ExtensionlessUrl-Integrated-4.0&amp;quot; path=&amp;quot;*.&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; verb=&amp;quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; type=&amp;quot;System.Web.Handlers.TransferRequestHandler&amp;quot;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;strong&amp;gt; preCondition=&amp;quot;integratedMode,runtimeVersionv4.0&amp;quot; /&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/handlers&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/system.webServer&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;usual-media-types-to-add-to-your-windows-azure-configuration&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#usual-media-types-to-add-to-your-windows-azure-configuration&#34;&gt;Usual Media types to add to your Windows Azure configuration&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The code snippet below is for media types we usually use on the web to keep IIS or Windows Azure happy serving static content, you can add/remove stuff depending on your needs. _Please note this is also inside &amp;lt;_system.webServer&amp;gt; of your Web.config.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;staticContent&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.eot&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.otf&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.woff&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.mp4&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ogv&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.webm&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.svg&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.eot&amp;quot; mimeType=&amp;quot;application/vnd.ms-fontobject&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ttf&amp;quot; mimeType=&amp;quot;font/ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.otf&amp;quot; mimeType=&amp;quot;font/otf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff&amp;quot; mimeType=&amp;quot;application/font-woff&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff2&amp;quot; mimeType=&amp;quot;application/font-woff2&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.mp4&amp;quot; mimeType=&amp;quot;video/mp4&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ogv&amp;quot; mimeType=&amp;quot;video/ogg&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.webm&amp;quot; mimeType=&amp;quot;video/webm&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.svg&amp;quot; mimeType=&amp;quot;image/svg+xml&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/staticContent&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;staticContent&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.eot&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.otf&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.woff&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.mp4&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.ogv&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.webm&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;remove fileExtension=&amp;quot;.svg&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.eot&amp;quot; mimeType=&amp;quot;application/vnd.ms-fontobject&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ttf&amp;quot; mimeType=&amp;quot;font/ttf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.otf&amp;quot; mimeType=&amp;quot;font/otf&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff&amp;quot; mimeType=&amp;quot;application/font-woff&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.woff2&amp;quot; mimeType=&amp;quot;application/font-woff2&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.mp4&amp;quot; mimeType=&amp;quot;video/mp4&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.ogv&amp;quot; mimeType=&amp;quot;video/ogg&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.webm&amp;quot; mimeType=&amp;quot;video/webm&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;mimeMap fileExtension=&amp;quot;.svg&amp;quot; mimeType=&amp;quot;image/svg+xml&amp;quot;/&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/staticContent&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;I think you have noticed this by now as well, it is good practice to remove something in your Web.config first before adding it again, to make sure you don’t get duplicates. That’s it for tonight 🙂&lt;/p&gt;</description>
         </item>
         
         <item>
             <title>Automate deployment from Github to Windows Azure</title>
-            <link>https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/</link>
+            <link>https://angelocorleone.com/2017/04/automate-deployment-github-windows-azure/</link>
             <pubDate>Fri, 21 Apr 2017 10:18:16 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/04/automate-deployment-github-windows-azure/</guid>
+            <guid>https://angelocorleone.com/2017/04/automate-deployment-github-windows-azure/</guid>
             <description>&lt;p&gt;There are many options to choose from to automate deployment. On my first web app, I used Github together with Windows Azure. In this post I will highlight the problems I faced and how I got over them. The first, and most important lesson I learned was this –&lt;/p&gt;
 
 &lt;h4 id=&#34;keepyourprivate-stuff-out-of-source-control&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#keepyourprivate-stuff-out-of-source-control&#34;&gt;Keep your private stuff out of source control&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;I’m not sure if every developer once made the mistake of putting private stuff in source control, I sure did and it bit me bad. When I found out I checked in a private connection string a couple of days after the fact, my response was to &lt;strong&gt;delete my repository&lt;/strong&gt;. I’m pretty sure there is a way to untrack and remove a file from Github. I didn’t bother to research about it during that time though, perhaps I was in panic mode.&lt;/p&gt;
 &lt;p&gt;Here is what I found out on Azure. Your connection strings in web.config will get updated by what you have written in a configuration section at Azure portal. Here is a screenshot&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-493&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;61&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-300x61.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-768x156.png 768w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1024x208.png 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString-1100x223.png 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/connectionString.png 1556w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/connectionString.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-493&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/connectionString-300x61.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;61&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/connectionString-300x61.png 300w, https://angelocorleone.com/wp-content/uploads/2018/04/connectionString-768x156.png 768w, https://angelocorleone.com/wp-content/uploads/2018/04/connectionString-1024x208.png 1024w, https://angelocorleone.com/wp-content/uploads/2018/04/connectionString-1100x223.png 1100w, https://angelocorleone.com/wp-content/uploads/2018/04/connectionString.png 1556w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Its found in the &lt;strong&gt;Application Settings&lt;/strong&gt; section of your App Service. Just make sure &lt;strong&gt;the Name or the Key&lt;/strong&gt; you write in Azure Portal matches the Name/Key of the setting in your development machine. Azure will then use the &lt;strong&gt;Value&lt;/strong&gt; you wrote in Azure Portal (the private area) when you publish. Just put a dummy value on your development machine’s settings before you check in to Github. &lt;em&gt;Please note that I haven’t tried using a different name on my Dev machine and on Azure configuration section to see if it’ll still work.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;If you have complete control of your server, which you won’t have in an Azure App Service, you can save a configuration file that contains the private data on your server. You can then reference the file on your web.config. &lt;em&gt;By the way, you can have a unique extension for these external files so you’ll know they have secret stuff.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For connection strings, use the &lt;strong&gt;configSource&lt;/strong&gt; property to reference the file:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;connectionStrings configSource=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;connectionStrings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;connectionStrings configSource=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;connectionStrings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For app settings, use the &lt;strong&gt;file&lt;/strong&gt; property:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;appSettings file=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;appSettings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;appSettings file=&amp;quot;secretStuff.config&amp;quot;&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;appSettings/&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The settings you have on the external file will then get merged on runtime.&lt;/p&gt;
 
 &lt;h4 id=&#34;to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#to-automate-deployment-in-windowsazure-sometimes-you-have-to-delete-filesin-kudu&#34;&gt;To automate deployment in Windows Azure, sometimes you have to delete files in Kudu&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This one took me some time to figure out. I kept getting deployment errors on Windows Azure. You set this up in the &lt;strong&gt;Deployment Options&lt;/strong&gt; section of your App Service.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-494&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;128&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png 300w, https://angeloryndon.com/wp-content/uploads/2018/04/deploymentOptions.png 559w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/deploymentOptions.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-494&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;128&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/deploymentOptions-300x128.png 300w, https://angelocorleone.com/wp-content/uploads/2018/04/deploymentOptions.png 559w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;By the way &lt;a href=&#34;https://github.com/projectkudu/kudu&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Kudu&lt;/a&gt; is this nifty little tool that I just found out about while trying to fix the deployment errors I kept getting. I tried republishing the Web App, disconnecting and redeploying from Github, recreating the database and a couple of other things – trial and error – to fix the deployment problems. Then I found out simply deleting the &lt;strong&gt;repository&lt;/strong&gt; folder and the &lt;strong&gt;wwwroot&lt;/strong&gt; on Kudu’s debug console, then setting up deployment again fixes my issue. You can access Kudu by adding scm to your site url – _yoursite.scm.azurewebsites.net – _or by clicking &lt;strong&gt;Advanced Tools&lt;/strong&gt; on the Development Tools of your App Service.&lt;/p&gt;
 &lt;p&gt;If you encounter this error – &lt;em&gt;Azure: The system cannot find the path specified.&lt;/em&gt; There’s a quick fix I found on the Github &lt;a href=&#34;https://github.com/madskristensen/WebCompiler/issues/146&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;forum&lt;/a&gt;, while on Kudu console you do these commands:&lt;/p&gt;
 &lt;p&gt;Go to – local/temp/webcompiler.[version]&lt;/p&gt;

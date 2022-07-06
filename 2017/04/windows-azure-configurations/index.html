@@ -7,23 +7,23 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<meta name="description" content="Angelo Corleone&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Windows Azure Configuration for Asp. Net Mvc - Angelo Ryndon
+Windows Azure Configuration for Asp. Net Mvc - Angelo Corleone
 </title>
 
 
 
-        <meta property="og:title" content="Windows Azure configuration for ASP.NET MVC - Angelo Ryndon" />
+        <meta property="og:title" content="Windows Azure configuration for ASP.NET MVC - Angelo Corleone" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/2017/04/windows-azure-configurations/"/>
-<meta property="og:site_name" content="Angelo Ryndon"/>
+<meta property="og:description" content="Angelo Corleone&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angelocorleone.com/2017/04/windows-azure-configurations/"/>
+<meta property="og:site_name" content="Angelo Corleone"/>
 
 
 
 
-<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+<meta property="og:image" content="https://angelocorleone.com/home/profile.jpg"/>
 
 
 
@@ -119,7 +119,7 @@ Windows Azure Configuration for Asp. Net Mvc - Angelo Ryndon
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/2017/04/windows-azure-configurations/">Windows Azure configuration for ASP.NET MVC</a>
+        <a href="https://angelocorleone.com/2017/04/windows-azure-configurations/">Windows Azure configuration for ASP.NET MVC</a>
     </h2>
     <div class="post-data">
         Apr 26, 2017 |
@@ -129,19 +129,19 @@ Windows Azure Configuration for Asp. Net Mvc - Angelo Ryndon
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>
@@ -183,17 +183,16 @@ Windows Azure Configuration for Asp. Net Mvc - Angelo Ryndon
 
 <div class="container markdown top-pad">
     <p>The ASP.NET Web API convention annoyed me so much, well because I’m not proficient in Web API yet. <em>By convention, your action name in Web API should match/contain the Http Verb name.</em> I spent about 45 minutes trying to fix this thing! So now I hope I won’t forget that 🙂</p>
-
 <h4 id="windowsazureconfiguration" class="anchor-link"><a href="#windowsazureconfiguration">Windows Azure configuration</a></h4>
 <p>IIS or Windows Azure does not recognize DELETE, PUT and some other Http verbs by default. I found this fix online while trying to fix an Http 404 error from my Web API controller.</p>
 <p>Below is the exact code I used:</p>
-<p><code>&lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot;&lt;br /&gt; path=&quot;*.&quot;&lt;br /&gt; verb=&quot;GET,HEAD,POST,DEBUG,DELETE,PUT&quot;&lt;br /&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;br /&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;/handlers&gt;</code></p>
+<p><code>&lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot;&lt;br /&gt; path=&quot;*.&quot;&lt;br /&gt; verb=&quot;GET,HEAD,POST,DEBUG,DELETE,PUT&quot;&lt;br /&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;br /&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;/handlers&gt;</code></p>
 <p>If the code above does not fix your issue, I read that removing “WebDav” and “WebDavModule” could help resolve the issue. Below is the complete snippet – <em>the snippet I used in bold</em></p>
-<p><code>&lt;system.webServer&gt;&lt;br /&gt; &lt;validation validateIntegratedModeConfiguration=&quot;false&quot; /&gt;&lt;br /&gt; &lt;modules runAllManagedModulesForAllRequests=&quot;true&quot;&gt;&lt;br /&gt; &lt;remove name=&quot;WebDAVModule&quot;/&gt;&lt;br /&gt; &lt;/modules&gt;&lt;br /&gt; &lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;WebDav&quot;/&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness32&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness64&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; type=&quot;System.Web.Handlers.TransferRequestHandler&quot; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot; path=&quot;*.&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;/handlers&gt;&lt;br /&gt; &lt;/system.webServer&gt;</code></p>
+<p><code>&lt;system.webServer&gt;&lt;br /&gt; &lt;validation validateIntegratedModeConfiguration=&quot;false&quot; /&gt;&lt;br /&gt; &lt;modules runAllManagedModulesForAllRequests=&quot;true&quot;&gt;&lt;br /&gt; &lt;remove name=&quot;WebDAVModule&quot;/&gt;&lt;br /&gt; &lt;/modules&gt;&lt;br /&gt; &lt;handlers&gt;&lt;br /&gt; &lt;remove name=&quot;WebDav&quot;/&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; /&gt;&lt;br /&gt; &lt;remove name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;remove name=&quot;ExtensionlessUrl-Integrated-4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrl-ISAPI-4.0_32bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness32&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-ISAPI-4.0_64bit&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness64&quot; responseBufferLimit=&quot;0&quot; /&gt;&lt;br /&gt; &lt;add name=&quot;ExtensionlessUrlHandler-Integrated-4.0&quot; path=&quot;*.&quot; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot; type=&quot;System.Web.Handlers.TransferRequestHandler&quot; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;br /&gt; &lt;strong&gt;&lt;add name=&quot;ExtensionlessUrl-Integrated-4.0&quot; path=&quot;*.&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; verb=&quot;GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; type=&quot;System.Web.Handlers.TransferRequestHandler&quot;&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt; preCondition=&quot;integratedMode,runtimeVersionv4.0&quot; /&gt;&lt;/strong&gt;&lt;br /&gt; &lt;/handlers&gt;&lt;br /&gt; &lt;/system.webServer&gt;</code></p>
 
 <h4 id="usual-media-types-to-add-to-your-windows-azure-configuration" class="anchor-link"><a href="#usual-media-types-to-add-to-your-windows-azure-configuration">Usual Media types to add to your Windows Azure configuration</a></h4>
 <p>The code snippet below is for media types we usually use on the web to keep IIS or Windows Azure happy serving static content, you can add/remove stuff depending on your needs. _Please note this is also inside &lt;_system.webServer&gt; of your Web.config.</p>
-<p><code>&lt;staticContent&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.eot&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ttf&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.otf&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.woff&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.mp4&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ogv&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.webm&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.svg&quot;/&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.eot&quot; mimeType=&quot;application/vnd.ms-fontobject&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ttf&quot; mimeType=&quot;font/ttf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.otf&quot; mimeType=&quot;font/otf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff&quot; mimeType=&quot;application/font-woff&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff2&quot; mimeType=&quot;application/font-woff2&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.mp4&quot; mimeType=&quot;video/mp4&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ogv&quot; mimeType=&quot;video/ogg&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.webm&quot; mimeType=&quot;video/webm&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.svg&quot; mimeType=&quot;image/svg+xml&quot;/&gt;&lt;br /&gt; &lt;/staticContent&gt;</code></p>
+<p><code>&lt;staticContent&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.eot&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ttf&quot; /&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.otf&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.woff&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.mp4&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.ogv&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.webm&quot;/&gt;&lt;br /&gt; &lt;remove fileExtension=&quot;.svg&quot;/&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.eot&quot; mimeType=&quot;application/vnd.ms-fontobject&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ttf&quot; mimeType=&quot;font/ttf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.otf&quot; mimeType=&quot;font/otf&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff&quot; mimeType=&quot;application/font-woff&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.woff2&quot; mimeType=&quot;application/font-woff2&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.mp4&quot; mimeType=&quot;video/mp4&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.ogv&quot; mimeType=&quot;video/ogg&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.webm&quot; mimeType=&quot;video/webm&quot; /&gt;&lt;br /&gt; &lt;mimeMap fileExtension=&quot;.svg&quot; mimeType=&quot;image/svg+xml&quot;/&gt;&lt;br /&gt; &lt;/staticContent&gt;</code></p>
 <p> </p>
 <p>I think you have noticed this by now as well, it is good practice to remove something in your Web.config first before adding it again, to make sure you don’t get duplicates. That’s it for tonight 🙂</p>
     <div class="top-pad">
@@ -201,19 +200,19 @@ Windows Azure Configuration for Asp. Net Mvc - Angelo Ryndon
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>

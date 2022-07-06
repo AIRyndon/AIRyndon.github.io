@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>MVC on Angelo Ryndon</title>
-        <link>https://angeloryndon.com/tags/mvc/</link>
-        <description>Recent content in MVC on Angelo Ryndon</description>
+        <title>MVC on Angelo Corleone</title>
+        <link>https://angelocorleone.com/tags/mvc/</link>
+        <description>Recent content in MVC on Angelo Corleone</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 15 May 2017 19:51:33 +0000</lastBuildDate><atom:link href="https://angeloryndon.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 15 May 2017 19:51:33 +0000</lastBuildDate><atom:link href="https://angelocorleone.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
         <item>
             <title>Learning about ASP.NET MVC 5 Identity</title>
-            <link>https://angeloryndon.com/2017/05/mvc-5-identity/</link>
+            <link>https://angelocorleone.com/2017/05/mvc-5-identity/</link>
             <pubDate>Mon, 15 May 2017 19:51:33 +0000</pubDate>
             
-            <guid>https://angeloryndon.com/2017/05/mvc-5-identity/</guid>
+            <guid>https://angelocorleone.com/2017/05/mvc-5-identity/</guid>
             <description>&lt;p&gt;I just watched a &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m3-identity&amp;clip=0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;video&lt;/a&gt; from Scott Allen to learn more about MVC 5 Identity on ASP.NET. By the way the video is a great resource to get a grasp of the fundamentals of ASP.NET MVC 5. I’m primarily interested on Identity, OWIN and Katana because I just brushed through them quickly while working on a team project before. I should really start posting stuff I learned during the day or during the course of a week. I think in addition to writing code and building something, writing about it helps in making it stick 🙂&lt;/p&gt;
-
 &lt;h4 id=&#34;mvc-5-identity-8211-microsoftaspnetidentitycore&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#mvc-5-identity-8211-microsoftaspnetidentitycore&#34;&gt;MVC 5 Identity – Microsoft.AspNet.Identity.Core&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This is new in MVC 5, the core assembly of MVC 5 provides interfaces that you can implement if you want full control of user creation, authentication, etc. in your application. But I think Microsoft’s implementation is good for most projects.&lt;/p&gt;
 &lt;p&gt;Microsoft’s implementation relies on Entity Framework to talk with a SQL Server Db. If you want to use a different database, implement the interface provided. The diagram below is a quick overview of what I think are the most important core interfaces:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-476&#34; src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-476&#34; src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;135&#34; srcset=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-300x135.jpg 300w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-768x346.jpg 768w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-1024x462.jpg 1024w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-1100x496.jpg 1100w, https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg 1596w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Microsoft is using a repository pattern on this one, the implementation will be hiding behind interfaces which I believe is a good thing. The concrete class UserManager is there to manage users. IUserStore  and its buddies –  IUserLoginStore and IUserPasswordStore, who also implements IUserStore – has methods for database access. The Role interface by the way uses the same pattern as the User interface. It has store interfaces for database access.&lt;/p&gt;
 &lt;p&gt;Reiterating this, a User or Role just holds your data. UserStore etc. puts this on a Database of your choice. You then use the UserManager concrete class to orchestrate, it has your domain logic. Unless you have to do something low level.&lt;/p&gt;
 
 &lt;h4 id=&#34;entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#entity-framework-with-sql-server-8211-microsoftaspnetidentityentityframework&#34;&gt;Entity Framework with SQL Server – Microsoft.AspNet.Identity.EntityFramework&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This is one implementation of the core interfaces above. Entity Framework has IdentityUser, IdentityRole, a UserStore class, which I think are the crucial ones. The UserStore class implements IUserStore, IUserLogin and IUserPassword. To talk with SQL Server, it has IdentityDbContext. In conclusion, use this unless you really need some custom implementation. Also, I suggest watching this &lt;a href=&#34;https://app.pluralsight.com/player?course=aspdotnet-mvc5-fundamentals&amp;amp;author=scott-allen&amp;amp;name=aspdotnet-mvc5-fundamentals-m1-introduction&amp;amp;clip=0&#34;&gt;video &lt;/a&gt; since it is awesome 🙂&lt;figure class=&#34;wp-block-image is-resized&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img src=&#34;https://angeloryndon.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-476&#34; width=&#34;182&#34; height=&#34;182&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_.jpg&#34;&gt;&lt;img src=&#34;https://angelocorleone.com/wp-content/uploads/2018/04/Identity.Core_-150x150.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-476&#34; width=&#34;182&#34; height=&#34;182&#34; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>

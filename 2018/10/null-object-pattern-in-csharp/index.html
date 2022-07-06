@@ -7,23 +7,23 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects.">
+<meta name="description" content="Angelo Corleone&#39;s personal website, it contains his posts and some of his projects.">
 <title>
-Null Object Pattern in C# - Angelo Ryndon
+Null Object Pattern in C# - Angelo Corleone
 </title>
 
 
 
-        <meta property="og:title" content="Null Object Pattern in C# - Angelo Ryndon" />
+        <meta property="og:title" content="Null Object Pattern in C# - Angelo Corleone" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Angelo Ryndon&#39;s personal website, it contains his posts and some of his projects."/>
-<meta property="og:url" content="https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/"/>
-<meta property="og:site_name" content="Angelo Ryndon"/>
+<meta property="og:description" content="Angelo Corleone&#39;s personal website, it contains his posts and some of his projects."/>
+<meta property="og:url" content="https://angelocorleone.com/2018/10/null-object-pattern-in-csharp/"/>
+<meta property="og:site_name" content="Angelo Corleone"/>
 
 
 
 
-<meta property="og:image" content="https://angeloryndon.com/home/profile.jpg"/>
+<meta property="og:image" content="https://angelocorleone.com/home/profile.jpg"/>
 
 
 
@@ -119,7 +119,7 @@ Null Object Pattern in C# - Angelo Ryndon
                 
 <div class="container bottom-pad">
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://angeloryndon.com/2018/10/null-object-pattern-in-csharp/">Null Object Pattern in C#</a>
+        <a href="https://angelocorleone.com/2018/10/null-object-pattern-in-csharp/">Null Object Pattern in C#</a>
     </h2>
     <div class="post-data">
         Oct 4, 2018 |
@@ -129,19 +129,19 @@ Null Object Pattern in C# - Angelo Ryndon
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>
@@ -179,7 +179,6 @@ Null Object Pattern in C# - Angelo Ryndon
 
 <div class="container markdown top-pad">
     <p>I recently just learned about the Null Object Pattern in C# through <a href="https://app.pluralsight.com" target="_blank" rel="noopener noreferrer">Pluralsight</a>. I think it is straightforward to implement. As usual, the tricky part I believe is knowing when to use it or why you would use it.</p>
-
 <h2 id="the-basic-goal-of-the-null-object-pattern" class="anchor-link"><a href="#the-basic-goal-of-the-null-object-pattern">The basic goal of the Null Object Pattern</a></h2>
 <p>This pattern aims to decrease or greatly minimize the need for null checking code in parts of a code base. I think no one wants writing boilerplate like the if clause below.</p>
 <pre class="EnlighterJSRAW" data-enlighter-language="csharp">public YourMethod(someVariable)
@@ -194,7 +193,7 @@ Null Object Pattern in C# - Angelo Ryndon
 
 <h2 id="high-level-overview-of-the-patternnbsp" class="anchor-link"><a href="#high-level-overview-of-the-patternnbsp">High level overview of the Pattern </a></h2>
 <div class="wp-block-image">
-  <figure class="aligncenter"><a href="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png"><img src="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png" alt="Overview of Null Object Pattern in C#" class="wp-image-687" srcset="https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angeloryndon.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w" sizes="(max-width: 300px) 100vw, 300px" /></a></figure>
+  <figure class="aligncenter"><a href="https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview.png"><img src="https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png" alt="Overview of Null Object Pattern in C#" class="wp-image-687" srcset="https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-300x243.png 300w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-768x623.png 768w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-500x405.png 500w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview-800x649.png 800w, https://angelocorleone.com/wp-content/uploads/2018/09/null-object-pattern-overview.png 988w" sizes="(max-width: 300px) 100vw, 300px" /></a></figure>
 </div>
 <p>The image above shows what the pattern is conceptually. Imagine you have an abstraction containing only a method signature, this abstraction could be an Interface or an Abstract Class. This then has a real implementation(s) and a null object implementation(s). The key here is this:</p>
 <blockquote class="wp-block-quote">
@@ -205,7 +204,7 @@ Null Object Pattern in C# - Angelo Ryndon
 <p>Because the client code is only referencing the abstraction, the implementation (Real or Null) is not its concern.</p>
 
 <h2 id="implementing-the-null-object-pattern-in-c" class="anchor-link"><a href="#implementing-the-null-object-pattern-in-c">Implementing the Null Object Pattern in C#</a></h2>
-<p>Here is a <a href="https://github.com/AIRyndon/CSharpNullObjectPattern" target="_blank" rel="noopener noreferrer">Github repo</a> that illustrates the pattern’s basic implementation.</p>
+<p>Here is a <a href="https://github.com/ANRCorleone/CSharpNullObjectPattern" target="_blank" rel="noopener noreferrer">Github repo</a> that illustrates the pattern’s basic implementation.</p>
 <p>Some things to take note when using the pattern:</p>
 <ul>
 <li>When working with others, your team should know what parts of your project uses the null object pattern – or else other team members might use magic numbers or perform manual null checks instead</li>
@@ -217,19 +216,19 @@ Null Object Pattern in C# - Angelo Ryndon
 <div class="posts-contact-area">
     Share on:  
     
-    <a class="icon-dev-to" href="https://dev.to/new?prefill=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
+    <a class="icon-dev-to" href="https://dev.to/new?prefill=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="DEV.to" onclick="window.open(this.href, 'dev-to-share');return false;">
         <i class="fab fa-dev"></i>
         <span class="hidden">DEV.to</span>
     </a>
     
     
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Facebook" onclick="window.open(this.href, 'facebook-share');return false;">
         <i class="fab fa-facebook"></i>
         <span class="hidden">Facebook</span>
     </a>
     
     
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Automate%20deployment%20from%20Github%20to%20Windows%20Azure%20https%3a%2f%2fangeloryndon.com%2f2017%2f04%2fautomate-deployment-github-windows-azure%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Visual%20Studio%202017%20cannot%20refresh%20credentials%20https%3a%2f%2fangelocorleone.com%2f2017%2f06%2fvisual-studio-2017-cannot-refresh-credentials%2f" title="Twitter" onclick="window.open(this.href, 'twitter-share');return false;">
         <i class="fab fa-twitter"></i>
         <span class="hidden">Twitter</span>
     </a>
